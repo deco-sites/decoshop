@@ -1,6 +1,7 @@
 import { useSignal } from "@preact/signals";
 import { useCallback, useEffect, useRef } from "preact/hooks";
 import InstagramSearch from "../components/InstagramSearch.tsx";
+import mocks from "../components/mock.ts";
 
 function Chat() {
   const messageEl = useRef<HTMLDivElement>(null);
@@ -183,8 +184,14 @@ function Chat() {
     }
   };
 
+  console.log({ mocks, s: selectedUserInstagram.value });
+
+  const screenshot = mocks.find(
+    ({ user }) => user === selectedUserInstagram.value
+  )?.url;
+
   return selectedUserInstagram.value ? (
-    <>
+    <div class="flex flex-row justify-between">
       <div class="w-1/2 shadow-md h-full flex flex-col justify-end z-50 bg-white fixed">
         <div class="bg-green-500 flex justify-center p-3 text-white">
           Boteco
@@ -242,7 +249,15 @@ function Chat() {
           </button>
         </div>
       </div>
-    </>
+      <div class="w-1/2 h-full flex flex-col">
+        <input
+          type="text"
+          class="h-12 p-2 w-full"
+          value={`https://instagram.com/${selectedUserInstagram.value}`}
+        />
+        <img src={screenshot} class="w-full" alt="Screenshot" />
+      </div>
+    </div>
   ) : (
     <InstagramSearch onUser={onUser} />
   );
