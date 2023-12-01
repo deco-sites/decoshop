@@ -117,10 +117,6 @@ function Chat() {
     ];
   }
 
-  const onUser = (user: string) => {
-    selectedUserInstagram.value = user;
-  };
-
   useEffect(() => {
     const host = window.location.host;
     const websocket = window.location.protocol === "https:" ? "wss" : "ws";
@@ -186,6 +182,17 @@ function Chat() {
 
   console.log({ mocks, s: selectedUserInstagram.value });
 
+  const onUser = (user: string) => {
+    const message = `Quero um presente para @${user}`;
+    send(message);
+    const newMessageObject: { content: string; role: "user" | "bot" } = {
+      content: message,
+      role: "bot",
+    };
+    messageList.value = [...messageList.value, newMessageObject];
+    selectedUserInstagram.value = user;
+  };
+
   const screenshot = mocks.find(
     ({ user }) => user === selectedUserInstagram.value
   )?.url;
@@ -212,12 +219,18 @@ function Chat() {
               {typeof message.content === "string" ? (
                 <div>{message.content}</div>
               ) : message.content.type === "function_calls" ? (
-                message.content.content.map((productData, productIndex) => (
-                  <ProductShelf
-                    key={productIndex}
-                    products={productData.response}
-                  />
-                ))
+                message.content.content
+                  .filter(
+                    (content) =>
+                      content.name ===
+                      "deco-sites/decoshop/loaders/productList.ts"
+                  )
+                  .map((productData, productIndex) => (
+                    <ProductShelf
+                      key={productIndex}
+                      products={productData.response}
+                    />
+                  ))
               ) : message.content.type === "message" ? (
                 <div
                   dangerouslySetInnerHTML={{
@@ -249,7 +262,10 @@ function Chat() {
           </button>
         </div>
       </div>
-      <div class="w-1/2 h-full flex flex-col">
+      <div class="w-1/2 h-full flex flex-col relative">
+        <div class="absolute bg-[#00000044] inset-0 flex justify-center items-center">
+          Carregando...
+        </div>
         <input
           type="text"
           class="h-12 p-2 w-full"
