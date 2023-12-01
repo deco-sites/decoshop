@@ -199,7 +199,7 @@ function Chat() {
 
   return selectedUserInstagram.value ? (
     <div class="flex flex-row justify-between">
-      <div class="w-1/2 shadow-md h-full flex flex-col justify-end z-50 bg-white">
+      <div class="w-1/2 shadow-md h-[100vh] flex flex-col justify-end z-50 bg-white">
         <div class="bg-green-500 flex justify-center p-3 text-white">
           shop.deco.cx
         </div>
