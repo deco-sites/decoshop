@@ -2,6 +2,8 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import * as $$$0 from "./loaders/productList.ts";
+import * as $$$1 from "./loaders/assistant.ts";
 import * as $$$$$$0 from "./sections/Hero.tsx";
 import * as $$$$$$1 from "./sections/Theme.tsx";
 import * as $$$$$$2 from "./sections/Footer.tsx";
@@ -11,6 +13,10 @@ import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
 
 const manifest = {
+  "loaders": {
+    "deco-sites/decoshop/loaders/assistant.ts": $$$1,
+    "deco-sites/decoshop/loaders/productList.ts": $$$0,
+  },
   "sections": {
     "deco-sites/decoshop/sections/Footer.tsx": $$$$$$2,
     "deco-sites/decoshop/sections/Hero.tsx": $$$$$$0,
