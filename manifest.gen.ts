@@ -8,7 +8,8 @@ import * as $$$$$$0 from "./sections/Hero.tsx";
 import * as $$$$$$1 from "./sections/Theme.tsx";
 import * as $$$$$$2 from "./sections/Footer.tsx";
 import * as $$$$$$3 from "./sections/SimpleTextList.tsx";
-import * as $$$$$$4 from "./sections/ParagraphList.tsx";
+import * as $$$$$$4 from "./sections/Chat.tsx";
+import * as $$$$$$5 from "./sections/ParagraphList.tsx";
 import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
 
@@ -18,9 +19,10 @@ const manifest = {
     "deco-sites/decoshop/loaders/productList.ts": $$$0,
   },
   "sections": {
+    "deco-sites/decoshop/sections/Chat.tsx": $$$$$$4,
     "deco-sites/decoshop/sections/Footer.tsx": $$$$$$2,
     "deco-sites/decoshop/sections/Hero.tsx": $$$$$$0,
-    "deco-sites/decoshop/sections/ParagraphList.tsx": $$$$$$4,
+    "deco-sites/decoshop/sections/ParagraphList.tsx": $$$$$$5,
     "deco-sites/decoshop/sections/SimpleTextList.tsx": $$$$$$3,
     "deco-sites/decoshop/sections/Theme.tsx": $$$$$$1,
   },

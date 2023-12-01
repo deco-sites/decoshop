@@ -27,6 +27,7 @@ export default function Site(
 ]> {
   return {
     state: {
+      ...state,
       stores: (state?.stores ?? []).reduce(
         (acc, store) => ({ [store.name]: store, ...acc }),
         {},
