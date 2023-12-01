@@ -12,7 +12,7 @@ export default function socialMedia({ onUser }: Props) {
     <div class="max-w-7xl mx-auto">
       <div class="text-center py-6">
         <Image
-          src="https://avatars.githubusercontent.com/u/104853950?v=4"
+          src="https://github.com/vitortrindader/movier/blob/main/deco.cx-logo-outline.png"
           alt="deco.cx logo"
           width={300}
           class="mx-auto h-12"
