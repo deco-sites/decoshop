@@ -16,7 +16,7 @@ export default function socialMedia({ onUser }: Props) {
           class="object-cover"
           alt="deco.cx"
           width={300}
-          class="mx-auto h-12"
+          class="mx-auto"
         />
       </div>
 
