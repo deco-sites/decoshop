@@ -9,7 +9,7 @@ function Chat() {
   const selectedUserInstagram = useSignal("");
   const ws = useSignal<WebSocket | null>(null);
   const messageList = useSignal<{ content: any; role: "user" | "bot" }[]>([]);
-  const mock = true;
+  const mock = false;
 
   if (mock) {
     messageList.value = [
@@ -207,39 +207,40 @@ function Chat() {
           ref={messageEl}
           class="h-full overflow-y-auto pt-4 flex flex-col mx-5"
         >
-          {messageList.value.map((message, index) => (
-            <div
-              key={index}
-              class={`p-2 rounded-2xl mb-3 w-fit text-sm max-w-s ${
-                message.role === "user"
-                  ? "bg-gray-200 text-black self-start"
-                  : "bg-green-600 text-white self-end"
-              }`}
-            >
-              {typeof message.content === "string" ? (
-                <div>{message.content}</div>
-              ) : message.content.type === "function_calls" ? (
-                message.content.content
-                  .filter(
-                    (content) =>
-                      content.name ===
-                      "deco-sites/decoshop/loaders/productList.ts"
-                  )
-                  .map((productData, productIndex) => (
-                    <ProductShelf
-                      key={productIndex}
-                      products={productData.response}
-                    />
-                  ))
-              ) : message.content.type === "message" ? (
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: message.content.content,
-                  }}
-                ></div>
-              ) : null}
-            </div>
-          ))}
+          {messageList.value
+            .map((message, index) => (
+              <div
+                key={index}
+                class={`p-2 rounded-2xl mb-3 w-fit text-sm max-w-s ${
+                  message.role === "user"
+                    ? "bg-gray-200 text-black self-start"
+                    : "bg-green-600 text-white self-end"
+                }`}
+              >
+                {typeof message.content === "string" ? (
+                  <div>{message.content}</div>
+                ) : message.content.type === "function_calls" ? (
+                  message.content.content
+                    .filter(
+                      (content) =>
+                        content.name ===
+                        "deco-sites/decoshop/loaders/productList.ts"
+                    )
+                    .map((productData, productIndex) => (
+                      <ProductShelf
+                        key={productIndex}
+                        products={productData.response}
+                      />
+                    ))
+                ) : message.content.type === "message" ? (
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: message.content.content,
+                    }}
+                  ></div>
+                ) : null}
+              </div>
+            ))}
         </div>
 
         <div class="flex flex-row items-center bg-gray-100 rounded-xl relative mb-4 p-4 mt-4 mx-4">
