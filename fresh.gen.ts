@@ -4,6 +4,7 @@
 
 import * as $0 from "./routes/_app.tsx";
 import * as $$0 from "./islands/Chat.tsx";
+import * as $$1 from "./islands/InstagramSearch.tsx";
 
 const manifest = {
   routes: {
@@ -11,6 +12,7 @@ const manifest = {
   },
   islands: {
     "./islands/Chat.tsx": $$0,
+    "./islands/InstagramSearch.tsx": $$1,
   },
   baseUrl: import.meta.url,
 };
