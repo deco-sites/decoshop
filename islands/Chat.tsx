@@ -8,3809 +8,5883 @@ function Chat() {
   const messageList = useSignal<{ content: any; role: "user" | "bot" }[]>(
     [],
   );
-  const mock = true;
+  const mock = false;
 
   if (mock) {
     messageList.value = [
-      {
-        "content": "coleira azul de gato",
-        "role": "bot",
-      },
-      {
-        "content":
-          'A coleira para gatos "Ultimate Blue" da Zee.Cat tem fecho breakaway, que abre sozinho caso o gato se enrosque, além de ser totalmente regulável. O tamanho é único, com regulagem ajustável, e a coleira é feita de super poliéster estampado com tecnologia heat-transfer teteron. Além disso, possui uma logo emborrachada da Zee.Cat, feita em material atóxico. A largura da tira é de 1 cm e a regulagem do pescoço varia de 20 a 30 cm. O preço da coleira é de R$ 59. Esta coleira está em estoque e pode ser encontrada no seguinte link: [Coleira para gatos Ultimate Blue](https://www.zeedog.com.br/coleira-para-gatos-ultimate-blue-9010003/p?skuId=4156233)',
-        "role": "user",
-      },
-      {
-        "content": [
-          [
-            {
-              "@type": "Product",
-              "category": "Gatos>Coleiras",
-              "productID": "4156233",
-              "url":
-                "https://www.zeedog.com.br/coleira-para-gatos-ultimate-blue-9010003/p?skuId=4156233",
-              "name": "Coleira para gatos Ultimate Blue",
-              "description": "Coleira para gatos Ultimate Blue",
-              "brand": {
-                "@type": "Brand",
-                "@id": "930833574",
-                "name": "ZEEDOG",
-              },
-              "inProductGroupWithID": "5032500",
-              "sku": "4156233",
-              "gtin": "7908471101055",
-              "releaseDate": 1635033600000,
-              "additionalProperty": [
-                {
-                  "@type": "PropertyValue",
-                  "name": "Tamanho",
-                  "value": "U",
-                  "valueReference": "SPECIFICATION",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "gender",
-                  "value": "unisex",
-                  "valueReference": "SPECIFICATION",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "category",
-                  "propertyID": "2000096",
-                  "value": "Gatos",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "category",
-                  "propertyID": "2000120",
-                  "value": "Coleiras",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Loja",
-                  "propertyID": "136",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Clerk",
-                  "propertyID": "139",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Apollo 13",
-                  "propertyID": "142",
-                  "description": "highlight",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Coleção de Bloqueio",
-                  "propertyID": "144",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Últimos lançamentos Zee.Cat",
-                  "propertyID": "175",
-                  "description": "highlight",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Feed Criteo",
-                  "propertyID": "265",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Fast Shop",
-                  "propertyID": "283",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Coleções Pets Reposições",
-                  "propertyID": "355",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "colecao_homeZH_3.1",
-                  "propertyID": "399",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "colecao_CRMbonus_acessorios",
-                  "propertyID": "421",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "colecao_homeZD_2.3",
-                  "propertyID": "422",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "teste-pre-venda",
-                  "propertyID": "482",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "teste-pre-venda-sem-pre-sales",
-                  "propertyID": "483",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "solids-l4-out-21",
-                  "propertyID": "484",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "solids-ultimate-blue",
-                  "propertyID": "485",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "lancamento-l4-2021",
-                  "propertyID": "493",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "launch-ZeeCat-nov-21",
-                  "propertyID": "501",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Live-Auto-Gatos-Acessorios",
-                  "propertyID": "502",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "colecao-lojinha-mafia-trigatos",
-                  "propertyID": "576",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "troca-bf22",
-                  "propertyID": "609",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "copa-do-mundo",
-                  "propertyID": "618",
-                  "description": "highlight",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "escolhidos-ate-100",
-                  "propertyID": "624",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "FlashPromo",
-                  "propertyID": "638",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "zd_estampas_monocromaticas",
-                  "propertyID": "699",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "zd_flashpromo_lp",
-                  "propertyID": "702",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "zd_flashpromo_landing",
-                  "propertyID": "704",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "zc_flash_promo_lp",
-                  "propertyID": "725",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "promo_pre_bf_2023",
-                  "propertyID": "729",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "zc_coleiras",
-                  "propertyID": "732",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "dia_do_cliente_2023",
-                  "propertyID": "741",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "gatos_solids",
-                  "propertyID": "744",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Black Friday 2023",
-                  "propertyID": "755",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Segunda Chance BF 2023",
-                  "propertyID": "758",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Black Friday | 40%",
-                  "propertyID": "762",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "RefId",
-                  "value": "5032500_0_0_U",
-                  "valueReference": "ReferenceID",
-                },
-              ],
-              "isVariantOf": {
-                "@type": "ProductGroup",
-                "productGroupID": "5032500",
-                "hasVariant": [
-                  {
-                    "@type": "Product",
-                    "category": "Gatos>Coleiras",
-                    "productID": "4156233",
-                    "url":
-                      "https://www.zeedog.com.br/coleira-para-gatos-ultimate-blue-9010003/p?skuId=4156233",
-                    "name": "Coleira para gatos Ultimate Blue",
-                    "description": "Coleira para gatos Ultimate Blue",
-                    "brand": {
-                      "@type": "Brand",
-                      "@id": "930833574",
-                      "name": "ZEEDOG",
-                    },
-                    "inProductGroupWithID": "5032500",
-                    "sku": "4156233",
-                    "gtin": "7908471101055",
-                    "releaseDate": 1635033600000,
-                    "additionalProperty": [
-                      {
-                        "@type": "PropertyValue",
-                        "name": "Tamanho",
-                        "value": "U",
-                        "valueReference": "SPECIFICATION",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "gender",
-                        "value": "unisex",
-                        "valueReference": "SPECIFICATION",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "category",
-                        "propertyID": "2000096",
-                        "value": "Gatos",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "category",
-                        "propertyID": "2000120",
-                        "value": "Coleiras",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Loja",
-                        "propertyID": "136",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Clerk",
-                        "propertyID": "139",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Apollo 13",
-                        "propertyID": "142",
-                        "description": "highlight",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Coleção de Bloqueio",
-                        "propertyID": "144",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Últimos lançamentos Zee.Cat",
-                        "propertyID": "175",
-                        "description": "highlight",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Feed Criteo",
-                        "propertyID": "265",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Fast Shop",
-                        "propertyID": "283",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Coleções Pets Reposições",
-                        "propertyID": "355",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "colecao_homeZH_3.1",
-                        "propertyID": "399",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "colecao_CRMbonus_acessorios",
-                        "propertyID": "421",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "colecao_homeZD_2.3",
-                        "propertyID": "422",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "teste-pre-venda",
-                        "propertyID": "482",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "teste-pre-venda-sem-pre-sales",
-                        "propertyID": "483",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "solids-l4-out-21",
-                        "propertyID": "484",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "solids-ultimate-blue",
-                        "propertyID": "485",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "lancamento-l4-2021",
-                        "propertyID": "493",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "launch-ZeeCat-nov-21",
-                        "propertyID": "501",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Live-Auto-Gatos-Acessorios",
-                        "propertyID": "502",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "colecao-lojinha-mafia-trigatos",
-                        "propertyID": "576",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "troca-bf22",
-                        "propertyID": "609",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "copa-do-mundo",
-                        "propertyID": "618",
-                        "description": "highlight",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "escolhidos-ate-100",
-                        "propertyID": "624",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "FlashPromo",
-                        "propertyID": "638",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "zd_estampas_monocromaticas",
-                        "propertyID": "699",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "zd_flashpromo_lp",
-                        "propertyID": "702",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "zd_flashpromo_landing",
-                        "propertyID": "704",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "zc_flash_promo_lp",
-                        "propertyID": "725",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "promo_pre_bf_2023",
-                        "propertyID": "729",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "zc_coleiras",
-                        "propertyID": "732",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "dia_do_cliente_2023",
-                        "propertyID": "741",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "gatos_solids",
-                        "propertyID": "744",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Black Friday 2023",
-                        "propertyID": "755",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Segunda Chance BF 2023",
-                        "propertyID": "758",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Black Friday | 40%",
-                        "propertyID": "762",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "RefId",
-                        "value": "5032500_0_0_U",
-                        "valueReference": "ReferenceID",
-                      },
-                    ],
-                    "image": [
-                      {
-                        "@type": "ImageObject",
-                        "alternateName": "cinza",
-                        "url":
-                          "https://zeedog.vtexassets.com/arquivos/ids/202613/coleira-para-gatos-ultimate-blue-zeecat-pet-active.png?v=637656886349730000",
-                        "name": "cinza",
-                      },
-                      {
-                        "@type": "ImageObject",
-                        "alternateName": "mainhover",
-                        "url":
-                          "https://zeedog.vtexassets.com/arquivos/ids/202614/coleira-para-gatos-ultimate-blue-zeecat-pet-hover.png?v=637656886434000000",
-                        "name": "mainhover",
-                      },
-                    ],
-                    "offers": {
-                      "@type": "AggregateOffer",
-                      "priceCurrency": "BRL",
-                      "highPrice": 59,
-                      "lowPrice": 59,
-                      "offerCount": 1,
-                      "offers": [
-                        {
-                          "@type": "Offer",
-                          "price": 59,
-                          "seller": "1",
-                          "priceValidUntil": "2024-12-01T18:19:57Z",
-                          "inventoryLevel": {
-                            "value": 10000,
-                          },
-                          "giftSkuIds": [],
-                          "teasers": [],
-                          "priceSpecification": [
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/ListPrice",
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SRP",
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "American Express",
-                              "description": "American Express à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "American Express",
-                              "description":
-                                "American Express 2 vezes sem juros",
-                              "billingDuration": 2,
-                              "billingIncrement": 29.5,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "American Express",
-                              "description":
-                                "American Express 3 vezes sem juros",
-                              "billingDuration": 3,
-                              "billingIncrement": 19.66,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Visa",
-                              "description": "Visa à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Visa",
-                              "description": "Visa 2 vezes sem juros",
-                              "billingDuration": 2,
-                              "billingIncrement": 29.5,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Visa",
-                              "description": "Visa 3 vezes sem juros",
-                              "billingDuration": 3,
-                              "billingIncrement": 19.66,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Mastercard",
-                              "description": "Mastercard à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Mastercard",
-                              "description": "Mastercard 2 vezes sem juros",
-                              "billingDuration": 2,
-                              "billingIncrement": 29.5,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Mastercard",
-                              "description": "Mastercard 3 vezes sem juros",
-                              "billingDuration": 3,
-                              "billingIncrement": 19.66,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Boleto Bancário",
-                              "description": "Boleto Bancário à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Hipercard",
-                              "description": "Hipercard à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Hipercard",
-                              "description": "Hipercard 2 vezes sem juros",
-                              "billingDuration": 2,
-                              "billingIncrement": 29.5,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Hipercard",
-                              "description": "Hipercard 3 vezes sem juros",
-                              "billingDuration": 3,
-                              "billingIncrement": 19.66,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Elo",
-                              "description": "Elo à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Elo",
-                              "description": "Elo 2 vezes sem juros",
-                              "billingDuration": 2,
-                              "billingIncrement": 29.5,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Vale",
-                              "description": "Vale à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Maestro",
-                              "description": "Maestro à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Venda Direta Debito",
-                              "description": "Venda Direta Debito à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Venda Direta Credito",
-                              "description": "Venda Direta Credito à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Venda Direta Credito",
-                              "description":
-                                "Venda Direta Credito 2 vezes sem juros",
-                              "billingDuration": 2,
-                              "billingIncrement": 29.5,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Venda Direta Credito",
-                              "description":
-                                "Venda Direta Credito 3 vezes sem juros",
-                              "billingDuration": 3,
-                              "billingIncrement": 19.66,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "PicPay",
-                              "description": "PicPay à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Pix",
-                              "description": "Pix à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                          ],
-                          "availability": "https://schema.org/InStock",
-                        },
-                      ],
-                    },
-                  },
-                ],
-                "url":
-                  "https://www.zeedog.com.br/coleira-para-gatos-ultimate-blue-9010003/p",
-                "name": "Coleira para gatos Ultimate Blue",
-                "additionalProperty": [
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Release_Date",
-                    "value": "2021-10-28",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Cor",
-                    "value": "Azul",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "nome_produto",
-                    "value": "Ultimate Blue",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Imagens_Medidas",
-                    "value":
-                      "['sku':'u','urlImagem':'https://zeedog.vteximg.com.br/arquivos/Zee.Cat-Coleira-Size-Chart-BR.png'];",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Bundle_Recomendacao",
-                    "value":
-                      "['carrossel':'1','posicao':'1','produto':'5032515'];\r\n['carrossel':'2','posicao':'1','produto':'5033799'];",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Fotos_Produto",
-                    "value":
-                      "['urlImagem':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-ultimate-blue-zeecat-pet-main-1.jpg','altImagem':'Coleira para gatos Ultimate Blue  | Zee.Cat'];\r\n['urlVideo':'https://d17lu9slax0fqq.cloudfront.net/videos/pdp/zeecat-buckle-guide.mp4','urlImagem':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-ultimate-blue-zeecat-pet-main-2.jpg','altImagem':'Coleira para gatos Ultimate Blue  | Zee.Cat'];\r\n['urlImagem':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-ultimate-blue-zeecat-pet-main-3.jpg','altImagem':'Coleira para gatos Ultimate Blue  | Zee.Cat'];\r\n['urlImagem':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-ultimate-blue-zeecat-pet-main-4.jpg','altImagem':'Coleira para gatos Ultimate Blue  | Zee.Cat'];",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Age",
-                    "value": "adulto",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "gender",
-                    "value": "unisex",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "gender",
-                    "value": "unisex",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Estampas_Relacionadas",
-                    "value":
-                      "['idProduto':'5032500','nomeProduto':'Coleira para gatos Ultimate Blue','nomeEstampa':'Ultimate Blue','imagemProduto':'http://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-ultimate-blue-zeecat-pet-active.png'];\r\n['idProduto':'5032501','nomeProduto':'Coleira para gatos Pink Led','nomeEstampa':'Pink Led','imagemProduto':'http://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-pink-led-zeecat-pet-active.png'];\r\n['idProduto':'5032502','nomeProduto':'Coleira para gatos Sand','nomeEstampa':'Sand','imagemProduto':'http://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-sand-zeecat-pet-active.png'];\r\n['idProduto':'5000865','nomeProduto':'Coleira para gatos Gotham','nomeEstampa':'Gotham','imagemProduto':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos_gotham_preto_zeecat_gato_pet_fb.jpg'];",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "TableSizeChart",
-                    "value":
-                      '<ul class="sizes">\r\n   <li>Largura da tira</li>\r\n   <li><span>U</span>1 cm</li>\r\n</ul>\r\n<ul class="sizes">\r\n   <li>Regulagem do pescoço</li>\r\n   <li><span>U</span>20 a 30 cm</li>\r\n</ul>',
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Descricao_Produto",
-                    "value":
-                      "A coleira para gatos Ultimate Blue da Zee.Cat tem fecho breakway, que abre sozinho caso o gato se enrosque, além de ser totalmente regulável.",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Atributos_Especiais",
-                    "value":
-                      "<ul><li>Tamanho único com regulagem ajustável;</li>\r\n<li>Exclusivo fecho breakaway que abre sozinho caso o gato se enrosque;</li>\r\n<li>Super poliéster estampado com tecnologia heat-transfer teteron;</li>\r\n<li>Logo emborrachada da Zee.Cat, feita em material atóxico.</li></ul>",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "facebook_image",
-                    "value":
-                      "https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-ultimate-blue-zeecat-pet-main-1.jpg",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Tamanho",
-                    "value": "U",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "gender",
-                    "value": "unisex",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "gender",
-                    "value": "unisex",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "sellerId",
-                    "value": "1",
-                    "valueReference": "PROPERTY",
-                  },
-                ],
-                "model": "9010003",
-              },
-              "image": [
-                {
-                  "@type": "ImageObject",
-                  "alternateName": "cinza",
-                  "url":
-                    "https://zeedog.vtexassets.com/arquivos/ids/202613/coleira-para-gatos-ultimate-blue-zeecat-pet-active.png?v=637656886349730000",
-                  "name": "cinza",
-                },
-                {
-                  "@type": "ImageObject",
-                  "alternateName": "mainhover",
-                  "url":
-                    "https://zeedog.vtexassets.com/arquivos/ids/202614/coleira-para-gatos-ultimate-blue-zeecat-pet-hover.png?v=637656886434000000",
-                  "name": "mainhover",
-                },
-              ],
-              "offers": {
-                "@type": "AggregateOffer",
-                "priceCurrency": "BRL",
-                "highPrice": 59,
-                "lowPrice": 59,
-                "offerCount": 1,
-                "offers": [
-                  {
-                    "@type": "Offer",
-                    "price": 59,
-                    "seller": "1",
-                    "priceValidUntil": "2024-12-01T18:19:57Z",
-                    "inventoryLevel": {
-                      "value": 10000,
-                    },
-                    "giftSkuIds": [],
-                    "teasers": [],
-                    "priceSpecification": [
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/ListPrice",
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SRP",
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "American Express",
-                        "description": "American Express à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "American Express",
-                        "description": "American Express 2 vezes sem juros",
-                        "billingDuration": 2,
-                        "billingIncrement": 29.5,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "American Express",
-                        "description": "American Express 3 vezes sem juros",
-                        "billingDuration": 3,
-                        "billingIncrement": 19.66,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Visa",
-                        "description": "Visa à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Visa",
-                        "description": "Visa 2 vezes sem juros",
-                        "billingDuration": 2,
-                        "billingIncrement": 29.5,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Visa",
-                        "description": "Visa 3 vezes sem juros",
-                        "billingDuration": 3,
-                        "billingIncrement": 19.66,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Mastercard",
-                        "description": "Mastercard à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Mastercard",
-                        "description": "Mastercard 2 vezes sem juros",
-                        "billingDuration": 2,
-                        "billingIncrement": 29.5,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Mastercard",
-                        "description": "Mastercard 3 vezes sem juros",
-                        "billingDuration": 3,
-                        "billingIncrement": 19.66,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Boleto Bancário",
-                        "description": "Boleto Bancário à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Hipercard",
-                        "description": "Hipercard à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Hipercard",
-                        "description": "Hipercard 2 vezes sem juros",
-                        "billingDuration": 2,
-                        "billingIncrement": 29.5,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Hipercard",
-                        "description": "Hipercard 3 vezes sem juros",
-                        "billingDuration": 3,
-                        "billingIncrement": 19.66,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Elo",
-                        "description": "Elo à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Elo",
-                        "description": "Elo 2 vezes sem juros",
-                        "billingDuration": 2,
-                        "billingIncrement": 29.5,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Vale",
-                        "description": "Vale à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Maestro",
-                        "description": "Maestro à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Venda Direta Debito",
-                        "description": "Venda Direta Debito à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Venda Direta Credito",
-                        "description": "Venda Direta Credito à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Venda Direta Credito",
-                        "description": "Venda Direta Credito 2 vezes sem juros",
-                        "billingDuration": 2,
-                        "billingIncrement": 29.5,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Venda Direta Credito",
-                        "description": "Venda Direta Credito 3 vezes sem juros",
-                        "billingDuration": 3,
-                        "billingIncrement": 19.66,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "PicPay",
-                        "description": "PicPay à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Pix",
-                        "description": "Pix à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                    ],
-                    "availability": "https://schema.org/InStock",
-                  },
-                ],
-              },
+        {
+            "content": "camisa azul",
+            "role": "bot"
+        },
+        {
+            "content": {
+                "messageId": "run_GuQ6Ysx73RMWhmL9dmLsSDYX",
+                "type": "start_function_call",
+                "content": {
+                    "name": "deco-sites/decoshop/loaders/productList.ts",
+                    "props": {
+                        "query": "camisa azul",
+                        "storeName": "lojastorra"
+                    }
+                }
             },
-            {
-              "@type": "Product",
-              "category": "Gatos>Coleiras",
-              "productID": "4008257",
-              "url":
-                "https://www.zeedog.com.br/coleira-para-gatos-neopro-azul--901278/p?skuId=4008257",
-              "name": "Coleira para gatos Neopro Azul\n U",
-              "description": "Coleira para gatos Neopro Azul",
-              "brand": {
-                "@type": "Brand",
-                "@id": "930833574",
-                "name": "ZEEDOG",
-              },
-              "inProductGroupWithID": "5005699",
-              "sku": "4008257",
-              "gtin": "7898582481095",
-              "releaseDate": 1593043200000,
-              "additionalProperty": [
-                {
-                  "@type": "PropertyValue",
-                  "name": "Tamanho",
-                  "value": "U",
-                  "valueReference": "SPECIFICATION",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "gender",
-                  "value": "unisex",
-                  "valueReference": "SPECIFICATION",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "category",
-                  "propertyID": "2000096",
-                  "value": "Gatos",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "category",
-                  "propertyID": "2000120",
-                  "value": "Coleiras",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Loja",
-                  "propertyID": "136",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Clerk",
-                  "propertyID": "139",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Apollo 13",
-                  "propertyID": "142",
-                  "description": "highlight",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Coleção de Bloqueio",
-                  "propertyID": "144",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Últimos lançamentos Zee.Cat",
-                  "propertyID": "175",
-                  "description": "highlight",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Neopro",
-                  "propertyID": "183",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Neopro Azul",
-                  "propertyID": "185",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Estampa NeoPro",
-                  "propertyID": "189",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Feed Criteo",
-                  "propertyID": "265",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Promo Até 40 Off",
-                  "propertyID": "266",
-                  "description": "highlight",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Fast Shop",
-                  "propertyID": "283",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Coleção BF 2020 Completo",
-                  "propertyID": "337",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Coleção Facebook",
-                  "propertyID": "346",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Produtos Reposicao Jan-2021",
-                  "propertyID": "348",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Coleções Pets Reposições Acessórios",
-                  "propertyID": "356",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "colecao_CRMbonus_acessorios",
-                  "propertyID": "421",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "colecao_fp_acessorios",
-                  "propertyID": "458",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "teste-pre-venda",
-                  "propertyID": "482",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "teste-pre-venda-sem-pre-sales",
-                  "propertyID": "483",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Live-Auto-Gatos-Acessorios",
-                  "propertyID": "502",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "zd_flashpromo_lp",
-                  "propertyID": "702",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "promo_pre_bf_2023",
-                  "propertyID": "729",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "zc_coleiras",
-                  "propertyID": "732",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Promo Especial",
-                  "propertyID": "737",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "gatos_neopro",
-                  "propertyID": "743",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Black Friday 2023",
-                  "propertyID": "755",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Segunda Chance BF 2023",
-                  "propertyID": "758",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Black Friday | 50% até 70%",
-                  "propertyID": "764",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "RefId",
-                  "value": "5005699_0_0_U",
-                  "valueReference": "ReferenceID",
-                },
-              ],
-              "isVariantOf": {
-                "@type": "ProductGroup",
-                "productGroupID": "5005699",
-                "hasVariant": [
-                  {
-                    "@type": "Product",
-                    "category": "Gatos>Coleiras",
-                    "productID": "4008257",
-                    "url":
-                      "https://www.zeedog.com.br/coleira-para-gatos-neopro-azul--901278/p?skuId=4008257",
-                    "name": "Coleira para gatos Neopro Azul\n U",
-                    "description": "Coleira para gatos Neopro Azul",
-                    "brand": {
-                      "@type": "Brand",
-                      "@id": "930833574",
-                      "name": "ZEEDOG",
-                    },
-                    "inProductGroupWithID": "5005699",
-                    "sku": "4008257",
-                    "gtin": "7898582481095",
-                    "releaseDate": 1593043200000,
-                    "additionalProperty": [
-                      {
-                        "@type": "PropertyValue",
-                        "name": "Tamanho",
-                        "value": "U",
-                        "valueReference": "SPECIFICATION",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "gender",
-                        "value": "unisex",
-                        "valueReference": "SPECIFICATION",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "category",
-                        "propertyID": "2000096",
-                        "value": "Gatos",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "category",
-                        "propertyID": "2000120",
-                        "value": "Coleiras",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Loja",
-                        "propertyID": "136",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Clerk",
-                        "propertyID": "139",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Apollo 13",
-                        "propertyID": "142",
-                        "description": "highlight",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Coleção de Bloqueio",
-                        "propertyID": "144",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Últimos lançamentos Zee.Cat",
-                        "propertyID": "175",
-                        "description": "highlight",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Neopro",
-                        "propertyID": "183",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Neopro Azul",
-                        "propertyID": "185",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Estampa NeoPro",
-                        "propertyID": "189",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Feed Criteo",
-                        "propertyID": "265",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Promo Até 40 Off",
-                        "propertyID": "266",
-                        "description": "highlight",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Fast Shop",
-                        "propertyID": "283",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Coleção BF 2020 Completo",
-                        "propertyID": "337",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Coleção Facebook",
-                        "propertyID": "346",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Produtos Reposicao Jan-2021",
-                        "propertyID": "348",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Coleções Pets Reposições Acessórios",
-                        "propertyID": "356",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "colecao_CRMbonus_acessorios",
-                        "propertyID": "421",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "colecao_fp_acessorios",
-                        "propertyID": "458",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "teste-pre-venda",
-                        "propertyID": "482",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "teste-pre-venda-sem-pre-sales",
-                        "propertyID": "483",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Live-Auto-Gatos-Acessorios",
-                        "propertyID": "502",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "zd_flashpromo_lp",
-                        "propertyID": "702",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "promo_pre_bf_2023",
-                        "propertyID": "729",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "zc_coleiras",
-                        "propertyID": "732",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Promo Especial",
-                        "propertyID": "737",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "gatos_neopro",
-                        "propertyID": "743",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Black Friday 2023",
-                        "propertyID": "755",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Segunda Chance BF 2023",
-                        "propertyID": "758",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Black Friday | 50% até 70%",
-                        "propertyID": "764",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "RefId",
-                        "value": "5005699_0_0_U",
-                        "valueReference": "ReferenceID",
-                      },
-                    ],
-                    "image": [
-                      {
-                        "@type": "ImageObject",
-                        "alternateName": "cinza",
-                        "url":
-                          "https://zeedog.vtexassets.com/arquivos/ids/197569/coleira-para-gatos-blue-zeecat-neopro-zeedog-active.png?v=637514338580900000",
-                        "name": "cinza",
-                      },
-                      {
-                        "@type": "ImageObject",
-                        "alternateName": "mainhover",
-                        "url":
-                          "https://zeedog.vtexassets.com/arquivos/ids/201656/coleira-para-gatos-blue-zeecat-neopro-zeedog-hover.png?v=637636075653100000",
-                        "name": "mainhover",
-                      },
-                    ],
-                    "offers": {
-                      "@type": "AggregateOffer",
-                      "priceCurrency": "BRL",
-                      "highPrice": 69,
-                      "lowPrice": 69,
-                      "offerCount": 1,
-                      "offers": [
-                        {
-                          "@type": "Offer",
-                          "price": 69,
-                          "seller": "1",
-                          "priceValidUntil": "2024-12-01T18:19:57Z",
-                          "inventoryLevel": {
-                            "value": 0,
-                          },
-                          "giftSkuIds": [],
-                          "teasers": [],
-                          "priceSpecification": [
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/ListPrice",
-                              "price": 69,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "price": 69,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SRP",
-                              "price": 69,
-                            },
-                          ],
-                          "availability": "https://schema.org/OutOfStock",
-                        },
-                      ],
-                    },
-                  },
-                ],
-                "url":
-                  "https://www.zeedog.com.br/coleira-para-gatos-neopro-azul--901278/p",
-                "name": "Coleira para gatos Neopro Azul",
-                "additionalProperty": [
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Release_Date",
-                    "value": "2019-12-31",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Cor",
-                    "value": "Azul",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "nome_produto",
-                    "value": "Azul",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Bundle_Recomendacao",
-                    "value":
-                      "['carrossel':'1','posicao':'1','produto':'5006028'];\r\n['carrossel':'1','posicao':'2','produto':'5011104'];\r\n['carrossel':'1','posicao':'3','produto':'413'];\r\n['carrossel':'2','posicao':'1','produto':'5006180'];",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "estampa",
-                    "value": "Neopro Azul",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Fotos_Produto",
-                    "value":
-                      "['urlImagem':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-neopro-blue-azul-zeecat-zeedog-gato-pet-main-1-.jpg','altImagem':'Coleira para gatos Neopro Azul | Zee.Dog'];\r\n['urlVideo':'https://s3-sa-east-1.amazonaws.com/zee.dog/videos/pdp/zeecat-buckle-guide.mp4','urlImagem':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-neopro-blue-azul-zeecat-zeedog-gato-pet-main-2-.jpg','altImagem':'Coleira para gatos Neopro Azul | Zee.Dog'];\r\n['urlImagem':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-neopro-blue-azul-zeecat-zeedog-gato-pet-main-3-.jpg','altImagem':'Coleira para gatos Neopro Azul | Zee.Dog'];\r\n['urlImagem':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-neopro-blue-azul-zeecat-zeedog-gato-pet-main-4-.jpg','altImagem':'Coleira para gatos Neopro Azul | Zee.Dog'];",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Age",
-                    "value": "adulto",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "gender",
-                    "value": "unisex",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Estampas_Relacionadas",
-                    "value":
-                      "['idProduto':'5005698','nomeProduto':'Coleira para gatos Neopro Preto','nomeEstampa':'Preto','imagemProduto':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos_neopro_preto_zeedog_gato_pet_fb.jpg'];\r\n['idProduto':'5005699','nomeProduto':'Coleira para gatos Neopro Azul','nomeEstampa':'Azul','imagemProduto':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos_neopro_blue_zeecat_gato_pet_fb.png'];\r\n['idProduto':'5005700','nomeProduto':'Coleira para gatos Neopro Coral','nomeEstampa':'Coral','imagemProduto':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos_neopro_red_zeecat_gato_pet_fb.png'];\r\n['idProduto':'5005701','nomeProduto':'Coleira para gatos Neopro Verde Limão','nomeEstampa':'Verde Limão','imagemProduto':'https://zeedog.vteximg.com.br/arquivos/ids/172379_2/coleira-para-gatos_neopro_limegreen_zeecat_gato_pet_active.png'];",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "TableSizeChart",
-                    "value":
-                      '<ul class="sizes">\r\n   <li>Largura da tira</li>\r\n   <li><span>U</span>1 cm</li>\r\n</ul>\r\n<ul class="sizes">\r\n   <li>Regulagem do pescoço</li>\r\n   <li><span>U</span>20 a 30 cm</li>\r\n</ul>',
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Descricao_Produto",
-                    "value":
-                      "A coleira para gatos NeoPro é mais um super lançamento da Zee.Dog. A coleira possui uma nova tecnologia com ultra proteção externa de borracha de PVC chamada NeoPro, resistente à água e à ação do tempo, evitando que a coleira fique suja, molhada ou arranhada. Além de ser muito mais fácil de limpar, a coleira é feita com a mesma qualidade e material que a coleira para cachorro da Zee.Dog. Nossas coleiras de gato tem fecho breakway, que abre sozinho caso o gato se enrosque. Totalmente reguláveis, para gatos de atitude.",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Atributos_Especiais",
-                    "value":
-                      "<ul>\r\n\r\n<li>Nova tecnologia NeoPro, com ultra proteção resistente à água e à ação do tempo</li>\r\n<li>Muito fácil de limpar</li>\r\n<li>Tamanho único com regularem ajustável.</li>\r\n<li>Exclusivo fecho breakaway que abre sozinho caso o gato se enrosque.</li>\r\n<li>Logo emborrachada da Zee.Dog, feita em material atóxico.</li>\r\n</ul>",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "facebook_image",
-                    "value":
-                      "https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-neopro-blue-azul-zeecat-zeedog-gato-pet-main-1.jpg",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "sellerId",
-                    "value": "1",
-                    "valueReference": "PROPERTY",
-                  },
-                ],
-                "model": "901278",
-              },
-              "image": [
-                {
-                  "@type": "ImageObject",
-                  "alternateName": "cinza",
-                  "url":
-                    "https://zeedog.vtexassets.com/arquivos/ids/197569/coleira-para-gatos-blue-zeecat-neopro-zeedog-active.png?v=637514338580900000",
-                  "name": "cinza",
-                },
-                {
-                  "@type": "ImageObject",
-                  "alternateName": "mainhover",
-                  "url":
-                    "https://zeedog.vtexassets.com/arquivos/ids/201656/coleira-para-gatos-blue-zeecat-neopro-zeedog-hover.png?v=637636075653100000",
-                  "name": "mainhover",
-                },
-              ],
-              "offers": {
-                "@type": "AggregateOffer",
-                "priceCurrency": "BRL",
-                "highPrice": 69,
-                "lowPrice": 69,
-                "offerCount": 1,
-                "offers": [
-                  {
-                    "@type": "Offer",
-                    "price": 69,
-                    "seller": "1",
-                    "priceValidUntil": "2024-12-01T18:19:57Z",
-                    "inventoryLevel": {
-                      "value": 0,
-                    },
-                    "giftSkuIds": [],
-                    "teasers": [],
-                    "priceSpecification": [
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/ListPrice",
-                        "price": 69,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "price": 69,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SRP",
-                        "price": 69,
-                      },
-                    ],
-                    "availability": "https://schema.org/OutOfStock",
-                  },
-                ],
-              },
+            "role": "user"
+        },
+        {
+            "content": {
+                "messageId": "run_GuQ6Ysx73RMWhmL9dmLsSDYX",
+                "type": "message",
+                "content": "I found a blue shirt for men with long sleeves. It is made of polyester fabric and has a fold-down collar, button closure, and a front pocket with standard sewing and finishing. The brand is Analogy, and it is available in sizes from P to GG. The price is BRL 89.99. You can find more details and purchase it here: [Blue Shirt with Long Sleeves](https://www.lojastorra.com.br/camisa-masculina-manga-longa-com-bolso-azul-28224000069022/p?skuId=261576)"
             },
-          ],
-          [
-            {
-              "@type": "Product",
-              "category": "Gatos>Coleiras",
-              "productID": "4156233",
-              "url":
-                "https://www.zeedog.com.br/coleira-para-gatos-ultimate-blue-9010003/p?skuId=4156233",
-              "name": "Coleira para gatos Ultimate Blue",
-              "description": "Coleira para gatos Ultimate Blue",
-              "brand": {
-                "@type": "Brand",
-                "@id": "930833574",
-                "name": "ZEEDOG",
-              },
-              "inProductGroupWithID": "5032500",
-              "sku": "4156233",
-              "gtin": "7908471101055",
-              "releaseDate": 1635033600000,
-              "additionalProperty": [
-                {
-                  "@type": "PropertyValue",
-                  "name": "Tamanho",
-                  "value": "U",
-                  "valueReference": "SPECIFICATION",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "gender",
-                  "value": "unisex",
-                  "valueReference": "SPECIFICATION",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "category",
-                  "propertyID": "2000096",
-                  "value": "Gatos",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "category",
-                  "propertyID": "2000120",
-                  "value": "Coleiras",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Loja",
-                  "propertyID": "136",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Clerk",
-                  "propertyID": "139",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Apollo 13",
-                  "propertyID": "142",
-                  "description": "highlight",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Coleção de Bloqueio",
-                  "propertyID": "144",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Últimos lançamentos Zee.Cat",
-                  "propertyID": "175",
-                  "description": "highlight",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Feed Criteo",
-                  "propertyID": "265",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Fast Shop",
-                  "propertyID": "283",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Coleções Pets Reposições",
-                  "propertyID": "355",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "colecao_homeZH_3.1",
-                  "propertyID": "399",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "colecao_CRMbonus_acessorios",
-                  "propertyID": "421",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "colecao_homeZD_2.3",
-                  "propertyID": "422",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "teste-pre-venda",
-                  "propertyID": "482",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "teste-pre-venda-sem-pre-sales",
-                  "propertyID": "483",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "solids-l4-out-21",
-                  "propertyID": "484",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "solids-ultimate-blue",
-                  "propertyID": "485",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "lancamento-l4-2021",
-                  "propertyID": "493",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "launch-ZeeCat-nov-21",
-                  "propertyID": "501",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Live-Auto-Gatos-Acessorios",
-                  "propertyID": "502",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "colecao-lojinha-mafia-trigatos",
-                  "propertyID": "576",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "troca-bf22",
-                  "propertyID": "609",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "copa-do-mundo",
-                  "propertyID": "618",
-                  "description": "highlight",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "escolhidos-ate-100",
-                  "propertyID": "624",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "FlashPromo",
-                  "propertyID": "638",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "zd_estampas_monocromaticas",
-                  "propertyID": "699",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "zd_flashpromo_lp",
-                  "propertyID": "702",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "zd_flashpromo_landing",
-                  "propertyID": "704",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "zc_flash_promo_lp",
-                  "propertyID": "725",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "promo_pre_bf_2023",
-                  "propertyID": "729",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "zc_coleiras",
-                  "propertyID": "732",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "dia_do_cliente_2023",
-                  "propertyID": "741",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "gatos_solids",
-                  "propertyID": "744",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Black Friday 2023",
-                  "propertyID": "755",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Segunda Chance BF 2023",
-                  "propertyID": "758",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Black Friday | 40%",
-                  "propertyID": "762",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "RefId",
-                  "value": "5032500_0_0_U",
-                  "valueReference": "ReferenceID",
-                },
-              ],
-              "isVariantOf": {
-                "@type": "ProductGroup",
-                "productGroupID": "5032500",
-                "hasVariant": [
-                  {
-                    "@type": "Product",
-                    "category": "Gatos>Coleiras",
-                    "productID": "4156233",
-                    "url":
-                      "https://www.zeedog.com.br/coleira-para-gatos-ultimate-blue-9010003/p?skuId=4156233",
-                    "name": "Coleira para gatos Ultimate Blue",
-                    "description": "Coleira para gatos Ultimate Blue",
-                    "brand": {
-                      "@type": "Brand",
-                      "@id": "930833574",
-                      "name": "ZEEDOG",
-                    },
-                    "inProductGroupWithID": "5032500",
-                    "sku": "4156233",
-                    "gtin": "7908471101055",
-                    "releaseDate": 1635033600000,
-                    "additionalProperty": [
-                      {
-                        "@type": "PropertyValue",
-                        "name": "Tamanho",
-                        "value": "U",
-                        "valueReference": "SPECIFICATION",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "gender",
-                        "value": "unisex",
-                        "valueReference": "SPECIFICATION",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "category",
-                        "propertyID": "2000096",
-                        "value": "Gatos",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "category",
-                        "propertyID": "2000120",
-                        "value": "Coleiras",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Loja",
-                        "propertyID": "136",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Clerk",
-                        "propertyID": "139",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Apollo 13",
-                        "propertyID": "142",
-                        "description": "highlight",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Coleção de Bloqueio",
-                        "propertyID": "144",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Últimos lançamentos Zee.Cat",
-                        "propertyID": "175",
-                        "description": "highlight",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Feed Criteo",
-                        "propertyID": "265",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Fast Shop",
-                        "propertyID": "283",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Coleções Pets Reposições",
-                        "propertyID": "355",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "colecao_homeZH_3.1",
-                        "propertyID": "399",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "colecao_CRMbonus_acessorios",
-                        "propertyID": "421",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "colecao_homeZD_2.3",
-                        "propertyID": "422",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "teste-pre-venda",
-                        "propertyID": "482",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "teste-pre-venda-sem-pre-sales",
-                        "propertyID": "483",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "solids-l4-out-21",
-                        "propertyID": "484",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "solids-ultimate-blue",
-                        "propertyID": "485",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "lancamento-l4-2021",
-                        "propertyID": "493",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "launch-ZeeCat-nov-21",
-                        "propertyID": "501",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Live-Auto-Gatos-Acessorios",
-                        "propertyID": "502",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "colecao-lojinha-mafia-trigatos",
-                        "propertyID": "576",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "troca-bf22",
-                        "propertyID": "609",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "copa-do-mundo",
-                        "propertyID": "618",
-                        "description": "highlight",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "escolhidos-ate-100",
-                        "propertyID": "624",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "FlashPromo",
-                        "propertyID": "638",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "zd_estampas_monocromaticas",
-                        "propertyID": "699",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "zd_flashpromo_lp",
-                        "propertyID": "702",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "zd_flashpromo_landing",
-                        "propertyID": "704",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "zc_flash_promo_lp",
-                        "propertyID": "725",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "promo_pre_bf_2023",
-                        "propertyID": "729",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "zc_coleiras",
-                        "propertyID": "732",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "dia_do_cliente_2023",
-                        "propertyID": "741",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "gatos_solids",
-                        "propertyID": "744",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Black Friday 2023",
-                        "propertyID": "755",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Segunda Chance BF 2023",
-                        "propertyID": "758",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Black Friday | 40%",
-                        "propertyID": "762",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "RefId",
-                        "value": "5032500_0_0_U",
-                        "valueReference": "ReferenceID",
-                      },
-                    ],
-                    "image": [
-                      {
-                        "@type": "ImageObject",
-                        "alternateName": "cinza",
-                        "url":
-                          "https://zeedog.vtexassets.com/arquivos/ids/202613/coleira-para-gatos-ultimate-blue-zeecat-pet-active.png?v=637656886349730000",
-                        "name": "cinza",
-                      },
-                      {
-                        "@type": "ImageObject",
-                        "alternateName": "mainhover",
-                        "url":
-                          "https://zeedog.vtexassets.com/arquivos/ids/202614/coleira-para-gatos-ultimate-blue-zeecat-pet-hover.png?v=637656886434000000",
-                        "name": "mainhover",
-                      },
-                    ],
-                    "offers": {
-                      "@type": "AggregateOffer",
-                      "priceCurrency": "BRL",
-                      "highPrice": 59,
-                      "lowPrice": 59,
-                      "offerCount": 1,
-                      "offers": [
-                        {
-                          "@type": "Offer",
-                          "price": 59,
-                          "seller": "1",
-                          "priceValidUntil": "2024-12-01T18:19:57Z",
-                          "inventoryLevel": {
-                            "value": 10000,
-                          },
-                          "giftSkuIds": [],
-                          "teasers": [],
-                          "priceSpecification": [
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/ListPrice",
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SRP",
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "American Express",
-                              "description": "American Express à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "American Express",
-                              "description":
-                                "American Express 2 vezes sem juros",
-                              "billingDuration": 2,
-                              "billingIncrement": 29.5,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "American Express",
-                              "description":
-                                "American Express 3 vezes sem juros",
-                              "billingDuration": 3,
-                              "billingIncrement": 19.66,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Visa",
-                              "description": "Visa à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Visa",
-                              "description": "Visa 2 vezes sem juros",
-                              "billingDuration": 2,
-                              "billingIncrement": 29.5,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Visa",
-                              "description": "Visa 3 vezes sem juros",
-                              "billingDuration": 3,
-                              "billingIncrement": 19.66,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Mastercard",
-                              "description": "Mastercard à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Mastercard",
-                              "description": "Mastercard 2 vezes sem juros",
-                              "billingDuration": 2,
-                              "billingIncrement": 29.5,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Mastercard",
-                              "description": "Mastercard 3 vezes sem juros",
-                              "billingDuration": 3,
-                              "billingIncrement": 19.66,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Boleto Bancário",
-                              "description": "Boleto Bancário à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Hipercard",
-                              "description": "Hipercard à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Hipercard",
-                              "description": "Hipercard 2 vezes sem juros",
-                              "billingDuration": 2,
-                              "billingIncrement": 29.5,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Hipercard",
-                              "description": "Hipercard 3 vezes sem juros",
-                              "billingDuration": 3,
-                              "billingIncrement": 19.66,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Elo",
-                              "description": "Elo à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Elo",
-                              "description": "Elo 2 vezes sem juros",
-                              "billingDuration": 2,
-                              "billingIncrement": 29.5,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Vale",
-                              "description": "Vale à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Maestro",
-                              "description": "Maestro à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Venda Direta Debito",
-                              "description": "Venda Direta Debito à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Venda Direta Credito",
-                              "description": "Venda Direta Credito à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Venda Direta Credito",
-                              "description":
-                                "Venda Direta Credito 2 vezes sem juros",
-                              "billingDuration": 2,
-                              "billingIncrement": 29.5,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Venda Direta Credito",
-                              "description":
-                                "Venda Direta Credito 3 vezes sem juros",
-                              "billingDuration": 3,
-                              "billingIncrement": 19.66,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "PicPay",
-                              "description": "PicPay à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "priceComponentType":
-                                "https://schema.org/Installment",
-                              "name": "Pix",
-                              "description": "Pix à vista",
-                              "billingDuration": 1,
-                              "billingIncrement": 59,
-                              "price": 59,
-                            },
-                          ],
-                          "availability": "https://schema.org/InStock",
+            "role": "user"
+        },
+        {
+            "content": {
+                "messageId": "run_GuQ6Ysx73RMWhmL9dmLsSDYX",
+                "type": "function_calls",
+                "content": [
+                    {
+                        "name": "deco-sites/decoshop/loaders/productList.ts",
+                        "props": {
+                            "query": "camisa azul",
+                            "storeName": "lojastorra"
                         },
-                      ],
-                    },
-                  },
-                ],
-                "url":
-                  "https://www.zeedog.com.br/coleira-para-gatos-ultimate-blue-9010003/p",
-                "name": "Coleira para gatos Ultimate Blue",
-                "additionalProperty": [
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Release_Date",
-                    "value": "2021-10-28",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Cor",
-                    "value": "Azul",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "nome_produto",
-                    "value": "Ultimate Blue",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Imagens_Medidas",
-                    "value":
-                      "['sku':'u','urlImagem':'https://zeedog.vteximg.com.br/arquivos/Zee.Cat-Coleira-Size-Chart-BR.png'];",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Bundle_Recomendacao",
-                    "value":
-                      "['carrossel':'1','posicao':'1','produto':'5032515'];\r\n['carrossel':'2','posicao':'1','produto':'5033799'];",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Fotos_Produto",
-                    "value":
-                      "['urlImagem':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-ultimate-blue-zeecat-pet-main-1.jpg','altImagem':'Coleira para gatos Ultimate Blue  | Zee.Cat'];\r\n['urlVideo':'https://d17lu9slax0fqq.cloudfront.net/videos/pdp/zeecat-buckle-guide.mp4','urlImagem':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-ultimate-blue-zeecat-pet-main-2.jpg','altImagem':'Coleira para gatos Ultimate Blue  | Zee.Cat'];\r\n['urlImagem':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-ultimate-blue-zeecat-pet-main-3.jpg','altImagem':'Coleira para gatos Ultimate Blue  | Zee.Cat'];\r\n['urlImagem':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-ultimate-blue-zeecat-pet-main-4.jpg','altImagem':'Coleira para gatos Ultimate Blue  | Zee.Cat'];",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Age",
-                    "value": "adulto",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "gender",
-                    "value": "unisex",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "gender",
-                    "value": "unisex",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Estampas_Relacionadas",
-                    "value":
-                      "['idProduto':'5032500','nomeProduto':'Coleira para gatos Ultimate Blue','nomeEstampa':'Ultimate Blue','imagemProduto':'http://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-ultimate-blue-zeecat-pet-active.png'];\r\n['idProduto':'5032501','nomeProduto':'Coleira para gatos Pink Led','nomeEstampa':'Pink Led','imagemProduto':'http://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-pink-led-zeecat-pet-active.png'];\r\n['idProduto':'5032502','nomeProduto':'Coleira para gatos Sand','nomeEstampa':'Sand','imagemProduto':'http://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-sand-zeecat-pet-active.png'];\r\n['idProduto':'5000865','nomeProduto':'Coleira para gatos Gotham','nomeEstampa':'Gotham','imagemProduto':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos_gotham_preto_zeecat_gato_pet_fb.jpg'];",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "TableSizeChart",
-                    "value":
-                      '<ul class="sizes">\r\n   <li>Largura da tira</li>\r\n   <li><span>U</span>1 cm</li>\r\n</ul>\r\n<ul class="sizes">\r\n   <li>Regulagem do pescoço</li>\r\n   <li><span>U</span>20 a 30 cm</li>\r\n</ul>',
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Descricao_Produto",
-                    "value":
-                      "A coleira para gatos Ultimate Blue da Zee.Cat tem fecho breakway, que abre sozinho caso o gato se enrosque, além de ser totalmente regulável.",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Atributos_Especiais",
-                    "value":
-                      "<ul><li>Tamanho único com regulagem ajustável;</li>\r\n<li>Exclusivo fecho breakaway que abre sozinho caso o gato se enrosque;</li>\r\n<li>Super poliéster estampado com tecnologia heat-transfer teteron;</li>\r\n<li>Logo emborrachada da Zee.Cat, feita em material atóxico.</li></ul>",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "facebook_image",
-                    "value":
-                      "https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-ultimate-blue-zeecat-pet-main-1.jpg",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Tamanho",
-                    "value": "U",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "gender",
-                    "value": "unisex",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "gender",
-                    "value": "unisex",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "sellerId",
-                    "value": "1",
-                    "valueReference": "PROPERTY",
-                  },
-                ],
-                "model": "9010003",
-              },
-              "image": [
-                {
-                  "@type": "ImageObject",
-                  "alternateName": "cinza",
-                  "url":
-                    "https://zeedog.vtexassets.com/arquivos/ids/202613/coleira-para-gatos-ultimate-blue-zeecat-pet-active.png?v=637656886349730000",
-                  "name": "cinza",
-                },
-                {
-                  "@type": "ImageObject",
-                  "alternateName": "mainhover",
-                  "url":
-                    "https://zeedog.vtexassets.com/arquivos/ids/202614/coleira-para-gatos-ultimate-blue-zeecat-pet-hover.png?v=637656886434000000",
-                  "name": "mainhover",
-                },
-              ],
-              "offers": {
-                "@type": "AggregateOffer",
-                "priceCurrency": "BRL",
-                "highPrice": 59,
-                "lowPrice": 59,
-                "offerCount": 1,
-                "offers": [
-                  {
-                    "@type": "Offer",
-                    "price": 59,
-                    "seller": "1",
-                    "priceValidUntil": "2024-12-01T18:19:57Z",
-                    "inventoryLevel": {
-                      "value": 10000,
-                    },
-                    "giftSkuIds": [],
-                    "teasers": [],
-                    "priceSpecification": [
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/ListPrice",
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SRP",
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "American Express",
-                        "description": "American Express à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "American Express",
-                        "description": "American Express 2 vezes sem juros",
-                        "billingDuration": 2,
-                        "billingIncrement": 29.5,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "American Express",
-                        "description": "American Express 3 vezes sem juros",
-                        "billingDuration": 3,
-                        "billingIncrement": 19.66,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Visa",
-                        "description": "Visa à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Visa",
-                        "description": "Visa 2 vezes sem juros",
-                        "billingDuration": 2,
-                        "billingIncrement": 29.5,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Visa",
-                        "description": "Visa 3 vezes sem juros",
-                        "billingDuration": 3,
-                        "billingIncrement": 19.66,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Mastercard",
-                        "description": "Mastercard à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Mastercard",
-                        "description": "Mastercard 2 vezes sem juros",
-                        "billingDuration": 2,
-                        "billingIncrement": 29.5,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Mastercard",
-                        "description": "Mastercard 3 vezes sem juros",
-                        "billingDuration": 3,
-                        "billingIncrement": 19.66,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Boleto Bancário",
-                        "description": "Boleto Bancário à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Hipercard",
-                        "description": "Hipercard à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Hipercard",
-                        "description": "Hipercard 2 vezes sem juros",
-                        "billingDuration": 2,
-                        "billingIncrement": 29.5,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Hipercard",
-                        "description": "Hipercard 3 vezes sem juros",
-                        "billingDuration": 3,
-                        "billingIncrement": 19.66,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Elo",
-                        "description": "Elo à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Elo",
-                        "description": "Elo 2 vezes sem juros",
-                        "billingDuration": 2,
-                        "billingIncrement": 29.5,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Vale",
-                        "description": "Vale à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Maestro",
-                        "description": "Maestro à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Venda Direta Debito",
-                        "description": "Venda Direta Debito à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Venda Direta Credito",
-                        "description": "Venda Direta Credito à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Venda Direta Credito",
-                        "description": "Venda Direta Credito 2 vezes sem juros",
-                        "billingDuration": 2,
-                        "billingIncrement": 29.5,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Venda Direta Credito",
-                        "description": "Venda Direta Credito 3 vezes sem juros",
-                        "billingDuration": 3,
-                        "billingIncrement": 19.66,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "PicPay",
-                        "description": "PicPay à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "priceComponentType": "https://schema.org/Installment",
-                        "name": "Pix",
-                        "description": "Pix à vista",
-                        "billingDuration": 1,
-                        "billingIncrement": 59,
-                        "price": 59,
-                      },
-                    ],
-                    "availability": "https://schema.org/InStock",
-                  },
-                ],
-              },
+                        "response": [
+                            {
+                                "@type": "Product",
+                                "category": "Masculino>Camisas",
+                                "productID": "261576",
+                                "url": "https://www.lojastorra.com.br/camisa-masculina-manga-longa-com-bolso-azul-28224000069022/p?skuId=261576",
+                                "name": "3",
+                                "description": "<p><strong>Especificações</strong></p><p><strong>Produto</strong>: camisa&nbsp;</p><p><strong>Modelagem</strong>: manga longa</p><p><strong>Detalhe</strong>: não possui</p><p><strong>Gola</strong>: dobrável</p><p><strong>Costura</strong>: padrão</p><p><strong>Manga</strong>: longa</p><p><strong>Categoria</strong>: masculino</p><p><strong>Tamanho</strong>: p ao gg</p><p><strong>Tecido</strong>: malha</p><p><strong>Composição</strong>: 80% poliéster, 20% algodão</p><p><strong>Produzido no Sri Lanka</strong></p><p><strong>Cor: </strong>azul</p><p><strong>Marca</strong>: Analogy</p><p><br><strong>​<br>​Mais detalhes</strong><br>Camisa masculina confeccionada em poliéster. Possui gola dobrável, fechamento por botões, bolso frontal com costura e acabamento padrão.</p><p>​​<br><strong>Modelo veste tamanho M<br>Medidas do modelo</strong></p><p>Altura: 1,80m</p><p>Tórax: 101cm</p><p>Cintura: 85cm</p><p>Quadril: 96cm</p><p>Manequim: 42</p><p><br><strong>​Instruções de lavagem</strong></p><p>Lavar com temperatura máxima de 30°C</p><p>​Não usar alvejante a base de cloro</p><p>Secar com temperatura baixa (40°C)</p><p>Passar com temperatura máxima de 110°C<br></p><p>Lavagem profissional</p><p><br>​O tom das cores dos produtos nas fotos podem sofrer variações em decorrência do flash.<br></p>",
+                                "brand": {
+                                    "@type": "Brand",
+                                    "@id": "2000159",
+                                    "name": "Analogy"
+                                },
+                                "inProductGroupWithID": "69281",
+                                "sku": "261576",
+                                "gtin": "282240000690223",
+                                "releaseDate": 1701399600000,
+                                "additionalProperty": [
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "Tamanho",
+                                        "value": "3",
+                                        "valueReference": "SPECIFICATION"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "category",
+                                        "propertyID": "4",
+                                        "value": "Masculino"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "category",
+                                        "propertyID": "24",
+                                        "value": "Camisas"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Novidades",
+                                        "propertyID": "138"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "todos os produtos",
+                                        "propertyID": "164"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Criteo-Todos",
+                                        "propertyID": "171"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "produtos-google-shopping",
+                                        "propertyID": "174",
+                                        "description": "highlight"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Criteo-All",
+                                        "propertyID": "416"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Colecao-Criteo",
+                                        "propertyID": "590",
+                                        "description": "highlight"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Sizebay",
+                                        "propertyID": "2281"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Rakuten",
+                                        "propertyID": "2321"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "RefId",
+                                        "value": "282240000690223",
+                                        "valueReference": "ReferenceID"
+                                    }
+                                ],
+                                "isVariantOf": {
+                                    "@type": "ProductGroup",
+                                    "productGroupID": "69281",
+                                    "hasVariant": [
+                                        {
+                                            "@type": "Product",
+                                            "category": "Masculino>Camisas",
+                                            "productID": "261576",
+                                            "url": "https://www.lojastorra.com.br/camisa-masculina-manga-longa-com-bolso-azul-28224000069022/p?skuId=261576",
+                                            "name": "3",
+                                            "description": "<p><strong>Especificações</strong></p><p><strong>Produto</strong>: camisa&nbsp;</p><p><strong>Modelagem</strong>: manga longa</p><p><strong>Detalhe</strong>: não possui</p><p><strong>Gola</strong>: dobrável</p><p><strong>Costura</strong>: padrão</p><p><strong>Manga</strong>: longa</p><p><strong>Categoria</strong>: masculino</p><p><strong>Tamanho</strong>: p ao gg</p><p><strong>Tecido</strong>: malha</p><p><strong>Composição</strong>: 80% poliéster, 20% algodão</p><p><strong>Produzido no Sri Lanka</strong></p><p><strong>Cor: </strong>azul</p><p><strong>Marca</strong>: Analogy</p><p><br><strong>​<br>​Mais detalhes</strong><br>Camisa masculina confeccionada em poliéster. Possui gola dobrável, fechamento por botões, bolso frontal com costura e acabamento padrão.</p><p>​​<br><strong>Modelo veste tamanho M<br>Medidas do modelo</strong></p><p>Altura: 1,80m</p><p>Tórax: 101cm</p><p>Cintura: 85cm</p><p>Quadril: 96cm</p><p>Manequim: 42</p><p><br><strong>​Instruções de lavagem</strong></p><p>Lavar com temperatura máxima de 30°C</p><p>​Não usar alvejante a base de cloro</p><p>Secar com temperatura baixa (40°C)</p><p>Passar com temperatura máxima de 110°C<br></p><p>Lavagem profissional</p><p><br>​O tom das cores dos produtos nas fotos podem sofrer variações em decorrência do flash.<br></p>",
+                                            "brand": {
+                                                "@type": "Brand",
+                                                "@id": "2000159",
+                                                "name": "Analogy"
+                                            },
+                                            "inProductGroupWithID": "69281",
+                                            "sku": "261576",
+                                            "gtin": "282240000690223",
+                                            "releaseDate": 1701399600000,
+                                            "additionalProperty": [
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "Tamanho",
+                                                    "value": "3",
+                                                    "valueReference": "SPECIFICATION"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "4",
+                                                    "value": "Masculino"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "24",
+                                                    "value": "Camisas"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Novidades",
+                                                    "propertyID": "138"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "todos os produtos",
+                                                    "propertyID": "164"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-Todos",
+                                                    "propertyID": "171"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "produtos-google-shopping",
+                                                    "propertyID": "174",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-All",
+                                                    "propertyID": "416"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Colecao-Criteo",
+                                                    "propertyID": "590",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Sizebay",
+                                                    "propertyID": "2281"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Rakuten",
+                                                    "propertyID": "2321"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "RefId",
+                                                    "value": "282240000690223",
+                                                    "valueReference": "ReferenceID"
+                                                }
+                                            ],
+                                            "image": [
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285347/28224000069022.jpg?v=638370350631600000",
+                                                    "name": "28224000069022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285348/28224000069022.jpg?v=638370350646030000",
+                                                    "name": "28224000069022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285349/28224000069022.jpg?v=638370350659900000",
+                                                    "name": "28224000069022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285350/28224000069022.jpg?v=638370350665930000",
+                                                    "name": "28224000069022"
+                                                }
+                                            ],
+                                            "offers": {
+                                                "@type": "AggregateOffer",
+                                                "priceCurrency": "BRL",
+                                                "highPrice": 89.99,
+                                                "lowPrice": 89.99,
+                                                "offerCount": 1,
+                                                "offers": [
+                                                    {
+                                                        "@type": "Offer",
+                                                        "price": 89.99,
+                                                        "seller": "1",
+                                                        "priceValidUntil": "2024-12-01T20:17:28Z",
+                                                        "inventoryLevel": {
+                                                            "value": 10000
+                                                        },
+                                                        "giftSkuIds": [],
+                                                        "teasers": [],
+                                                        "priceSpecification": [
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/ListPrice",
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Vale",
+                                                                "description": "Vale à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "PicPay",
+                                                                "description": "PicPay à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "AmeDigital",
+                                                                "description": "AmeDigital à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Pix",
+                                                                "description": "Pix à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 29.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 4 vezes sem juros",
+                                                                "billingDuration": 4,
+                                                                "billingIncrement": 22.49,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 5 vezes sem juros",
+                                                                "billingDuration": 5,
+                                                                "billingIncrement": 17.99,
+                                                                "price": 89.99
+                                                            }
+                                                        ],
+                                                        "availability": "https://schema.org/InStock"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "@type": "Product",
+                                            "category": "Masculino>Camisas",
+                                            "productID": "261577",
+                                            "url": "https://www.lojastorra.com.br/camisa-masculina-manga-longa-com-bolso-azul-28224000069022/p?skuId=261577",
+                                            "name": "2",
+                                            "description": "<p><strong>Especificações</strong></p><p><strong>Produto</strong>: camisa&nbsp;</p><p><strong>Modelagem</strong>: manga longa</p><p><strong>Detalhe</strong>: não possui</p><p><strong>Gola</strong>: dobrável</p><p><strong>Costura</strong>: padrão</p><p><strong>Manga</strong>: longa</p><p><strong>Categoria</strong>: masculino</p><p><strong>Tamanho</strong>: p ao gg</p><p><strong>Tecido</strong>: malha</p><p><strong>Composição</strong>: 80% poliéster, 20% algodão</p><p><strong>Produzido no Sri Lanka</strong></p><p><strong>Cor: </strong>azul</p><p><strong>Marca</strong>: Analogy</p><p><br><strong>​<br>​Mais detalhes</strong><br>Camisa masculina confeccionada em poliéster. Possui gola dobrável, fechamento por botões, bolso frontal com costura e acabamento padrão.</p><p>​​<br><strong>Modelo veste tamanho M<br>Medidas do modelo</strong></p><p>Altura: 1,80m</p><p>Tórax: 101cm</p><p>Cintura: 85cm</p><p>Quadril: 96cm</p><p>Manequim: 42</p><p><br><strong>​Instruções de lavagem</strong></p><p>Lavar com temperatura máxima de 30°C</p><p>​Não usar alvejante a base de cloro</p><p>Secar com temperatura baixa (40°C)</p><p>Passar com temperatura máxima de 110°C<br></p><p>Lavagem profissional</p><p><br>​O tom das cores dos produtos nas fotos podem sofrer variações em decorrência do flash.<br></p>",
+                                            "brand": {
+                                                "@type": "Brand",
+                                                "@id": "2000159",
+                                                "name": "Analogy"
+                                            },
+                                            "inProductGroupWithID": "69281",
+                                            "sku": "261577",
+                                            "gtin": "282240000690222",
+                                            "releaseDate": 1701399600000,
+                                            "additionalProperty": [
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "Tamanho",
+                                                    "value": "2",
+                                                    "valueReference": "SPECIFICATION"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "4",
+                                                    "value": "Masculino"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "24",
+                                                    "value": "Camisas"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Novidades",
+                                                    "propertyID": "138"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "todos os produtos",
+                                                    "propertyID": "164"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-Todos",
+                                                    "propertyID": "171"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "produtos-google-shopping",
+                                                    "propertyID": "174",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-All",
+                                                    "propertyID": "416"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Colecao-Criteo",
+                                                    "propertyID": "590",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Sizebay",
+                                                    "propertyID": "2281"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Rakuten",
+                                                    "propertyID": "2321"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "RefId",
+                                                    "value": "282240000690222",
+                                                    "valueReference": "ReferenceID"
+                                                }
+                                            ],
+                                            "image": [
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285347/28224000069022.jpg?v=638370350631600000",
+                                                    "name": "28224000069022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285348/28224000069022.jpg?v=638370350646030000",
+                                                    "name": "28224000069022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285349/28224000069022.jpg?v=638370350659900000",
+                                                    "name": "28224000069022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285350/28224000069022.jpg?v=638370350665930000",
+                                                    "name": "28224000069022"
+                                                }
+                                            ],
+                                            "offers": {
+                                                "@type": "AggregateOffer",
+                                                "priceCurrency": "BRL",
+                                                "highPrice": 89.99,
+                                                "lowPrice": 89.99,
+                                                "offerCount": 1,
+                                                "offers": [
+                                                    {
+                                                        "@type": "Offer",
+                                                        "price": 89.99,
+                                                        "seller": "1",
+                                                        "priceValidUntil": "2024-12-01T20:17:28Z",
+                                                        "inventoryLevel": {
+                                                            "value": 10000
+                                                        },
+                                                        "giftSkuIds": [],
+                                                        "teasers": [],
+                                                        "priceSpecification": [
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/ListPrice",
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Vale",
+                                                                "description": "Vale à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "PicPay",
+                                                                "description": "PicPay à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "AmeDigital",
+                                                                "description": "AmeDigital à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Pix",
+                                                                "description": "Pix à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 29.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 4 vezes sem juros",
+                                                                "billingDuration": 4,
+                                                                "billingIncrement": 22.49,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 5 vezes sem juros",
+                                                                "billingDuration": 5,
+                                                                "billingIncrement": 17.99,
+                                                                "price": 89.99
+                                                            }
+                                                        ],
+                                                        "availability": "https://schema.org/InStock"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "@type": "Product",
+                                            "category": "Masculino>Camisas",
+                                            "productID": "261578",
+                                            "url": "https://www.lojastorra.com.br/camisa-masculina-manga-longa-com-bolso-azul-28224000069022/p?skuId=261578",
+                                            "name": "4",
+                                            "description": "<p><strong>Especificações</strong></p><p><strong>Produto</strong>: camisa&nbsp;</p><p><strong>Modelagem</strong>: manga longa</p><p><strong>Detalhe</strong>: não possui</p><p><strong>Gola</strong>: dobrável</p><p><strong>Costura</strong>: padrão</p><p><strong>Manga</strong>: longa</p><p><strong>Categoria</strong>: masculino</p><p><strong>Tamanho</strong>: p ao gg</p><p><strong>Tecido</strong>: malha</p><p><strong>Composição</strong>: 80% poliéster, 20% algodão</p><p><strong>Produzido no Sri Lanka</strong></p><p><strong>Cor: </strong>azul</p><p><strong>Marca</strong>: Analogy</p><p><br><strong>​<br>​Mais detalhes</strong><br>Camisa masculina confeccionada em poliéster. Possui gola dobrável, fechamento por botões, bolso frontal com costura e acabamento padrão.</p><p>​​<br><strong>Modelo veste tamanho M<br>Medidas do modelo</strong></p><p>Altura: 1,80m</p><p>Tórax: 101cm</p><p>Cintura: 85cm</p><p>Quadril: 96cm</p><p>Manequim: 42</p><p><br><strong>​Instruções de lavagem</strong></p><p>Lavar com temperatura máxima de 30°C</p><p>​Não usar alvejante a base de cloro</p><p>Secar com temperatura baixa (40°C)</p><p>Passar com temperatura máxima de 110°C<br></p><p>Lavagem profissional</p><p><br>​O tom das cores dos produtos nas fotos podem sofrer variações em decorrência do flash.<br></p>",
+                                            "brand": {
+                                                "@type": "Brand",
+                                                "@id": "2000159",
+                                                "name": "Analogy"
+                                            },
+                                            "inProductGroupWithID": "69281",
+                                            "sku": "261578",
+                                            "gtin": "282240000690224",
+                                            "releaseDate": 1701399600000,
+                                            "additionalProperty": [
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "Tamanho",
+                                                    "value": "4",
+                                                    "valueReference": "SPECIFICATION"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "4",
+                                                    "value": "Masculino"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "24",
+                                                    "value": "Camisas"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Novidades",
+                                                    "propertyID": "138"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "todos os produtos",
+                                                    "propertyID": "164"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-Todos",
+                                                    "propertyID": "171"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "produtos-google-shopping",
+                                                    "propertyID": "174",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-All",
+                                                    "propertyID": "416"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Colecao-Criteo",
+                                                    "propertyID": "590",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Sizebay",
+                                                    "propertyID": "2281"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Rakuten",
+                                                    "propertyID": "2321"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "RefId",
+                                                    "value": "282240000690224",
+                                                    "valueReference": "ReferenceID"
+                                                }
+                                            ],
+                                            "image": [
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285347/28224000069022.jpg?v=638370350631600000",
+                                                    "name": "28224000069022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285348/28224000069022.jpg?v=638370350646030000",
+                                                    "name": "28224000069022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285349/28224000069022.jpg?v=638370350659900000",
+                                                    "name": "28224000069022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285350/28224000069022.jpg?v=638370350665930000",
+                                                    "name": "28224000069022"
+                                                }
+                                            ],
+                                            "offers": {
+                                                "@type": "AggregateOffer",
+                                                "priceCurrency": "BRL",
+                                                "highPrice": 89.99,
+                                                "lowPrice": 89.99,
+                                                "offerCount": 1,
+                                                "offers": [
+                                                    {
+                                                        "@type": "Offer",
+                                                        "price": 89.99,
+                                                        "seller": "1",
+                                                        "priceValidUntil": "2024-12-01T20:16:14Z",
+                                                        "inventoryLevel": {
+                                                            "value": 10000
+                                                        },
+                                                        "giftSkuIds": [],
+                                                        "teasers": [],
+                                                        "priceSpecification": [
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/ListPrice",
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Vale",
+                                                                "description": "Vale à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "PicPay",
+                                                                "description": "PicPay à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "AmeDigital",
+                                                                "description": "AmeDigital à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Pix",
+                                                                "description": "Pix à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 29.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 4 vezes sem juros",
+                                                                "billingDuration": 4,
+                                                                "billingIncrement": 22.49,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 5 vezes sem juros",
+                                                                "billingDuration": 5,
+                                                                "billingIncrement": 17.99,
+                                                                "price": 89.99
+                                                            }
+                                                        ],
+                                                        "availability": "https://schema.org/InStock"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "@type": "Product",
+                                            "category": "Masculino>Camisas",
+                                            "productID": "261579",
+                                            "url": "https://www.lojastorra.com.br/camisa-masculina-manga-longa-com-bolso-azul-28224000069022/p?skuId=261579",
+                                            "name": "5",
+                                            "description": "<p><strong>Especificações</strong></p><p><strong>Produto</strong>: camisa&nbsp;</p><p><strong>Modelagem</strong>: manga longa</p><p><strong>Detalhe</strong>: não possui</p><p><strong>Gola</strong>: dobrável</p><p><strong>Costura</strong>: padrão</p><p><strong>Manga</strong>: longa</p><p><strong>Categoria</strong>: masculino</p><p><strong>Tamanho</strong>: p ao gg</p><p><strong>Tecido</strong>: malha</p><p><strong>Composição</strong>: 80% poliéster, 20% algodão</p><p><strong>Produzido no Sri Lanka</strong></p><p><strong>Cor: </strong>azul</p><p><strong>Marca</strong>: Analogy</p><p><br><strong>​<br>​Mais detalhes</strong><br>Camisa masculina confeccionada em poliéster. Possui gola dobrável, fechamento por botões, bolso frontal com costura e acabamento padrão.</p><p>​​<br><strong>Modelo veste tamanho M<br>Medidas do modelo</strong></p><p>Altura: 1,80m</p><p>Tórax: 101cm</p><p>Cintura: 85cm</p><p>Quadril: 96cm</p><p>Manequim: 42</p><p><br><strong>​Instruções de lavagem</strong></p><p>Lavar com temperatura máxima de 30°C</p><p>​Não usar alvejante a base de cloro</p><p>Secar com temperatura baixa (40°C)</p><p>Passar com temperatura máxima de 110°C<br></p><p>Lavagem profissional</p><p><br>​O tom das cores dos produtos nas fotos podem sofrer variações em decorrência do flash.<br></p>",
+                                            "brand": {
+                                                "@type": "Brand",
+                                                "@id": "2000159",
+                                                "name": "Analogy"
+                                            },
+                                            "inProductGroupWithID": "69281",
+                                            "sku": "261579",
+                                            "gtin": "282240000690225",
+                                            "releaseDate": 1701399600000,
+                                            "additionalProperty": [
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "Tamanho",
+                                                    "value": "5",
+                                                    "valueReference": "SPECIFICATION"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "4",
+                                                    "value": "Masculino"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "24",
+                                                    "value": "Camisas"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Novidades",
+                                                    "propertyID": "138"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "todos os produtos",
+                                                    "propertyID": "164"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-Todos",
+                                                    "propertyID": "171"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "produtos-google-shopping",
+                                                    "propertyID": "174",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-All",
+                                                    "propertyID": "416"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Colecao-Criteo",
+                                                    "propertyID": "590",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Sizebay",
+                                                    "propertyID": "2281"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Rakuten",
+                                                    "propertyID": "2321"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "RefId",
+                                                    "value": "282240000690225",
+                                                    "valueReference": "ReferenceID"
+                                                }
+                                            ],
+                                            "image": [
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285347/28224000069022.jpg?v=638370350631600000",
+                                                    "name": "28224000069022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285348/28224000069022.jpg?v=638370350646030000",
+                                                    "name": "28224000069022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285349/28224000069022.jpg?v=638370350659900000",
+                                                    "name": "28224000069022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285350/28224000069022.jpg?v=638370350665930000",
+                                                    "name": "28224000069022"
+                                                }
+                                            ],
+                                            "offers": {
+                                                "@type": "AggregateOffer",
+                                                "priceCurrency": "BRL",
+                                                "highPrice": 89.99,
+                                                "lowPrice": 89.99,
+                                                "offerCount": 1,
+                                                "offers": [
+                                                    {
+                                                        "@type": "Offer",
+                                                        "price": 89.99,
+                                                        "seller": "1",
+                                                        "priceValidUntil": "2024-12-01T20:17:28Z",
+                                                        "inventoryLevel": {
+                                                            "value": 10000
+                                                        },
+                                                        "giftSkuIds": [],
+                                                        "teasers": [],
+                                                        "priceSpecification": [
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/ListPrice",
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Vale",
+                                                                "description": "Vale à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "PicPay",
+                                                                "description": "PicPay à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "AmeDigital",
+                                                                "description": "AmeDigital à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Pix",
+                                                                "description": "Pix à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 29.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 4 vezes sem juros",
+                                                                "billingDuration": 4,
+                                                                "billingIncrement": 22.49,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 5 vezes sem juros",
+                                                                "billingDuration": 5,
+                                                                "billingIncrement": 17.99,
+                                                                "price": 89.99
+                                                            }
+                                                        ],
+                                                        "availability": "https://schema.org/InStock"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "@type": "Product",
+                                            "category": "Masculino>Camisas",
+                                            "productID": "261580",
+                                            "url": "https://www.lojastorra.com.br/camisa-masculina-manga-longa-com-bolso-azul-28224000069022/p?skuId=261580",
+                                            "name": "6",
+                                            "description": "<p><strong>Especificações</strong></p><p><strong>Produto</strong>: camisa&nbsp;</p><p><strong>Modelagem</strong>: manga longa</p><p><strong>Detalhe</strong>: não possui</p><p><strong>Gola</strong>: dobrável</p><p><strong>Costura</strong>: padrão</p><p><strong>Manga</strong>: longa</p><p><strong>Categoria</strong>: masculino</p><p><strong>Tamanho</strong>: p ao gg</p><p><strong>Tecido</strong>: malha</p><p><strong>Composição</strong>: 80% poliéster, 20% algodão</p><p><strong>Produzido no Sri Lanka</strong></p><p><strong>Cor: </strong>azul</p><p><strong>Marca</strong>: Analogy</p><p><br><strong>​<br>​Mais detalhes</strong><br>Camisa masculina confeccionada em poliéster. Possui gola dobrável, fechamento por botões, bolso frontal com costura e acabamento padrão.</p><p>​​<br><strong>Modelo veste tamanho M<br>Medidas do modelo</strong></p><p>Altura: 1,80m</p><p>Tórax: 101cm</p><p>Cintura: 85cm</p><p>Quadril: 96cm</p><p>Manequim: 42</p><p><br><strong>​Instruções de lavagem</strong></p><p>Lavar com temperatura máxima de 30°C</p><p>​Não usar alvejante a base de cloro</p><p>Secar com temperatura baixa (40°C)</p><p>Passar com temperatura máxima de 110°C<br></p><p>Lavagem profissional</p><p><br>​O tom das cores dos produtos nas fotos podem sofrer variações em decorrência do flash.<br></p>",
+                                            "brand": {
+                                                "@type": "Brand",
+                                                "@id": "2000159",
+                                                "name": "Analogy"
+                                            },
+                                            "inProductGroupWithID": "69281",
+                                            "sku": "261580",
+                                            "gtin": "282240000690226",
+                                            "releaseDate": 1701399600000,
+                                            "additionalProperty": [
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "Tamanho",
+                                                    "value": "6",
+                                                    "valueReference": "SPECIFICATION"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "4",
+                                                    "value": "Masculino"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "24",
+                                                    "value": "Camisas"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Novidades",
+                                                    "propertyID": "138"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "todos os produtos",
+                                                    "propertyID": "164"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-Todos",
+                                                    "propertyID": "171"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "produtos-google-shopping",
+                                                    "propertyID": "174",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-All",
+                                                    "propertyID": "416"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Colecao-Criteo",
+                                                    "propertyID": "590",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Sizebay",
+                                                    "propertyID": "2281"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Rakuten",
+                                                    "propertyID": "2321"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "RefId",
+                                                    "value": "282240000690226",
+                                                    "valueReference": "ReferenceID"
+                                                }
+                                            ],
+                                            "image": [
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285347/28224000069022.jpg?v=638370350631600000",
+                                                    "name": "28224000069022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285348/28224000069022.jpg?v=638370350646030000",
+                                                    "name": "28224000069022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285349/28224000069022.jpg?v=638370350659900000",
+                                                    "name": "28224000069022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28224000069022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1285350/28224000069022.jpg?v=638370350665930000",
+                                                    "name": "28224000069022"
+                                                }
+                                            ],
+                                            "offers": {
+                                                "@type": "AggregateOffer",
+                                                "priceCurrency": "BRL",
+                                                "highPrice": 89.99,
+                                                "lowPrice": 89.99,
+                                                "offerCount": 1,
+                                                "offers": [
+                                                    {
+                                                        "@type": "Offer",
+                                                        "price": 89.99,
+                                                        "seller": "1",
+                                                        "priceValidUntil": "2024-12-01T20:16:14Z",
+                                                        "inventoryLevel": {
+                                                            "value": 10000
+                                                        },
+                                                        "giftSkuIds": [],
+                                                        "teasers": [],
+                                                        "priceSpecification": [
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/ListPrice",
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Vale",
+                                                                "description": "Vale à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "PicPay",
+                                                                "description": "PicPay à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "AmeDigital",
+                                                                "description": "AmeDigital à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Pix",
+                                                                "description": "Pix à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 89.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 44.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 29.99,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 4 vezes sem juros",
+                                                                "billingDuration": 4,
+                                                                "billingIncrement": 22.49,
+                                                                "price": 89.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 5 vezes sem juros",
+                                                                "billingDuration": 5,
+                                                                "billingIncrement": 17.99,
+                                                                "price": 89.99
+                                                            }
+                                                        ],
+                                                        "availability": "https://schema.org/InStock"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "url": "https://www.lojastorra.com.br/camisa-masculina-manga-longa-com-bolso-azul-28224000069022/p",
+                                    "name": "Camisa Masculina Manga Longa Com Bolso Azul",
+                                    "additionalProperty": [
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Manga",
+                                            "value": "Manga Longa",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Cor",
+                                            "value": "Marinho",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Modelo",
+                                            "value": "Social",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Estilo",
+                                            "value": "Social e Office",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Estampa",
+                                            "value": "Lisa",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Tecido",
+                                            "value": "Poliéster",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Tamanho",
+                                            "value": "3",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Tamanho",
+                                            "value": "2",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Tamanho",
+                                            "value": "4",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Tamanho",
+                                            "value": "5",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Tamanho",
+                                            "value": "6",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "sellerId",
+                                            "value": "1",
+                                            "valueReference": "PROPERTY"
+                                        }
+                                    ],
+                                    "model": "28224000069022"
+                                },
+                                "image": [
+                                    {
+                                        "@type": "ImageObject",
+                                        "alternateName": "28224000069022",
+                                        "url": "https://torratorra.vtexassets.com/arquivos/ids/1285347/28224000069022.jpg?v=638370350631600000",
+                                        "name": "28224000069022"
+                                    },
+                                    {
+                                        "@type": "ImageObject",
+                                        "alternateName": "28224000069022",
+                                        "url": "https://torratorra.vtexassets.com/arquivos/ids/1285348/28224000069022.jpg?v=638370350646030000",
+                                        "name": "28224000069022"
+                                    },
+                                    {
+                                        "@type": "ImageObject",
+                                        "alternateName": "28224000069022",
+                                        "url": "https://torratorra.vtexassets.com/arquivos/ids/1285349/28224000069022.jpg?v=638370350659900000",
+                                        "name": "28224000069022"
+                                    },
+                                    {
+                                        "@type": "ImageObject",
+                                        "alternateName": "28224000069022",
+                                        "url": "https://torratorra.vtexassets.com/arquivos/ids/1285350/28224000069022.jpg?v=638370350665930000",
+                                        "name": "28224000069022"
+                                    }
+                                ],
+                                "offers": {
+                                    "@type": "AggregateOffer",
+                                    "priceCurrency": "BRL",
+                                    "highPrice": 89.99,
+                                    "lowPrice": 89.99,
+                                    "offerCount": 1,
+                                    "offers": [
+                                        {
+                                            "@type": "Offer",
+                                            "price": 89.99,
+                                            "seller": "1",
+                                            "priceValidUntil": "2024-12-01T20:17:28Z",
+                                            "inventoryLevel": {
+                                                "value": 10000
+                                            },
+                                            "giftSkuIds": [],
+                                            "teasers": [],
+                                            "priceSpecification": [
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/ListPrice",
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "American Express",
+                                                    "description": "American Express à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 89.99,
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "American Express",
+                                                    "description": "American Express 2 vezes sem juros",
+                                                    "billingDuration": 2,
+                                                    "billingIncrement": 44.99,
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Visa",
+                                                    "description": "Visa à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 89.99,
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Visa",
+                                                    "description": "Visa 2 vezes sem juros",
+                                                    "billingDuration": 2,
+                                                    "billingIncrement": 44.99,
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Mastercard",
+                                                    "description": "Mastercard à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 89.99,
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Mastercard",
+                                                    "description": "Mastercard 2 vezes sem juros",
+                                                    "billingDuration": 2,
+                                                    "billingIncrement": 44.99,
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Hipercard",
+                                                    "description": "Hipercard à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 89.99,
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Hipercard",
+                                                    "description": "Hipercard 2 vezes sem juros",
+                                                    "billingDuration": 2,
+                                                    "billingIncrement": 44.99,
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Elo",
+                                                    "description": "Elo à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 89.99,
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Elo",
+                                                    "description": "Elo 2 vezes sem juros",
+                                                    "billingDuration": 2,
+                                                    "billingIncrement": 44.99,
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Vale",
+                                                    "description": "Vale à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 89.99,
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "PicPay",
+                                                    "description": "PicPay à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 89.99,
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "AmeDigital",
+                                                    "description": "AmeDigital à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 89.99,
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Pix",
+                                                    "description": "Pix à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 89.99,
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Cartão Torra",
+                                                    "description": "Cartão Torra à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 89.99,
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Cartão Torra",
+                                                    "description": "Cartão Torra 2 vezes sem juros",
+                                                    "billingDuration": 2,
+                                                    "billingIncrement": 44.99,
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Cartão Torra",
+                                                    "description": "Cartão Torra 3 vezes sem juros",
+                                                    "billingDuration": 3,
+                                                    "billingIncrement": 29.99,
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Cartão Torra",
+                                                    "description": "Cartão Torra 4 vezes sem juros",
+                                                    "billingDuration": 4,
+                                                    "billingIncrement": 22.49,
+                                                    "price": 89.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Cartão Torra",
+                                                    "description": "Cartão Torra 5 vezes sem juros",
+                                                    "billingDuration": 5,
+                                                    "billingIncrement": 17.99,
+                                                    "price": 89.99
+                                                }
+                                            ],
+                                            "availability": "https://schema.org/InStock"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "@type": "Product",
+                                "category": "Masculino>Polos",
+                                "productID": "261139",
+                                "url": "https://www.lojastorra.com.br/camisa-polo-masculina-piquet-com-bolso-manga-curta-azul-28212000707020/p?skuId=261139",
+                                "name": "M",
+                                "description": "<h2>Características</h2><p><strong>Segmento: </strong>camisa polo</p><p><strong>Gola:</strong> sim</p><p><strong>Tipo de manga: </strong>curta</p><p><strong>Costura: </strong>padrão</p><p><strong>Acabamento: </strong>padrão</p><p><strong>Textura do tecido: </strong>piquet</p><p><strong>Descrição da estampa: </strong>não possui</p><p><strong>Bordado: </strong>não possui</p><p><strong>Detalhes: </strong>polo masculina com bolso único&nbsp;na frente, com botões e fenda na lateral</p><h2>Especificações técnicas</h2><p><strong>Produto: </strong>polo</p><p><strong>Categoria: </strong>masculina</p><p><strong>Tamanho: </strong>P ao GG</p><p><strong>Tecido: </strong>piquet</p><p><strong>Composição: </strong>100%&nbsp;poliéster</p><p><strong>Produzido: </strong>Brasil</p><p><strong>Cor: </strong>azul</p><p><br></p><p><strong>Modelo veste peça tamanho M</strong></p><p><strong>Medidas da Modelo</strong></p><p>Altura: 1,86m</p><p>Tórax: 99cm</p><p>Cintura: 80cm</p><p>Quadril: 101cm</p><p>Manequim: 40/42<br></p><p><br></p><p><strong>Instruções de lavagem:</strong></p><p><span>Lavar com temperatura máxima de 30°C</span></p><p><span>Não usar alvejante a base de cloro</span></p><p><span>Proibido usar secadora</span></p><p><span>Secar pendurada</span></p><p><span>Passar com temperatura máxima de 150°C</span></p><p><span>Não lavar a seco</span></p><p><br></p><p>O tom das cores dos produtos nas fotos podem sofrer variações em decorrência do flash.</p><h2>Por que camiseta polo?</h2><p>A camiseta polo é uma peça tradicional do guarda-roupa do dia a dia. Também conhecida como camisa polo, ela tem algumas características que são fáceis de identificar.<strong> A camisa polo tem o formato de uma camiseta tradicional, mas o seu diferencial é a gola que simula uma gola de camisa, em malha canelada</strong>. A camiseta polo tem esse nome porque foi inspirada nos uniformes dos jogadores de polo, esporte praticado com cavalos. Escolha as suas camisas polos favoritas e aproveite também para conhecer a nossa coleção de <a href=\"https://www.lojastorra.com.br/masculino/camisetas\">camiseta masculina</a>.</p>",
+                                "brand": {
+                                    "@type": "Brand",
+                                    "@id": "2000159",
+                                    "name": "Analogy"
+                                },
+                                "inProductGroupWithID": "69168",
+                                "sku": "261139",
+                                "gtin": "28212000707020M",
+                                "releaseDate": 1701226800000,
+                                "additionalProperty": [
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "Tamanho",
+                                        "value": "M",
+                                        "valueReference": "SPECIFICATION"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "category",
+                                        "propertyID": "4",
+                                        "value": "Masculino"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "category",
+                                        "propertyID": "29",
+                                        "value": "Polos"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Novidades",
+                                        "propertyID": "138"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "todos os produtos",
+                                        "propertyID": "164"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Criteo-Todos",
+                                        "propertyID": "171"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "produtos-google-shopping",
+                                        "propertyID": "174",
+                                        "description": "highlight"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Criteo-All",
+                                        "propertyID": "416"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Colecao-Criteo",
+                                        "propertyID": "590",
+                                        "description": "highlight"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Sizebay",
+                                        "propertyID": "2281"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Rakuten",
+                                        "propertyID": "2321"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "RefId",
+                                        "value": "28212000707020M",
+                                        "valueReference": "ReferenceID"
+                                    }
+                                ],
+                                "isVariantOf": {
+                                    "@type": "ProductGroup",
+                                    "productGroupID": "69168",
+                                    "hasVariant": [
+                                        {
+                                            "@type": "Product",
+                                            "category": "Masculino>Polos",
+                                            "productID": "261139",
+                                            "url": "https://www.lojastorra.com.br/camisa-polo-masculina-piquet-com-bolso-manga-curta-azul-28212000707020/p?skuId=261139",
+                                            "name": "M",
+                                            "description": "<h2>Características</h2><p><strong>Segmento: </strong>camisa polo</p><p><strong>Gola:</strong> sim</p><p><strong>Tipo de manga: </strong>curta</p><p><strong>Costura: </strong>padrão</p><p><strong>Acabamento: </strong>padrão</p><p><strong>Textura do tecido: </strong>piquet</p><p><strong>Descrição da estampa: </strong>não possui</p><p><strong>Bordado: </strong>não possui</p><p><strong>Detalhes: </strong>polo masculina com bolso único&nbsp;na frente, com botões e fenda na lateral</p><h2>Especificações técnicas</h2><p><strong>Produto: </strong>polo</p><p><strong>Categoria: </strong>masculina</p><p><strong>Tamanho: </strong>P ao GG</p><p><strong>Tecido: </strong>piquet</p><p><strong>Composição: </strong>100%&nbsp;poliéster</p><p><strong>Produzido: </strong>Brasil</p><p><strong>Cor: </strong>azul</p><p><br></p><p><strong>Modelo veste peça tamanho M</strong></p><p><strong>Medidas da Modelo</strong></p><p>Altura: 1,86m</p><p>Tórax: 99cm</p><p>Cintura: 80cm</p><p>Quadril: 101cm</p><p>Manequim: 40/42<br></p><p><br></p><p><strong>Instruções de lavagem:</strong></p><p><span>Lavar com temperatura máxima de 30°C</span></p><p><span>Não usar alvejante a base de cloro</span></p><p><span>Proibido usar secadora</span></p><p><span>Secar pendurada</span></p><p><span>Passar com temperatura máxima de 150°C</span></p><p><span>Não lavar a seco</span></p><p><br></p><p>O tom das cores dos produtos nas fotos podem sofrer variações em decorrência do flash.</p><h2>Por que camiseta polo?</h2><p>A camiseta polo é uma peça tradicional do guarda-roupa do dia a dia. Também conhecida como camisa polo, ela tem algumas características que são fáceis de identificar.<strong> A camisa polo tem o formato de uma camiseta tradicional, mas o seu diferencial é a gola que simula uma gola de camisa, em malha canelada</strong>. A camiseta polo tem esse nome porque foi inspirada nos uniformes dos jogadores de polo, esporte praticado com cavalos. Escolha as suas camisas polos favoritas e aproveite também para conhecer a nossa coleção de <a href=\"https://www.lojastorra.com.br/masculino/camisetas\">camiseta masculina</a>.</p>",
+                                            "brand": {
+                                                "@type": "Brand",
+                                                "@id": "2000159",
+                                                "name": "Analogy"
+                                            },
+                                            "inProductGroupWithID": "69168",
+                                            "sku": "261139",
+                                            "gtin": "28212000707020M",
+                                            "releaseDate": 1701226800000,
+                                            "additionalProperty": [
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "Tamanho",
+                                                    "value": "M",
+                                                    "valueReference": "SPECIFICATION"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "4",
+                                                    "value": "Masculino"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "29",
+                                                    "value": "Polos"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Novidades",
+                                                    "propertyID": "138"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "todos os produtos",
+                                                    "propertyID": "164"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-Todos",
+                                                    "propertyID": "171"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "produtos-google-shopping",
+                                                    "propertyID": "174",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-All",
+                                                    "propertyID": "416"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Colecao-Criteo",
+                                                    "propertyID": "590",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Sizebay",
+                                                    "propertyID": "2281"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Rakuten",
+                                                    "propertyID": "2321"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "RefId",
+                                                    "value": "28212000707020M",
+                                                    "valueReference": "ReferenceID"
+                                                }
+                                            ],
+                                            "image": [
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000707020",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284657/28212000707020.jpg?v=638368776851500000",
+                                                    "name": "28212000707020"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000707020",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284658/28212000707020.jpg?v=638368776865130000",
+                                                    "name": "28212000707020"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000707020",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284659/28212000707020.jpg?v=638368776878470000",
+                                                    "name": "28212000707020"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000707020",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284660/28212000707020.jpg?v=638368776895600000",
+                                                    "name": "28212000707020"
+                                                }
+                                            ],
+                                            "offers": {
+                                                "@type": "AggregateOffer",
+                                                "priceCurrency": "BRL",
+                                                "highPrice": 39.99,
+                                                "lowPrice": 39.99,
+                                                "offerCount": 1,
+                                                "offers": [
+                                                    {
+                                                        "@type": "Offer",
+                                                        "price": 39.99,
+                                                        "seller": "1",
+                                                        "priceValidUntil": "2024-12-01T20:17:28Z",
+                                                        "inventoryLevel": {
+                                                            "value": 10000
+                                                        },
+                                                        "giftSkuIds": [],
+                                                        "teasers": [],
+                                                        "priceSpecification": [
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/ListPrice",
+                                                                "price": 39.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "price": 39.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 39.99,
+                                                                "price": 39.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 39.99,
+                                                                "price": 39.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 39.99,
+                                                                "price": 39.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 39.99,
+                                                                "price": 39.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 39.99,
+                                                                "price": 39.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Vale",
+                                                                "description": "Vale à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 39.99,
+                                                                "price": 39.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "PicPay",
+                                                                "description": "PicPay à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 39.99,
+                                                                "price": 39.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "AmeDigital",
+                                                                "description": "AmeDigital à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 39.99,
+                                                                "price": 39.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Pix",
+                                                                "description": "Pix à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 39.99,
+                                                                "price": 39.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 39.99,
+                                                                "price": 39.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 19.99,
+                                                                "price": 39.99
+                                                            }
+                                                        ],
+                                                        "availability": "https://schema.org/InStock"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "url": "https://www.lojastorra.com.br/camisa-polo-masculina-piquet-com-bolso-manga-curta-azul-28212000707020/p",
+                                    "name": "Camisa Polo Masculina Piquet Com Bolso Manga Curta Azul",
+                                    "additionalProperty": [
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Manga",
+                                            "value": "Manga Curta",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Cor",
+                                            "value": "Azul",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Tecido",
+                                            "value": "Piquet",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Estilo",
+                                            "value": "Casual",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Tamanho",
+                                            "value": "M",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "sellerId",
+                                            "value": "1",
+                                            "valueReference": "PROPERTY"
+                                        }
+                                    ],
+                                    "model": "28212000707020"
+                                },
+                                "image": [
+                                    {
+                                        "@type": "ImageObject",
+                                        "alternateName": "28212000707020",
+                                        "url": "https://torratorra.vtexassets.com/arquivos/ids/1284657/28212000707020.jpg?v=638368776851500000",
+                                        "name": "28212000707020"
+                                    },
+                                    {
+                                        "@type": "ImageObject",
+                                        "alternateName": "28212000707020",
+                                        "url": "https://torratorra.vtexassets.com/arquivos/ids/1284658/28212000707020.jpg?v=638368776865130000",
+                                        "name": "28212000707020"
+                                    },
+                                    {
+                                        "@type": "ImageObject",
+                                        "alternateName": "28212000707020",
+                                        "url": "https://torratorra.vtexassets.com/arquivos/ids/1284659/28212000707020.jpg?v=638368776878470000",
+                                        "name": "28212000707020"
+                                    },
+                                    {
+                                        "@type": "ImageObject",
+                                        "alternateName": "28212000707020",
+                                        "url": "https://torratorra.vtexassets.com/arquivos/ids/1284660/28212000707020.jpg?v=638368776895600000",
+                                        "name": "28212000707020"
+                                    }
+                                ],
+                                "offers": {
+                                    "@type": "AggregateOffer",
+                                    "priceCurrency": "BRL",
+                                    "highPrice": 39.99,
+                                    "lowPrice": 39.99,
+                                    "offerCount": 1,
+                                    "offers": [
+                                        {
+                                            "@type": "Offer",
+                                            "price": 39.99,
+                                            "seller": "1",
+                                            "priceValidUntil": "2024-12-01T20:17:28Z",
+                                            "inventoryLevel": {
+                                                "value": 10000
+                                            },
+                                            "giftSkuIds": [],
+                                            "teasers": [],
+                                            "priceSpecification": [
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/ListPrice",
+                                                    "price": 39.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "price": 39.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "American Express",
+                                                    "description": "American Express à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 39.99,
+                                                    "price": 39.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Visa",
+                                                    "description": "Visa à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 39.99,
+                                                    "price": 39.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Mastercard",
+                                                    "description": "Mastercard à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 39.99,
+                                                    "price": 39.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Hipercard",
+                                                    "description": "Hipercard à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 39.99,
+                                                    "price": 39.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Elo",
+                                                    "description": "Elo à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 39.99,
+                                                    "price": 39.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Vale",
+                                                    "description": "Vale à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 39.99,
+                                                    "price": 39.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "PicPay",
+                                                    "description": "PicPay à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 39.99,
+                                                    "price": 39.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "AmeDigital",
+                                                    "description": "AmeDigital à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 39.99,
+                                                    "price": 39.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Pix",
+                                                    "description": "Pix à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 39.99,
+                                                    "price": 39.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Cartão Torra",
+                                                    "description": "Cartão Torra à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 39.99,
+                                                    "price": 39.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Cartão Torra",
+                                                    "description": "Cartão Torra 2 vezes sem juros",
+                                                    "billingDuration": 2,
+                                                    "billingIncrement": 19.99,
+                                                    "price": 39.99
+                                                }
+                                            ],
+                                            "availability": "https://schema.org/InStock"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "@type": "Product",
+                                "category": "Masculino>Polos",
+                                "productID": "260839",
+                                "url": "https://www.lojastorra.com.br/camisa-polo-masculina-com-bolso-piquet-azul-28212000736022/p?skuId=260839",
+                                "name": "M",
+                                "description": "<h2>Características</h2><p><strong>Segmento:</strong>&nbsp;camisa polo</p><p><strong>Gola:&nbsp;</strong>sim</p><p><strong>Tipo de manga:&nbsp;</strong>curta&nbsp;</p><p><strong>Costura:&nbsp;</strong>padrão&nbsp;</p><p><strong>Acabamento:&nbsp;</strong>padrão&nbsp;</p><p><strong>Textura do tecido:</strong>&nbsp;piquet</p><p><strong>Descrição da estampa:</strong>&nbsp;não possui&nbsp;</p><p><strong>Bordado:</strong>&nbsp;não possui&nbsp;</p><p><strong>Detalhes:&nbsp;</strong>camisa polo com botão e bolso frontal e acabamento em ribana&nbsp;</p><h2>Especificações técnicas</h2><p><strong>Produto:&nbsp;</strong>camisa polo&nbsp;</p><p><strong>Categoria:</strong>&nbsp;masculina&nbsp;</p><p><strong>Tamanho:</strong>&nbsp;P ao GG</p><p><strong>Tecido:</strong>&nbsp;malha</p><p><strong>Composição:</strong>&nbsp;50% poliéster 50% algodão&nbsp;</p><p><strong>Produzido:</strong>&nbsp;Brasil&nbsp;</p><p><strong>Cor:&nbsp;</strong>azul</p><p><strong>Modelo veste peça tamanho M</strong></p><p><strong>Medidas da Modelo</strong></p><p>Altura: 1,84m<br>Tórax: 102cm<br>Cintura: 80cm<br>Quadril: 99cm<br>Manequim: 40/42<br></p><p><strong>Instruções de lavagem:</strong></p><p>Lavar com temperatura máxima de 40°C<br>Não usar alvejante a base de cloro<br>Proibido usar secadora<br>Passar com temperatura máxima de 110°C<br>Não lavar a seco<br></p><p>O tom das cores dos produtos nas fotos podem sofrer variações em decorrência do flash.</p><h2>Por que camiseta polo?</h2><p>A camiseta polo é uma peça tradicional do guarda-roupa do dia a dia. Também conhecida como camisa polo, ela tem algumas características que são fáceis de identificar.<strong><span style=\"box-sizing: border-box; -webkit-user-drag: none; overflow: visible; font-family: inherit; font-size: inherit; color: inherit; display: inline; vertical-align: baseline; margin: 0px; padding: 0px;\">&nbsp;</span>A camisa polo tem o formato de uma camiseta tradicional, mas o seu diferencial é a gola que simula uma gola de camisa, em malha canelada</strong>. A camiseta polo tem esse nome porque foi inspirada nos uniformes dos jogadores de polo, esporte praticado com cavalos. Escolha as suas camisas polos favoritas e aproveite também para conhecer a nossa coleção de<span style=\"box-sizing: border-box; -webkit-user-drag: none; overflow: visible; font-family: inherit; font-size: inherit; color: inherit; display: inline; vertical-align: baseline; margin: 0px; padding: 0px;\">&nbsp;</span><a href=\"https://www.lojastorra.com.br/masculino/camisetas\" style=\"box-sizing: border-box; -webkit-user-drag: none; overflow: visible; font-family: inherit; font-size: inherit; color: rgb(0, 76, 255); text-decoration: none;\">camiseta masculina</a>.</p><p><br><!-- EndFragment --><br><br></p>",
+                                "brand": {
+                                    "@type": "Brand",
+                                    "@id": "2000000",
+                                    "name": "TORRA"
+                                },
+                                "inProductGroupWithID": "69118",
+                                "sku": "260839",
+                                "gtin": "28212000736022M",
+                                "releaseDate": 1701216000000,
+                                "additionalProperty": [
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "Tamanho",
+                                        "value": "M",
+                                        "valueReference": "SPECIFICATION"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "category",
+                                        "propertyID": "4",
+                                        "value": "Masculino"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "category",
+                                        "propertyID": "29",
+                                        "value": "Polos"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Novidades",
+                                        "propertyID": "138"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "todos os produtos",
+                                        "propertyID": "164"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Criteo-Todos",
+                                        "propertyID": "171"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "produtos-google-shopping",
+                                        "propertyID": "174",
+                                        "description": "highlight"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Criteo-All",
+                                        "propertyID": "416"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Colecao-Criteo",
+                                        "propertyID": "590",
+                                        "description": "highlight"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Sizebay",
+                                        "propertyID": "2281"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Rakuten",
+                                        "propertyID": "2321"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "RefId",
+                                        "value": "28212000736022M",
+                                        "valueReference": "ReferenceID"
+                                    }
+                                ],
+                                "isVariantOf": {
+                                    "@type": "ProductGroup",
+                                    "productGroupID": "69118",
+                                    "hasVariant": [
+                                        {
+                                            "@type": "Product",
+                                            "category": "Masculino>Polos",
+                                            "productID": "260839",
+                                            "url": "https://www.lojastorra.com.br/camisa-polo-masculina-com-bolso-piquet-azul-28212000736022/p?skuId=260839",
+                                            "name": "M",
+                                            "description": "<h2>Características</h2><p><strong>Segmento:</strong>&nbsp;camisa polo</p><p><strong>Gola:&nbsp;</strong>sim</p><p><strong>Tipo de manga:&nbsp;</strong>curta&nbsp;</p><p><strong>Costura:&nbsp;</strong>padrão&nbsp;</p><p><strong>Acabamento:&nbsp;</strong>padrão&nbsp;</p><p><strong>Textura do tecido:</strong>&nbsp;piquet</p><p><strong>Descrição da estampa:</strong>&nbsp;não possui&nbsp;</p><p><strong>Bordado:</strong>&nbsp;não possui&nbsp;</p><p><strong>Detalhes:&nbsp;</strong>camisa polo com botão e bolso frontal e acabamento em ribana&nbsp;</p><h2>Especificações técnicas</h2><p><strong>Produto:&nbsp;</strong>camisa polo&nbsp;</p><p><strong>Categoria:</strong>&nbsp;masculina&nbsp;</p><p><strong>Tamanho:</strong>&nbsp;P ao GG</p><p><strong>Tecido:</strong>&nbsp;malha</p><p><strong>Composição:</strong>&nbsp;50% poliéster 50% algodão&nbsp;</p><p><strong>Produzido:</strong>&nbsp;Brasil&nbsp;</p><p><strong>Cor:&nbsp;</strong>azul</p><p><strong>Modelo veste peça tamanho M</strong></p><p><strong>Medidas da Modelo</strong></p><p>Altura: 1,84m<br>Tórax: 102cm<br>Cintura: 80cm<br>Quadril: 99cm<br>Manequim: 40/42<br></p><p><strong>Instruções de lavagem:</strong></p><p>Lavar com temperatura máxima de 40°C<br>Não usar alvejante a base de cloro<br>Proibido usar secadora<br>Passar com temperatura máxima de 110°C<br>Não lavar a seco<br></p><p>O tom das cores dos produtos nas fotos podem sofrer variações em decorrência do flash.</p><h2>Por que camiseta polo?</h2><p>A camiseta polo é uma peça tradicional do guarda-roupa do dia a dia. Também conhecida como camisa polo, ela tem algumas características que são fáceis de identificar.<strong><span style=\"box-sizing: border-box; -webkit-user-drag: none; overflow: visible; font-family: inherit; font-size: inherit; color: inherit; display: inline; vertical-align: baseline; margin: 0px; padding: 0px;\">&nbsp;</span>A camisa polo tem o formato de uma camiseta tradicional, mas o seu diferencial é a gola que simula uma gola de camisa, em malha canelada</strong>. A camiseta polo tem esse nome porque foi inspirada nos uniformes dos jogadores de polo, esporte praticado com cavalos. Escolha as suas camisas polos favoritas e aproveite também para conhecer a nossa coleção de<span style=\"box-sizing: border-box; -webkit-user-drag: none; overflow: visible; font-family: inherit; font-size: inherit; color: inherit; display: inline; vertical-align: baseline; margin: 0px; padding: 0px;\">&nbsp;</span><a href=\"https://www.lojastorra.com.br/masculino/camisetas\" style=\"box-sizing: border-box; -webkit-user-drag: none; overflow: visible; font-family: inherit; font-size: inherit; color: rgb(0, 76, 255); text-decoration: none;\">camiseta masculina</a>.</p><p><br><!-- EndFragment --><br><br></p>",
+                                            "brand": {
+                                                "@type": "Brand",
+                                                "@id": "2000000",
+                                                "name": "TORRA"
+                                            },
+                                            "inProductGroupWithID": "69118",
+                                            "sku": "260839",
+                                            "gtin": "28212000736022M",
+                                            "releaseDate": 1701216000000,
+                                            "additionalProperty": [
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "Tamanho",
+                                                    "value": "M",
+                                                    "valueReference": "SPECIFICATION"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "4",
+                                                    "value": "Masculino"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "29",
+                                                    "value": "Polos"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Novidades",
+                                                    "propertyID": "138"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "todos os produtos",
+                                                    "propertyID": "164"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-Todos",
+                                                    "propertyID": "171"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "produtos-google-shopping",
+                                                    "propertyID": "174",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-All",
+                                                    "propertyID": "416"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Colecao-Criteo",
+                                                    "propertyID": "590",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Sizebay",
+                                                    "propertyID": "2281"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Rakuten",
+                                                    "propertyID": "2321"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "RefId",
+                                                    "value": "28212000736022M",
+                                                    "valueReference": "ReferenceID"
+                                                }
+                                            ],
+                                            "image": [
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000736022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284276/28212000736022.jpg?v=638368585391330000",
+                                                    "name": "28212000736022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000736022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284277/28212000736022.jpg?v=638368585404070000",
+                                                    "name": "28212000736022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000736022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284278/28212000736022.jpg?v=638368585418370000",
+                                                    "name": "28212000736022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000736022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284279/28212000736022.jpg?v=638368585433930000",
+                                                    "name": "28212000736022"
+                                                }
+                                            ],
+                                            "offers": {
+                                                "@type": "AggregateOffer",
+                                                "priceCurrency": "BRL",
+                                                "highPrice": 59.99,
+                                                "lowPrice": 59.99,
+                                                "offerCount": 1,
+                                                "offers": [
+                                                    {
+                                                        "@type": "Offer",
+                                                        "price": 59.99,
+                                                        "seller": "1",
+                                                        "priceValidUntil": "2024-12-01T20:21:12Z",
+                                                        "inventoryLevel": {
+                                                            "value": 10000
+                                                        },
+                                                        "giftSkuIds": [],
+                                                        "teasers": [],
+                                                        "priceSpecification": [
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/ListPrice",
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Vale",
+                                                                "description": "Vale à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "PicPay",
+                                                                "description": "PicPay à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "AmeDigital",
+                                                                "description": "AmeDigital à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Pix",
+                                                                "description": "Pix à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 29.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 19.99,
+                                                                "price": 59.99
+                                                            }
+                                                        ],
+                                                        "availability": "https://schema.org/InStock"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "@type": "Product",
+                                            "category": "Masculino>Polos",
+                                            "productID": "260840",
+                                            "url": "https://www.lojastorra.com.br/camisa-polo-masculina-com-bolso-piquet-azul-28212000736022/p?skuId=260840",
+                                            "name": "P",
+                                            "description": "<h2>Características</h2><p><strong>Segmento:</strong>&nbsp;camisa polo</p><p><strong>Gola:&nbsp;</strong>sim</p><p><strong>Tipo de manga:&nbsp;</strong>curta&nbsp;</p><p><strong>Costura:&nbsp;</strong>padrão&nbsp;</p><p><strong>Acabamento:&nbsp;</strong>padrão&nbsp;</p><p><strong>Textura do tecido:</strong>&nbsp;piquet</p><p><strong>Descrição da estampa:</strong>&nbsp;não possui&nbsp;</p><p><strong>Bordado:</strong>&nbsp;não possui&nbsp;</p><p><strong>Detalhes:&nbsp;</strong>camisa polo com botão e bolso frontal e acabamento em ribana&nbsp;</p><h2>Especificações técnicas</h2><p><strong>Produto:&nbsp;</strong>camisa polo&nbsp;</p><p><strong>Categoria:</strong>&nbsp;masculina&nbsp;</p><p><strong>Tamanho:</strong>&nbsp;P ao GG</p><p><strong>Tecido:</strong>&nbsp;malha</p><p><strong>Composição:</strong>&nbsp;50% poliéster 50% algodão&nbsp;</p><p><strong>Produzido:</strong>&nbsp;Brasil&nbsp;</p><p><strong>Cor:&nbsp;</strong>azul</p><p><strong>Modelo veste peça tamanho M</strong></p><p><strong>Medidas da Modelo</strong></p><p>Altura: 1,84m<br>Tórax: 102cm<br>Cintura: 80cm<br>Quadril: 99cm<br>Manequim: 40/42<br></p><p><strong>Instruções de lavagem:</strong></p><p>Lavar com temperatura máxima de 40°C<br>Não usar alvejante a base de cloro<br>Proibido usar secadora<br>Passar com temperatura máxima de 110°C<br>Não lavar a seco<br></p><p>O tom das cores dos produtos nas fotos podem sofrer variações em decorrência do flash.</p><h2>Por que camiseta polo?</h2><p>A camiseta polo é uma peça tradicional do guarda-roupa do dia a dia. Também conhecida como camisa polo, ela tem algumas características que são fáceis de identificar.<strong><span style=\"box-sizing: border-box; -webkit-user-drag: none; overflow: visible; font-family: inherit; font-size: inherit; color: inherit; display: inline; vertical-align: baseline; margin: 0px; padding: 0px;\">&nbsp;</span>A camisa polo tem o formato de uma camiseta tradicional, mas o seu diferencial é a gola que simula uma gola de camisa, em malha canelada</strong>. A camiseta polo tem esse nome porque foi inspirada nos uniformes dos jogadores de polo, esporte praticado com cavalos. Escolha as suas camisas polos favoritas e aproveite também para conhecer a nossa coleção de<span style=\"box-sizing: border-box; -webkit-user-drag: none; overflow: visible; font-family: inherit; font-size: inherit; color: inherit; display: inline; vertical-align: baseline; margin: 0px; padding: 0px;\">&nbsp;</span><a href=\"https://www.lojastorra.com.br/masculino/camisetas\" style=\"box-sizing: border-box; -webkit-user-drag: none; overflow: visible; font-family: inherit; font-size: inherit; color: rgb(0, 76, 255); text-decoration: none;\">camiseta masculina</a>.</p><p><br><!-- EndFragment --><br><br></p>",
+                                            "brand": {
+                                                "@type": "Brand",
+                                                "@id": "2000000",
+                                                "name": "TORRA"
+                                            },
+                                            "inProductGroupWithID": "69118",
+                                            "sku": "260840",
+                                            "gtin": "28212000736022P",
+                                            "releaseDate": 1701216000000,
+                                            "additionalProperty": [
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "Tamanho",
+                                                    "value": "P",
+                                                    "valueReference": "SPECIFICATION"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "4",
+                                                    "value": "Masculino"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "29",
+                                                    "value": "Polos"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Novidades",
+                                                    "propertyID": "138"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "todos os produtos",
+                                                    "propertyID": "164"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-Todos",
+                                                    "propertyID": "171"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "produtos-google-shopping",
+                                                    "propertyID": "174",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-All",
+                                                    "propertyID": "416"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Colecao-Criteo",
+                                                    "propertyID": "590",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Sizebay",
+                                                    "propertyID": "2281"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Rakuten",
+                                                    "propertyID": "2321"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "RefId",
+                                                    "value": "28212000736022P",
+                                                    "valueReference": "ReferenceID"
+                                                }
+                                            ],
+                                            "image": [
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000736022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284276/28212000736022.jpg?v=638368585391330000",
+                                                    "name": "28212000736022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000736022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284277/28212000736022.jpg?v=638368585404070000",
+                                                    "name": "28212000736022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000736022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284278/28212000736022.jpg?v=638368585418370000",
+                                                    "name": "28212000736022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000736022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284279/28212000736022.jpg?v=638368585433930000",
+                                                    "name": "28212000736022"
+                                                }
+                                            ],
+                                            "offers": {
+                                                "@type": "AggregateOffer",
+                                                "priceCurrency": "BRL",
+                                                "highPrice": 59.99,
+                                                "lowPrice": 59.99,
+                                                "offerCount": 1,
+                                                "offers": [
+                                                    {
+                                                        "@type": "Offer",
+                                                        "price": 59.99,
+                                                        "seller": "1",
+                                                        "priceValidUntil": "2024-12-01T20:21:12Z",
+                                                        "inventoryLevel": {
+                                                            "value": 10000
+                                                        },
+                                                        "giftSkuIds": [],
+                                                        "teasers": [],
+                                                        "priceSpecification": [
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/ListPrice",
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Vale",
+                                                                "description": "Vale à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "PicPay",
+                                                                "description": "PicPay à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "AmeDigital",
+                                                                "description": "AmeDigital à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Pix",
+                                                                "description": "Pix à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 29.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 19.99,
+                                                                "price": 59.99
+                                                            }
+                                                        ],
+                                                        "availability": "https://schema.org/InStock"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "@type": "Product",
+                                            "category": "Masculino>Polos",
+                                            "productID": "260841",
+                                            "url": "https://www.lojastorra.com.br/camisa-polo-masculina-com-bolso-piquet-azul-28212000736022/p?skuId=260841",
+                                            "name": "G",
+                                            "description": "<h2>Características</h2><p><strong>Segmento:</strong>&nbsp;camisa polo</p><p><strong>Gola:&nbsp;</strong>sim</p><p><strong>Tipo de manga:&nbsp;</strong>curta&nbsp;</p><p><strong>Costura:&nbsp;</strong>padrão&nbsp;</p><p><strong>Acabamento:&nbsp;</strong>padrão&nbsp;</p><p><strong>Textura do tecido:</strong>&nbsp;piquet</p><p><strong>Descrição da estampa:</strong>&nbsp;não possui&nbsp;</p><p><strong>Bordado:</strong>&nbsp;não possui&nbsp;</p><p><strong>Detalhes:&nbsp;</strong>camisa polo com botão e bolso frontal e acabamento em ribana&nbsp;</p><h2>Especificações técnicas</h2><p><strong>Produto:&nbsp;</strong>camisa polo&nbsp;</p><p><strong>Categoria:</strong>&nbsp;masculina&nbsp;</p><p><strong>Tamanho:</strong>&nbsp;P ao GG</p><p><strong>Tecido:</strong>&nbsp;malha</p><p><strong>Composição:</strong>&nbsp;50% poliéster 50% algodão&nbsp;</p><p><strong>Produzido:</strong>&nbsp;Brasil&nbsp;</p><p><strong>Cor:&nbsp;</strong>azul</p><p><strong>Modelo veste peça tamanho M</strong></p><p><strong>Medidas da Modelo</strong></p><p>Altura: 1,84m<br>Tórax: 102cm<br>Cintura: 80cm<br>Quadril: 99cm<br>Manequim: 40/42<br></p><p><strong>Instruções de lavagem:</strong></p><p>Lavar com temperatura máxima de 40°C<br>Não usar alvejante a base de cloro<br>Proibido usar secadora<br>Passar com temperatura máxima de 110°C<br>Não lavar a seco<br></p><p>O tom das cores dos produtos nas fotos podem sofrer variações em decorrência do flash.</p><h2>Por que camiseta polo?</h2><p>A camiseta polo é uma peça tradicional do guarda-roupa do dia a dia. Também conhecida como camisa polo, ela tem algumas características que são fáceis de identificar.<strong><span style=\"box-sizing: border-box; -webkit-user-drag: none; overflow: visible; font-family: inherit; font-size: inherit; color: inherit; display: inline; vertical-align: baseline; margin: 0px; padding: 0px;\">&nbsp;</span>A camisa polo tem o formato de uma camiseta tradicional, mas o seu diferencial é a gola que simula uma gola de camisa, em malha canelada</strong>. A camiseta polo tem esse nome porque foi inspirada nos uniformes dos jogadores de polo, esporte praticado com cavalos. Escolha as suas camisas polos favoritas e aproveite também para conhecer a nossa coleção de<span style=\"box-sizing: border-box; -webkit-user-drag: none; overflow: visible; font-family: inherit; font-size: inherit; color: inherit; display: inline; vertical-align: baseline; margin: 0px; padding: 0px;\">&nbsp;</span><a href=\"https://www.lojastorra.com.br/masculino/camisetas\" style=\"box-sizing: border-box; -webkit-user-drag: none; overflow: visible; font-family: inherit; font-size: inherit; color: rgb(0, 76, 255); text-decoration: none;\">camiseta masculina</a>.</p><p><br><!-- EndFragment --><br><br></p>",
+                                            "brand": {
+                                                "@type": "Brand",
+                                                "@id": "2000000",
+                                                "name": "TORRA"
+                                            },
+                                            "inProductGroupWithID": "69118",
+                                            "sku": "260841",
+                                            "gtin": "28212000736022G",
+                                            "releaseDate": 1701216000000,
+                                            "additionalProperty": [
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "Tamanho",
+                                                    "value": "G",
+                                                    "valueReference": "SPECIFICATION"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "4",
+                                                    "value": "Masculino"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "29",
+                                                    "value": "Polos"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Novidades",
+                                                    "propertyID": "138"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "todos os produtos",
+                                                    "propertyID": "164"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-Todos",
+                                                    "propertyID": "171"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "produtos-google-shopping",
+                                                    "propertyID": "174",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-All",
+                                                    "propertyID": "416"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Colecao-Criteo",
+                                                    "propertyID": "590",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Sizebay",
+                                                    "propertyID": "2281"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Rakuten",
+                                                    "propertyID": "2321"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "RefId",
+                                                    "value": "28212000736022G",
+                                                    "valueReference": "ReferenceID"
+                                                }
+                                            ],
+                                            "image": [
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000736022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284276/28212000736022.jpg?v=638368585391330000",
+                                                    "name": "28212000736022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000736022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284277/28212000736022.jpg?v=638368585404070000",
+                                                    "name": "28212000736022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000736022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284278/28212000736022.jpg?v=638368585418370000",
+                                                    "name": "28212000736022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000736022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284279/28212000736022.jpg?v=638368585433930000",
+                                                    "name": "28212000736022"
+                                                }
+                                            ],
+                                            "offers": {
+                                                "@type": "AggregateOffer",
+                                                "priceCurrency": "BRL",
+                                                "highPrice": 59.99,
+                                                "lowPrice": 59.99,
+                                                "offerCount": 1,
+                                                "offers": [
+                                                    {
+                                                        "@type": "Offer",
+                                                        "price": 59.99,
+                                                        "seller": "1",
+                                                        "priceValidUntil": "2024-12-01T20:21:12Z",
+                                                        "inventoryLevel": {
+                                                            "value": 10000
+                                                        },
+                                                        "giftSkuIds": [],
+                                                        "teasers": [],
+                                                        "priceSpecification": [
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/ListPrice",
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Vale",
+                                                                "description": "Vale à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "PicPay",
+                                                                "description": "PicPay à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "AmeDigital",
+                                                                "description": "AmeDigital à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Pix",
+                                                                "description": "Pix à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 29.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 19.99,
+                                                                "price": 59.99
+                                                            }
+                                                        ],
+                                                        "availability": "https://schema.org/InStock"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "@type": "Product",
+                                            "category": "Masculino>Polos",
+                                            "productID": "260842",
+                                            "url": "https://www.lojastorra.com.br/camisa-polo-masculina-com-bolso-piquet-azul-28212000736022/p?skuId=260842",
+                                            "name": "GG",
+                                            "description": "<h2>Características</h2><p><strong>Segmento:</strong>&nbsp;camisa polo</p><p><strong>Gola:&nbsp;</strong>sim</p><p><strong>Tipo de manga:&nbsp;</strong>curta&nbsp;</p><p><strong>Costura:&nbsp;</strong>padrão&nbsp;</p><p><strong>Acabamento:&nbsp;</strong>padrão&nbsp;</p><p><strong>Textura do tecido:</strong>&nbsp;piquet</p><p><strong>Descrição da estampa:</strong>&nbsp;não possui&nbsp;</p><p><strong>Bordado:</strong>&nbsp;não possui&nbsp;</p><p><strong>Detalhes:&nbsp;</strong>camisa polo com botão e bolso frontal e acabamento em ribana&nbsp;</p><h2>Especificações técnicas</h2><p><strong>Produto:&nbsp;</strong>camisa polo&nbsp;</p><p><strong>Categoria:</strong>&nbsp;masculina&nbsp;</p><p><strong>Tamanho:</strong>&nbsp;P ao GG</p><p><strong>Tecido:</strong>&nbsp;malha</p><p><strong>Composição:</strong>&nbsp;50% poliéster 50% algodão&nbsp;</p><p><strong>Produzido:</strong>&nbsp;Brasil&nbsp;</p><p><strong>Cor:&nbsp;</strong>azul</p><p><strong>Modelo veste peça tamanho M</strong></p><p><strong>Medidas da Modelo</strong></p><p>Altura: 1,84m<br>Tórax: 102cm<br>Cintura: 80cm<br>Quadril: 99cm<br>Manequim: 40/42<br></p><p><strong>Instruções de lavagem:</strong></p><p>Lavar com temperatura máxima de 40°C<br>Não usar alvejante a base de cloro<br>Proibido usar secadora<br>Passar com temperatura máxima de 110°C<br>Não lavar a seco<br></p><p>O tom das cores dos produtos nas fotos podem sofrer variações em decorrência do flash.</p><h2>Por que camiseta polo?</h2><p>A camiseta polo é uma peça tradicional do guarda-roupa do dia a dia. Também conhecida como camisa polo, ela tem algumas características que são fáceis de identificar.<strong><span style=\"box-sizing: border-box; -webkit-user-drag: none; overflow: visible; font-family: inherit; font-size: inherit; color: inherit; display: inline; vertical-align: baseline; margin: 0px; padding: 0px;\">&nbsp;</span>A camisa polo tem o formato de uma camiseta tradicional, mas o seu diferencial é a gola que simula uma gola de camisa, em malha canelada</strong>. A camiseta polo tem esse nome porque foi inspirada nos uniformes dos jogadores de polo, esporte praticado com cavalos. Escolha as suas camisas polos favoritas e aproveite também para conhecer a nossa coleção de<span style=\"box-sizing: border-box; -webkit-user-drag: none; overflow: visible; font-family: inherit; font-size: inherit; color: inherit; display: inline; vertical-align: baseline; margin: 0px; padding: 0px;\">&nbsp;</span><a href=\"https://www.lojastorra.com.br/masculino/camisetas\" style=\"box-sizing: border-box; -webkit-user-drag: none; overflow: visible; font-family: inherit; font-size: inherit; color: rgb(0, 76, 255); text-decoration: none;\">camiseta masculina</a>.</p><p><br><!-- EndFragment --><br><br></p>",
+                                            "brand": {
+                                                "@type": "Brand",
+                                                "@id": "2000000",
+                                                "name": "TORRA"
+                                            },
+                                            "inProductGroupWithID": "69118",
+                                            "sku": "260842",
+                                            "gtin": "28212000736022GG",
+                                            "releaseDate": 1701216000000,
+                                            "additionalProperty": [
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "Tamanho",
+                                                    "value": "GG",
+                                                    "valueReference": "SPECIFICATION"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "4",
+                                                    "value": "Masculino"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "29",
+                                                    "value": "Polos"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Novidades",
+                                                    "propertyID": "138"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "todos os produtos",
+                                                    "propertyID": "164"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-Todos",
+                                                    "propertyID": "171"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "produtos-google-shopping",
+                                                    "propertyID": "174",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-All",
+                                                    "propertyID": "416"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Colecao-Criteo",
+                                                    "propertyID": "590",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Sizebay",
+                                                    "propertyID": "2281"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Rakuten",
+                                                    "propertyID": "2321"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "RefId",
+                                                    "value": "28212000736022GG",
+                                                    "valueReference": "ReferenceID"
+                                                }
+                                            ],
+                                            "image": [
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000736022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284276/28212000736022.jpg?v=638368585391330000",
+                                                    "name": "28212000736022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000736022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284277/28212000736022.jpg?v=638368585404070000",
+                                                    "name": "28212000736022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000736022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284278/28212000736022.jpg?v=638368585418370000",
+                                                    "name": "28212000736022"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "28212000736022",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1284279/28212000736022.jpg?v=638368585433930000",
+                                                    "name": "28212000736022"
+                                                }
+                                            ],
+                                            "offers": {
+                                                "@type": "AggregateOffer",
+                                                "priceCurrency": "BRL",
+                                                "highPrice": 59.99,
+                                                "lowPrice": 59.99,
+                                                "offerCount": 1,
+                                                "offers": [
+                                                    {
+                                                        "@type": "Offer",
+                                                        "price": 59.99,
+                                                        "seller": "1",
+                                                        "priceValidUntil": "2024-12-01T20:21:12Z",
+                                                        "inventoryLevel": {
+                                                            "value": 10000
+                                                        },
+                                                        "giftSkuIds": [],
+                                                        "teasers": [],
+                                                        "priceSpecification": [
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/ListPrice",
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Vale",
+                                                                "description": "Vale à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "PicPay",
+                                                                "description": "PicPay à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "AmeDigital",
+                                                                "description": "AmeDigital à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Pix",
+                                                                "description": "Pix à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 59.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 29.99,
+                                                                "price": 59.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 19.99,
+                                                                "price": 59.99
+                                                            }
+                                                        ],
+                                                        "availability": "https://schema.org/InStock"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "url": "https://www.lojastorra.com.br/camisa-polo-masculina-com-bolso-piquet-azul-28212000736022/p",
+                                    "name": "Camisa Polo Masculina Com Bolso Piquet Azul",
+                                    "additionalProperty": [
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Manga",
+                                            "value": "Manga Curta",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Cor",
+                                            "value": "Azul",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Tecido",
+                                            "value": "Piquet",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Estilo",
+                                            "value": "Casual",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Tamanho",
+                                            "value": "M",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Tamanho",
+                                            "value": "P",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Tamanho",
+                                            "value": "G",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Tamanho",
+                                            "value": "GG",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "sellerId",
+                                            "value": "1",
+                                            "valueReference": "PROPERTY"
+                                        }
+                                    ],
+                                    "model": "28212000736022"
+                                },
+                                "image": [
+                                    {
+                                        "@type": "ImageObject",
+                                        "alternateName": "28212000736022",
+                                        "url": "https://torratorra.vtexassets.com/arquivos/ids/1284276/28212000736022.jpg?v=638368585391330000",
+                                        "name": "28212000736022"
+                                    },
+                                    {
+                                        "@type": "ImageObject",
+                                        "alternateName": "28212000736022",
+                                        "url": "https://torratorra.vtexassets.com/arquivos/ids/1284277/28212000736022.jpg?v=638368585404070000",
+                                        "name": "28212000736022"
+                                    },
+                                    {
+                                        "@type": "ImageObject",
+                                        "alternateName": "28212000736022",
+                                        "url": "https://torratorra.vtexassets.com/arquivos/ids/1284278/28212000736022.jpg?v=638368585418370000",
+                                        "name": "28212000736022"
+                                    },
+                                    {
+                                        "@type": "ImageObject",
+                                        "alternateName": "28212000736022",
+                                        "url": "https://torratorra.vtexassets.com/arquivos/ids/1284279/28212000736022.jpg?v=638368585433930000",
+                                        "name": "28212000736022"
+                                    }
+                                ],
+                                "offers": {
+                                    "@type": "AggregateOffer",
+                                    "priceCurrency": "BRL",
+                                    "highPrice": 59.99,
+                                    "lowPrice": 59.99,
+                                    "offerCount": 1,
+                                    "offers": [
+                                        {
+                                            "@type": "Offer",
+                                            "price": 59.99,
+                                            "seller": "1",
+                                            "priceValidUntil": "2024-12-01T20:21:12Z",
+                                            "inventoryLevel": {
+                                                "value": 10000
+                                            },
+                                            "giftSkuIds": [],
+                                            "teasers": [],
+                                            "priceSpecification": [
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/ListPrice",
+                                                    "price": 59.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "price": 59.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "American Express",
+                                                    "description": "American Express à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 59.99,
+                                                    "price": 59.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Visa",
+                                                    "description": "Visa à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 59.99,
+                                                    "price": 59.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Mastercard",
+                                                    "description": "Mastercard à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 59.99,
+                                                    "price": 59.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Hipercard",
+                                                    "description": "Hipercard à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 59.99,
+                                                    "price": 59.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Elo",
+                                                    "description": "Elo à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 59.99,
+                                                    "price": 59.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Vale",
+                                                    "description": "Vale à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 59.99,
+                                                    "price": 59.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "PicPay",
+                                                    "description": "PicPay à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 59.99,
+                                                    "price": 59.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "AmeDigital",
+                                                    "description": "AmeDigital à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 59.99,
+                                                    "price": 59.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Pix",
+                                                    "description": "Pix à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 59.99,
+                                                    "price": 59.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Cartão Torra",
+                                                    "description": "Cartão Torra à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 59.99,
+                                                    "price": 59.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Cartão Torra",
+                                                    "description": "Cartão Torra 2 vezes sem juros",
+                                                    "billingDuration": 2,
+                                                    "billingIncrement": 29.99,
+                                                    "price": 59.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Cartão Torra",
+                                                    "description": "Cartão Torra 3 vezes sem juros",
+                                                    "billingDuration": 3,
+                                                    "billingIncrement": 19.99,
+                                                    "price": 59.99
+                                                }
+                                            ],
+                                            "availability": "https://schema.org/InStock"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "@type": "Product",
+                                "category": "Plus Size>Masculino>Camisas",
+                                "productID": "260035",
+                                "url": "https://www.lojastorra.com.br/camisa-plus-size-masculina-estampa-folhagens-manga-curta-azul-21526000123023/p?skuId=260035",
+                                "name": "6",
+                                "description": "<p><span style=\"font-size: 1.5em; font-weight: 700;\">Características</span><br></p><p><br></p><p><strong>Segmento: </strong>camisa</p><p><br></p><p><strong>Gola:</strong> sim</p><p><br></p><p><strong>Tipo de manga: </strong>curta</p><p><br></p><p><strong>Costura: </strong>padrão</p><p><br></p><p><strong>Acabamento: </strong>padrão</p><p><br></p><p><strong>Textura do tecido: </strong>liso</p><p><br></p><p><strong>Descrição da estampa: </strong>folhagens&nbsp;</p><p><br></p><p><strong>Bordado: </strong>não possui</p><p><br></p><p><strong>Detalhes: </strong>botões&nbsp;</p><p><br></p><h2>Especificações técnicas</h2><p><br></p><p><strong>Produto: </strong>camisa</p><p><br></p><p><strong>Categoria: </strong>masculino</p><p><br></p><p><strong>Tamanho: </strong>P ao GG</p><p><br></p><p><strong>Tecido: </strong>malha</p><p><br></p><p><strong>Composição: </strong>55% algodão e 45% viscose</p><p><br></p><p><strong>Produzido: </strong>no Brasil&nbsp;</p><p><br></p><p><strong>Cor: </strong>Azul&nbsp;</p><p><br></p><p>Modelo veste peça tamanho</p><p><br></p><p><strong>Medidas da Modelo</strong></p><p><br></p><p><strong>Altura:&nbsp; </strong>1,81m</p><p><br></p><p><strong>Busto/Tórax: </strong>103cm</p><p><br></p><p><strong>Cintura</strong>: 82cm</p><p><br></p><p><strong>Quadril: </strong>98cm</p><p><br></p><p><strong>Manequim: </strong>40/42</p><p><br></p><p><strong>- Instruções de lavagem:</strong></p><p>Lavar com temperatura máxima de 40°C<br>Não usar alvejante a base de cloro<br>Secar com temperatura baixa (40°)<br>Passar com temperatura máxima de 150°C<br>Não lavar a seco</p><p><br></p><p>O tom das cores dos produtos nas fotos podem sofrer variações em decorrência do flash.</p><p><br></p><p><strong>Onde comprar camisa?</strong><br><br>Compre camisas no site ou APP Lojas Torra! Aqui você encontra variedade em camisas com preço baixo, para você e toda a sua família.<br></p><p><br>Na Lojas Torra você encontra este e outros modelos que podem ter modelagem padrão, ajustada ou ampla, com design desejado por pessoas de todos os estilos.</p><p><br>A camisa é uma peça básica e essencial no guarda-roupa de todas as pessoas antenadas com a moda, mas que também prezam por um guarda-roupa versátil e que combina com tudo. Aproveite e coloque no seu carrinho agora!<br></p><p><br></p>",
+                                "brand": {
+                                    "@type": "Brand",
+                                    "@id": "2000000",
+                                    "name": "TORRA"
+                                },
+                                "inProductGroupWithID": "68868",
+                                "sku": "260035",
+                                "gtin": "215260001230236",
+                                "releaseDate": 1701043200000,
+                                "additionalProperty": [
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "Tamanho",
+                                        "value": "6",
+                                        "valueReference": "SPECIFICATION"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "category",
+                                        "propertyID": "149",
+                                        "value": "Plus Size"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "category",
+                                        "propertyID": "150",
+                                        "value": "Masculino"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "category",
+                                        "propertyID": "258",
+                                        "value": "Camisas"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Novidades",
+                                        "propertyID": "138"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "todos os produtos",
+                                        "propertyID": "164"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Criteo-Todos",
+                                        "propertyID": "171"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "produtos-google-shopping",
+                                        "propertyID": "174",
+                                        "description": "highlight"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Criteo-All",
+                                        "propertyID": "416"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Colecao-Criteo",
+                                        "propertyID": "590",
+                                        "description": "highlight"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Sizebay",
+                                        "propertyID": "2281"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "cluster",
+                                        "value": "Rakuten",
+                                        "propertyID": "2321"
+                                    },
+                                    {
+                                        "@type": "PropertyValue",
+                                        "name": "RefId",
+                                        "value": "215260001230236",
+                                        "valueReference": "ReferenceID"
+                                    }
+                                ],
+                                "isVariantOf": {
+                                    "@type": "ProductGroup",
+                                    "productGroupID": "68868",
+                                    "hasVariant": [
+                                        {
+                                            "@type": "Product",
+                                            "category": "Plus Size>Masculino>Camisas",
+                                            "productID": "260035",
+                                            "url": "https://www.lojastorra.com.br/camisa-plus-size-masculina-estampa-folhagens-manga-curta-azul-21526000123023/p?skuId=260035",
+                                            "name": "6",
+                                            "description": "<p><span style=\"font-size: 1.5em; font-weight: 700;\">Características</span><br></p><p><br></p><p><strong>Segmento: </strong>camisa</p><p><br></p><p><strong>Gola:</strong> sim</p><p><br></p><p><strong>Tipo de manga: </strong>curta</p><p><br></p><p><strong>Costura: </strong>padrão</p><p><br></p><p><strong>Acabamento: </strong>padrão</p><p><br></p><p><strong>Textura do tecido: </strong>liso</p><p><br></p><p><strong>Descrição da estampa: </strong>folhagens&nbsp;</p><p><br></p><p><strong>Bordado: </strong>não possui</p><p><br></p><p><strong>Detalhes: </strong>botões&nbsp;</p><p><br></p><h2>Especificações técnicas</h2><p><br></p><p><strong>Produto: </strong>camisa</p><p><br></p><p><strong>Categoria: </strong>masculino</p><p><br></p><p><strong>Tamanho: </strong>P ao GG</p><p><br></p><p><strong>Tecido: </strong>malha</p><p><br></p><p><strong>Composição: </strong>55% algodão e 45% viscose</p><p><br></p><p><strong>Produzido: </strong>no Brasil&nbsp;</p><p><br></p><p><strong>Cor: </strong>Azul&nbsp;</p><p><br></p><p>Modelo veste peça tamanho</p><p><br></p><p><strong>Medidas da Modelo</strong></p><p><br></p><p><strong>Altura:&nbsp; </strong>1,81m</p><p><br></p><p><strong>Busto/Tórax: </strong>103cm</p><p><br></p><p><strong>Cintura</strong>: 82cm</p><p><br></p><p><strong>Quadril: </strong>98cm</p><p><br></p><p><strong>Manequim: </strong>40/42</p><p><br></p><p><strong>- Instruções de lavagem:</strong></p><p>Lavar com temperatura máxima de 40°C<br>Não usar alvejante a base de cloro<br>Secar com temperatura baixa (40°)<br>Passar com temperatura máxima de 150°C<br>Não lavar a seco</p><p><br></p><p>O tom das cores dos produtos nas fotos podem sofrer variações em decorrência do flash.</p><p><br></p><p><strong>Onde comprar camisa?</strong><br><br>Compre camisas no site ou APP Lojas Torra! Aqui você encontra variedade em camisas com preço baixo, para você e toda a sua família.<br></p><p><br>Na Lojas Torra você encontra este e outros modelos que podem ter modelagem padrão, ajustada ou ampla, com design desejado por pessoas de todos os estilos.</p><p><br>A camisa é uma peça básica e essencial no guarda-roupa de todas as pessoas antenadas com a moda, mas que também prezam por um guarda-roupa versátil e que combina com tudo. Aproveite e coloque no seu carrinho agora!<br></p><p><br></p>",
+                                            "brand": {
+                                                "@type": "Brand",
+                                                "@id": "2000000",
+                                                "name": "TORRA"
+                                            },
+                                            "inProductGroupWithID": "68868",
+                                            "sku": "260035",
+                                            "gtin": "215260001230236",
+                                            "releaseDate": 1701043200000,
+                                            "additionalProperty": [
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "Tamanho",
+                                                    "value": "6",
+                                                    "valueReference": "SPECIFICATION"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "149",
+                                                    "value": "Plus Size"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "150",
+                                                    "value": "Masculino"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "258",
+                                                    "value": "Camisas"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Novidades",
+                                                    "propertyID": "138"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "todos os produtos",
+                                                    "propertyID": "164"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-Todos",
+                                                    "propertyID": "171"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "produtos-google-shopping",
+                                                    "propertyID": "174",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-All",
+                                                    "propertyID": "416"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Colecao-Criteo",
+                                                    "propertyID": "590",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Sizebay",
+                                                    "propertyID": "2281"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Rakuten",
+                                                    "propertyID": "2321"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "RefId",
+                                                    "value": "215260001230236",
+                                                    "valueReference": "ReferenceID"
+                                                }
+                                            ],
+                                            "image": [
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "21526000123023",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1282792/21526000123023.jpg?v=638367055540270000",
+                                                    "name": "21526000123023"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "21526000123023",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1282793/21526000123023.jpg?v=638367055555600000",
+                                                    "name": "21526000123023"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "21526000123023",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1282794/21526000123023.jpg?v=638367055570700000",
+                                                    "name": "21526000123023"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "21526000123023",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1282795/21526000123023.jpg?v=638367055586300000",
+                                                    "name": "21526000123023"
+                                                }
+                                            ],
+                                            "offers": {
+                                                "@type": "AggregateOffer",
+                                                "priceCurrency": "BRL",
+                                                "highPrice": 99.99,
+                                                "lowPrice": 99.99,
+                                                "offerCount": 1,
+                                                "offers": [
+                                                    {
+                                                        "@type": "Offer",
+                                                        "price": 99.99,
+                                                        "seller": "1",
+                                                        "priceValidUntil": "2024-12-01T20:16:56Z",
+                                                        "inventoryLevel": {
+                                                            "value": 10000
+                                                        },
+                                                        "giftSkuIds": [],
+                                                        "teasers": [],
+                                                        "priceSpecification": [
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/ListPrice",
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 49.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 33.33,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 49.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 33.33,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 49.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 33.33,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 49.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 33.33,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 49.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 33.33,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Vale",
+                                                                "description": "Vale à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "PicPay",
+                                                                "description": "PicPay à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "AmeDigital",
+                                                                "description": "AmeDigital à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Pix",
+                                                                "description": "Pix à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 49.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 33.33,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 4 vezes sem juros",
+                                                                "billingDuration": 4,
+                                                                "billingIncrement": 24.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 5 vezes sem juros",
+                                                                "billingDuration": 5,
+                                                                "billingIncrement": 19.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 6 vezes sem juros",
+                                                                "billingDuration": 6,
+                                                                "billingIncrement": 16.66,
+                                                                "price": 99.99
+                                                            }
+                                                        ],
+                                                        "availability": "https://schema.org/InStock"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "@type": "Product",
+                                            "category": "Plus Size>Masculino>Camisas",
+                                            "productID": "260036",
+                                            "url": "https://www.lojastorra.com.br/camisa-plus-size-masculina-estampa-folhagens-manga-curta-azul-21526000123023/p?skuId=260036",
+                                            "name": "5",
+                                            "description": "<p><span style=\"font-size: 1.5em; font-weight: 700;\">Características</span><br></p><p><br></p><p><strong>Segmento: </strong>camisa</p><p><br></p><p><strong>Gola:</strong> sim</p><p><br></p><p><strong>Tipo de manga: </strong>curta</p><p><br></p><p><strong>Costura: </strong>padrão</p><p><br></p><p><strong>Acabamento: </strong>padrão</p><p><br></p><p><strong>Textura do tecido: </strong>liso</p><p><br></p><p><strong>Descrição da estampa: </strong>folhagens&nbsp;</p><p><br></p><p><strong>Bordado: </strong>não possui</p><p><br></p><p><strong>Detalhes: </strong>botões&nbsp;</p><p><br></p><h2>Especificações técnicas</h2><p><br></p><p><strong>Produto: </strong>camisa</p><p><br></p><p><strong>Categoria: </strong>masculino</p><p><br></p><p><strong>Tamanho: </strong>P ao GG</p><p><br></p><p><strong>Tecido: </strong>malha</p><p><br></p><p><strong>Composição: </strong>55% algodão e 45% viscose</p><p><br></p><p><strong>Produzido: </strong>no Brasil&nbsp;</p><p><br></p><p><strong>Cor: </strong>Azul&nbsp;</p><p><br></p><p>Modelo veste peça tamanho</p><p><br></p><p><strong>Medidas da Modelo</strong></p><p><br></p><p><strong>Altura:&nbsp; </strong>1,81m</p><p><br></p><p><strong>Busto/Tórax: </strong>103cm</p><p><br></p><p><strong>Cintura</strong>: 82cm</p><p><br></p><p><strong>Quadril: </strong>98cm</p><p><br></p><p><strong>Manequim: </strong>40/42</p><p><br></p><p><strong>- Instruções de lavagem:</strong></p><p>Lavar com temperatura máxima de 40°C<br>Não usar alvejante a base de cloro<br>Secar com temperatura baixa (40°)<br>Passar com temperatura máxima de 150°C<br>Não lavar a seco</p><p><br></p><p>O tom das cores dos produtos nas fotos podem sofrer variações em decorrência do flash.</p><p><br></p><p><strong>Onde comprar camisa?</strong><br><br>Compre camisas no site ou APP Lojas Torra! Aqui você encontra variedade em camisas com preço baixo, para você e toda a sua família.<br></p><p><br>Na Lojas Torra você encontra este e outros modelos que podem ter modelagem padrão, ajustada ou ampla, com design desejado por pessoas de todos os estilos.</p><p><br>A camisa é uma peça básica e essencial no guarda-roupa de todas as pessoas antenadas com a moda, mas que também prezam por um guarda-roupa versátil e que combina com tudo. Aproveite e coloque no seu carrinho agora!<br></p><p><br></p>",
+                                            "brand": {
+                                                "@type": "Brand",
+                                                "@id": "2000000",
+                                                "name": "TORRA"
+                                            },
+                                            "inProductGroupWithID": "68868",
+                                            "sku": "260036",
+                                            "gtin": "215260001230235",
+                                            "releaseDate": 1701043200000,
+                                            "additionalProperty": [
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "Tamanho",
+                                                    "value": "5",
+                                                    "valueReference": "SPECIFICATION"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "149",
+                                                    "value": "Plus Size"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "150",
+                                                    "value": "Masculino"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "258",
+                                                    "value": "Camisas"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Novidades",
+                                                    "propertyID": "138"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "todos os produtos",
+                                                    "propertyID": "164"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-Todos",
+                                                    "propertyID": "171"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "produtos-google-shopping",
+                                                    "propertyID": "174",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-All",
+                                                    "propertyID": "416"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Colecao-Criteo",
+                                                    "propertyID": "590",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Sizebay",
+                                                    "propertyID": "2281"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Rakuten",
+                                                    "propertyID": "2321"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "RefId",
+                                                    "value": "215260001230235",
+                                                    "valueReference": "ReferenceID"
+                                                }
+                                            ],
+                                            "image": [
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "21526000123023",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1282792/21526000123023.jpg?v=638367055540270000",
+                                                    "name": "21526000123023"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "21526000123023",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1282793/21526000123023.jpg?v=638367055555600000",
+                                                    "name": "21526000123023"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "21526000123023",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1282794/21526000123023.jpg?v=638367055570700000",
+                                                    "name": "21526000123023"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "21526000123023",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1282795/21526000123023.jpg?v=638367055586300000",
+                                                    "name": "21526000123023"
+                                                }
+                                            ],
+                                            "offers": {
+                                                "@type": "AggregateOffer",
+                                                "priceCurrency": "BRL",
+                                                "highPrice": 99.99,
+                                                "lowPrice": 99.99,
+                                                "offerCount": 1,
+                                                "offers": [
+                                                    {
+                                                        "@type": "Offer",
+                                                        "price": 99.99,
+                                                        "seller": "1",
+                                                        "priceValidUntil": "2024-12-01T20:16:56Z",
+                                                        "inventoryLevel": {
+                                                            "value": 10000
+                                                        },
+                                                        "giftSkuIds": [],
+                                                        "teasers": [],
+                                                        "priceSpecification": [
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/ListPrice",
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 49.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 33.33,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 49.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 33.33,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 49.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 33.33,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 49.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 33.33,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 49.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 33.33,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Vale",
+                                                                "description": "Vale à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "PicPay",
+                                                                "description": "PicPay à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "AmeDigital",
+                                                                "description": "AmeDigital à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Pix",
+                                                                "description": "Pix à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 49.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 33.33,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 4 vezes sem juros",
+                                                                "billingDuration": 4,
+                                                                "billingIncrement": 24.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 5 vezes sem juros",
+                                                                "billingDuration": 5,
+                                                                "billingIncrement": 19.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 6 vezes sem juros",
+                                                                "billingDuration": 6,
+                                                                "billingIncrement": 16.66,
+                                                                "price": 99.99
+                                                            }
+                                                        ],
+                                                        "availability": "https://schema.org/InStock"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "@type": "Product",
+                                            "category": "Plus Size>Masculino>Camisas",
+                                            "productID": "260037",
+                                            "url": "https://www.lojastorra.com.br/camisa-plus-size-masculina-estampa-folhagens-manga-curta-azul-21526000123023/p?skuId=260037",
+                                            "name": "7",
+                                            "description": "<p><span style=\"font-size: 1.5em; font-weight: 700;\">Características</span><br></p><p><br></p><p><strong>Segmento: </strong>camisa</p><p><br></p><p><strong>Gola:</strong> sim</p><p><br></p><p><strong>Tipo de manga: </strong>curta</p><p><br></p><p><strong>Costura: </strong>padrão</p><p><br></p><p><strong>Acabamento: </strong>padrão</p><p><br></p><p><strong>Textura do tecido: </strong>liso</p><p><br></p><p><strong>Descrição da estampa: </strong>folhagens&nbsp;</p><p><br></p><p><strong>Bordado: </strong>não possui</p><p><br></p><p><strong>Detalhes: </strong>botões&nbsp;</p><p><br></p><h2>Especificações técnicas</h2><p><br></p><p><strong>Produto: </strong>camisa</p><p><br></p><p><strong>Categoria: </strong>masculino</p><p><br></p><p><strong>Tamanho: </strong>P ao GG</p><p><br></p><p><strong>Tecido: </strong>malha</p><p><br></p><p><strong>Composição: </strong>55% algodão e 45% viscose</p><p><br></p><p><strong>Produzido: </strong>no Brasil&nbsp;</p><p><br></p><p><strong>Cor: </strong>Azul&nbsp;</p><p><br></p><p>Modelo veste peça tamanho</p><p><br></p><p><strong>Medidas da Modelo</strong></p><p><br></p><p><strong>Altura:&nbsp; </strong>1,81m</p><p><br></p><p><strong>Busto/Tórax: </strong>103cm</p><p><br></p><p><strong>Cintura</strong>: 82cm</p><p><br></p><p><strong>Quadril: </strong>98cm</p><p><br></p><p><strong>Manequim: </strong>40/42</p><p><br></p><p><strong>- Instruções de lavagem:</strong></p><p>Lavar com temperatura máxima de 40°C<br>Não usar alvejante a base de cloro<br>Secar com temperatura baixa (40°)<br>Passar com temperatura máxima de 150°C<br>Não lavar a seco</p><p><br></p><p>O tom das cores dos produtos nas fotos podem sofrer variações em decorrência do flash.</p><p><br></p><p><strong>Onde comprar camisa?</strong><br><br>Compre camisas no site ou APP Lojas Torra! Aqui você encontra variedade em camisas com preço baixo, para você e toda a sua família.<br></p><p><br>Na Lojas Torra você encontra este e outros modelos que podem ter modelagem padrão, ajustada ou ampla, com design desejado por pessoas de todos os estilos.</p><p><br>A camisa é uma peça básica e essencial no guarda-roupa de todas as pessoas antenadas com a moda, mas que também prezam por um guarda-roupa versátil e que combina com tudo. Aproveite e coloque no seu carrinho agora!<br></p><p><br></p>",
+                                            "brand": {
+                                                "@type": "Brand",
+                                                "@id": "2000000",
+                                                "name": "TORRA"
+                                            },
+                                            "inProductGroupWithID": "68868",
+                                            "sku": "260037",
+                                            "gtin": "215260001230237",
+                                            "releaseDate": 1701043200000,
+                                            "additionalProperty": [
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "Tamanho",
+                                                    "value": "7",
+                                                    "valueReference": "SPECIFICATION"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "149",
+                                                    "value": "Plus Size"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "150",
+                                                    "value": "Masculino"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "category",
+                                                    "propertyID": "258",
+                                                    "value": "Camisas"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Novidades",
+                                                    "propertyID": "138"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "todos os produtos",
+                                                    "propertyID": "164"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-Todos",
+                                                    "propertyID": "171"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "produtos-google-shopping",
+                                                    "propertyID": "174",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Criteo-All",
+                                                    "propertyID": "416"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Colecao-Criteo",
+                                                    "propertyID": "590",
+                                                    "description": "highlight"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Sizebay",
+                                                    "propertyID": "2281"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "cluster",
+                                                    "value": "Rakuten",
+                                                    "propertyID": "2321"
+                                                },
+                                                {
+                                                    "@type": "PropertyValue",
+                                                    "name": "RefId",
+                                                    "value": "215260001230237",
+                                                    "valueReference": "ReferenceID"
+                                                }
+                                            ],
+                                            "image": [
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "21526000123023",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1282792/21526000123023.jpg?v=638367055540270000",
+                                                    "name": "21526000123023"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "21526000123023",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1282793/21526000123023.jpg?v=638367055555600000",
+                                                    "name": "21526000123023"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "21526000123023",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1282794/21526000123023.jpg?v=638367055570700000",
+                                                    "name": "21526000123023"
+                                                },
+                                                {
+                                                    "@type": "ImageObject",
+                                                    "alternateName": "21526000123023",
+                                                    "url": "https://torratorra.vtexassets.com/arquivos/ids/1282795/21526000123023.jpg?v=638367055586300000",
+                                                    "name": "21526000123023"
+                                                }
+                                            ],
+                                            "offers": {
+                                                "@type": "AggregateOffer",
+                                                "priceCurrency": "BRL",
+                                                "highPrice": 99.99,
+                                                "lowPrice": 99.99,
+                                                "offerCount": 1,
+                                                "offers": [
+                                                    {
+                                                        "@type": "Offer",
+                                                        "price": 99.99,
+                                                        "seller": "1",
+                                                        "priceValidUntil": "2024-12-01T20:16:56Z",
+                                                        "inventoryLevel": {
+                                                            "value": 10000
+                                                        },
+                                                        "giftSkuIds": [],
+                                                        "teasers": [],
+                                                        "priceSpecification": [
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/ListPrice",
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 49.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "American Express",
+                                                                "description": "American Express 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 33.33,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 49.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Visa",
+                                                                "description": "Visa 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 33.33,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 49.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Mastercard",
+                                                                "description": "Mastercard 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 33.33,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 49.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Hipercard",
+                                                                "description": "Hipercard 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 33.33,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 49.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Elo",
+                                                                "description": "Elo 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 33.33,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Vale",
+                                                                "description": "Vale à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "PicPay",
+                                                                "description": "PicPay à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "AmeDigital",
+                                                                "description": "AmeDigital à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Pix",
+                                                                "description": "Pix à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra à vista",
+                                                                "billingDuration": 1,
+                                                                "billingIncrement": 99.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 2 vezes sem juros",
+                                                                "billingDuration": 2,
+                                                                "billingIncrement": 49.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 3 vezes sem juros",
+                                                                "billingDuration": 3,
+                                                                "billingIncrement": 33.33,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 4 vezes sem juros",
+                                                                "billingDuration": 4,
+                                                                "billingIncrement": 24.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 5 vezes sem juros",
+                                                                "billingDuration": 5,
+                                                                "billingIncrement": 19.99,
+                                                                "price": 99.99
+                                                            },
+                                                            {
+                                                                "@type": "UnitPriceSpecification",
+                                                                "priceType": "https://schema.org/SalePrice",
+                                                                "priceComponentType": "https://schema.org/Installment",
+                                                                "name": "Cartão Torra",
+                                                                "description": "Cartão Torra 6 vezes sem juros",
+                                                                "billingDuration": 6,
+                                                                "billingIncrement": 16.66,
+                                                                "price": 99.99
+                                                            }
+                                                        ],
+                                                        "availability": "https://schema.org/InStock"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "url": "https://www.lojastorra.com.br/camisa-plus-size-masculina-estampa-folhagens-manga-curta-azul-21526000123023/p",
+                                    "name": "Camisa Plus Size Masculina Estampa Folhagens Manga Curta Azul",
+                                    "additionalProperty": [
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Manga",
+                                            "value": "Manga Curta",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Cor",
+                                            "value": "Azul",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Estilo",
+                                            "value": "Fashion",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Estampa",
+                                            "value": "Floral",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Tecido",
+                                            "value": "Algodão",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Tamanho",
+                                            "value": "6",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Tamanho",
+                                            "value": "5",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "Tamanho",
+                                            "value": "7",
+                                            "valueReference": "PROPERTY"
+                                        },
+                                        {
+                                            "@type": "PropertyValue",
+                                            "name": "sellerId",
+                                            "value": "1",
+                                            "valueReference": "PROPERTY"
+                                        }
+                                    ],
+                                    "model": "21526000123023"
+                                },
+                                "image": [
+                                    {
+                                        "@type": "ImageObject",
+                                        "alternateName": "21526000123023",
+                                        "url": "https://torratorra.vtexassets.com/arquivos/ids/1282792/21526000123023.jpg?v=638367055540270000",
+                                        "name": "21526000123023"
+                                    },
+                                    {
+                                        "@type": "ImageObject",
+                                        "alternateName": "21526000123023",
+                                        "url": "https://torratorra.vtexassets.com/arquivos/ids/1282793/21526000123023.jpg?v=638367055555600000",
+                                        "name": "21526000123023"
+                                    },
+                                    {
+                                        "@type": "ImageObject",
+                                        "alternateName": "21526000123023",
+                                        "url": "https://torratorra.vtexassets.com/arquivos/ids/1282794/21526000123023.jpg?v=638367055570700000",
+                                        "name": "21526000123023"
+                                    },
+                                    {
+                                        "@type": "ImageObject",
+                                        "alternateName": "21526000123023",
+                                        "url": "https://torratorra.vtexassets.com/arquivos/ids/1282795/21526000123023.jpg?v=638367055586300000",
+                                        "name": "21526000123023"
+                                    }
+                                ],
+                                "offers": {
+                                    "@type": "AggregateOffer",
+                                    "priceCurrency": "BRL",
+                                    "highPrice": 99.99,
+                                    "lowPrice": 99.99,
+                                    "offerCount": 1,
+                                    "offers": [
+                                        {
+                                            "@type": "Offer",
+                                            "price": 99.99,
+                                            "seller": "1",
+                                            "priceValidUntil": "2024-12-01T20:16:56Z",
+                                            "inventoryLevel": {
+                                                "value": 10000
+                                            },
+                                            "giftSkuIds": [],
+                                            "teasers": [],
+                                            "priceSpecification": [
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/ListPrice",
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "American Express",
+                                                    "description": "American Express à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 99.99,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "American Express",
+                                                    "description": "American Express 2 vezes sem juros",
+                                                    "billingDuration": 2,
+                                                    "billingIncrement": 49.99,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "American Express",
+                                                    "description": "American Express 3 vezes sem juros",
+                                                    "billingDuration": 3,
+                                                    "billingIncrement": 33.33,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Visa",
+                                                    "description": "Visa à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 99.99,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Visa",
+                                                    "description": "Visa 2 vezes sem juros",
+                                                    "billingDuration": 2,
+                                                    "billingIncrement": 49.99,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Visa",
+                                                    "description": "Visa 3 vezes sem juros",
+                                                    "billingDuration": 3,
+                                                    "billingIncrement": 33.33,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Mastercard",
+                                                    "description": "Mastercard à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 99.99,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Mastercard",
+                                                    "description": "Mastercard 2 vezes sem juros",
+                                                    "billingDuration": 2,
+                                                    "billingIncrement": 49.99,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Mastercard",
+                                                    "description": "Mastercard 3 vezes sem juros",
+                                                    "billingDuration": 3,
+                                                    "billingIncrement": 33.33,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Hipercard",
+                                                    "description": "Hipercard à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 99.99,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Hipercard",
+                                                    "description": "Hipercard 2 vezes sem juros",
+                                                    "billingDuration": 2,
+                                                    "billingIncrement": 49.99,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Hipercard",
+                                                    "description": "Hipercard 3 vezes sem juros",
+                                                    "billingDuration": 3,
+                                                    "billingIncrement": 33.33,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Elo",
+                                                    "description": "Elo à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 99.99,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Elo",
+                                                    "description": "Elo 2 vezes sem juros",
+                                                    "billingDuration": 2,
+                                                    "billingIncrement": 49.99,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Elo",
+                                                    "description": "Elo 3 vezes sem juros",
+                                                    "billingDuration": 3,
+                                                    "billingIncrement": 33.33,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Vale",
+                                                    "description": "Vale à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 99.99,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "PicPay",
+                                                    "description": "PicPay à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 99.99,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "AmeDigital",
+                                                    "description": "AmeDigital à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 99.99,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Pix",
+                                                    "description": "Pix à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 99.99,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Cartão Torra",
+                                                    "description": "Cartão Torra à vista",
+                                                    "billingDuration": 1,
+                                                    "billingIncrement": 99.99,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Cartão Torra",
+                                                    "description": "Cartão Torra 2 vezes sem juros",
+                                                    "billingDuration": 2,
+                                                    "billingIncrement": 49.99,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Cartão Torra",
+                                                    "description": "Cartão Torra 3 vezes sem juros",
+                                                    "billingDuration": 3,
+                                                    "billingIncrement": 33.33,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Cartão Torra",
+                                                    "description": "Cartão Torra 4 vezes sem juros",
+                                                    "billingDuration": 4,
+                                                    "billingIncrement": 24.99,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Cartão Torra",
+                                                    "description": "Cartão Torra 5 vezes sem juros",
+                                                    "billingDuration": 5,
+                                                    "billingIncrement": 19.99,
+                                                    "price": 99.99
+                                                },
+                                                {
+                                                    "@type": "UnitPriceSpecification",
+                                                    "priceType": "https://schema.org/SalePrice",
+                                                    "priceComponentType": "https://schema.org/Installment",
+                                                    "name": "Cartão Torra",
+                                                    "description": "Cartão Torra 6 vezes sem juros",
+                                                    "billingDuration": 6,
+                                                    "billingIncrement": 16.66,
+                                                    "price": 99.99
+                                                }
+                                            ],
+                                            "availability": "https://schema.org/InStock"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ]
             },
-            {
-              "@type": "Product",
-              "category": "Gatos>Coleiras",
-              "productID": "4008257",
-              "url":
-                "https://www.zeedog.com.br/coleira-para-gatos-neopro-azul--901278/p?skuId=4008257",
-              "name": "Coleira para gatos Neopro Azul\n U",
-              "description": "Coleira para gatos Neopro Azul",
-              "brand": {
-                "@type": "Brand",
-                "@id": "930833574",
-                "name": "ZEEDOG",
-              },
-              "inProductGroupWithID": "5005699",
-              "sku": "4008257",
-              "gtin": "7898582481095",
-              "releaseDate": 1593043200000,
-              "additionalProperty": [
-                {
-                  "@type": "PropertyValue",
-                  "name": "Tamanho",
-                  "value": "U",
-                  "valueReference": "SPECIFICATION",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "gender",
-                  "value": "unisex",
-                  "valueReference": "SPECIFICATION",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "category",
-                  "propertyID": "2000096",
-                  "value": "Gatos",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "category",
-                  "propertyID": "2000120",
-                  "value": "Coleiras",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Loja",
-                  "propertyID": "136",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Clerk",
-                  "propertyID": "139",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Apollo 13",
-                  "propertyID": "142",
-                  "description": "highlight",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Coleção de Bloqueio",
-                  "propertyID": "144",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Últimos lançamentos Zee.Cat",
-                  "propertyID": "175",
-                  "description": "highlight",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Neopro",
-                  "propertyID": "183",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Neopro Azul",
-                  "propertyID": "185",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Estampa NeoPro",
-                  "propertyID": "189",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Feed Criteo",
-                  "propertyID": "265",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Promo Até 40 Off",
-                  "propertyID": "266",
-                  "description": "highlight",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Fast Shop",
-                  "propertyID": "283",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Coleção BF 2020 Completo",
-                  "propertyID": "337",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Coleção Facebook",
-                  "propertyID": "346",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Produtos Reposicao Jan-2021",
-                  "propertyID": "348",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Coleções Pets Reposições Acessórios",
-                  "propertyID": "356",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "colecao_CRMbonus_acessorios",
-                  "propertyID": "421",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "colecao_fp_acessorios",
-                  "propertyID": "458",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "teste-pre-venda",
-                  "propertyID": "482",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "teste-pre-venda-sem-pre-sales",
-                  "propertyID": "483",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Live-Auto-Gatos-Acessorios",
-                  "propertyID": "502",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "zd_flashpromo_lp",
-                  "propertyID": "702",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "promo_pre_bf_2023",
-                  "propertyID": "729",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "zc_coleiras",
-                  "propertyID": "732",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Promo Especial",
-                  "propertyID": "737",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "gatos_neopro",
-                  "propertyID": "743",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Black Friday 2023",
-                  "propertyID": "755",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Segunda Chance BF 2023",
-                  "propertyID": "758",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "cluster",
-                  "value": "Black Friday | 50% até 70%",
-                  "propertyID": "764",
-                },
-                {
-                  "@type": "PropertyValue",
-                  "name": "RefId",
-                  "value": "5005699_0_0_U",
-                  "valueReference": "ReferenceID",
-                },
-              ],
-              "isVariantOf": {
-                "@type": "ProductGroup",
-                "productGroupID": "5005699",
-                "hasVariant": [
-                  {
-                    "@type": "Product",
-                    "category": "Gatos>Coleiras",
-                    "productID": "4008257",
-                    "url":
-                      "https://www.zeedog.com.br/coleira-para-gatos-neopro-azul--901278/p?skuId=4008257",
-                    "name": "Coleira para gatos Neopro Azul\n U",
-                    "description": "Coleira para gatos Neopro Azul",
-                    "brand": {
-                      "@type": "Brand",
-                      "@id": "930833574",
-                      "name": "ZEEDOG",
-                    },
-                    "inProductGroupWithID": "5005699",
-                    "sku": "4008257",
-                    "gtin": "7898582481095",
-                    "releaseDate": 1593043200000,
-                    "additionalProperty": [
-                      {
-                        "@type": "PropertyValue",
-                        "name": "Tamanho",
-                        "value": "U",
-                        "valueReference": "SPECIFICATION",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "gender",
-                        "value": "unisex",
-                        "valueReference": "SPECIFICATION",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "category",
-                        "propertyID": "2000096",
-                        "value": "Gatos",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "category",
-                        "propertyID": "2000120",
-                        "value": "Coleiras",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Loja",
-                        "propertyID": "136",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Clerk",
-                        "propertyID": "139",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Apollo 13",
-                        "propertyID": "142",
-                        "description": "highlight",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Coleção de Bloqueio",
-                        "propertyID": "144",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Últimos lançamentos Zee.Cat",
-                        "propertyID": "175",
-                        "description": "highlight",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Neopro",
-                        "propertyID": "183",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Neopro Azul",
-                        "propertyID": "185",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Estampa NeoPro",
-                        "propertyID": "189",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Feed Criteo",
-                        "propertyID": "265",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Promo Até 40 Off",
-                        "propertyID": "266",
-                        "description": "highlight",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Fast Shop",
-                        "propertyID": "283",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Coleção BF 2020 Completo",
-                        "propertyID": "337",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Coleção Facebook",
-                        "propertyID": "346",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Produtos Reposicao Jan-2021",
-                        "propertyID": "348",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Coleções Pets Reposições Acessórios",
-                        "propertyID": "356",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "colecao_CRMbonus_acessorios",
-                        "propertyID": "421",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "colecao_fp_acessorios",
-                        "propertyID": "458",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "teste-pre-venda",
-                        "propertyID": "482",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "teste-pre-venda-sem-pre-sales",
-                        "propertyID": "483",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Live-Auto-Gatos-Acessorios",
-                        "propertyID": "502",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "zd_flashpromo_lp",
-                        "propertyID": "702",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "promo_pre_bf_2023",
-                        "propertyID": "729",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "zc_coleiras",
-                        "propertyID": "732",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Promo Especial",
-                        "propertyID": "737",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "gatos_neopro",
-                        "propertyID": "743",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Black Friday 2023",
-                        "propertyID": "755",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Segunda Chance BF 2023",
-                        "propertyID": "758",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "cluster",
-                        "value": "Black Friday | 50% até 70%",
-                        "propertyID": "764",
-                      },
-                      {
-                        "@type": "PropertyValue",
-                        "name": "RefId",
-                        "value": "5005699_0_0_U",
-                        "valueReference": "ReferenceID",
-                      },
-                    ],
-                    "image": [
-                      {
-                        "@type": "ImageObject",
-                        "alternateName": "cinza",
-                        "url":
-                          "https://zeedog.vtexassets.com/arquivos/ids/197569/coleira-para-gatos-blue-zeecat-neopro-zeedog-active.png?v=637514338580900000",
-                        "name": "cinza",
-                      },
-                      {
-                        "@type": "ImageObject",
-                        "alternateName": "mainhover",
-                        "url":
-                          "https://zeedog.vtexassets.com/arquivos/ids/201656/coleira-para-gatos-blue-zeecat-neopro-zeedog-hover.png?v=637636075653100000",
-                        "name": "mainhover",
-                      },
-                    ],
-                    "offers": {
-                      "@type": "AggregateOffer",
-                      "priceCurrency": "BRL",
-                      "highPrice": 69,
-                      "lowPrice": 69,
-                      "offerCount": 1,
-                      "offers": [
-                        {
-                          "@type": "Offer",
-                          "price": 69,
-                          "seller": "1",
-                          "priceValidUntil": "2024-12-01T18:19:57Z",
-                          "inventoryLevel": {
-                            "value": 0,
-                          },
-                          "giftSkuIds": [],
-                          "teasers": [],
-                          "priceSpecification": [
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/ListPrice",
-                              "price": 69,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SalePrice",
-                              "price": 69,
-                            },
-                            {
-                              "@type": "UnitPriceSpecification",
-                              "priceType": "https://schema.org/SRP",
-                              "price": 69,
-                            },
-                          ],
-                          "availability": "https://schema.org/OutOfStock",
-                        },
-                      ],
-                    },
-                  },
-                ],
-                "url":
-                  "https://www.zeedog.com.br/coleira-para-gatos-neopro-azul--901278/p",
-                "name": "Coleira para gatos Neopro Azul",
-                "additionalProperty": [
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Release_Date",
-                    "value": "2019-12-31",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Cor",
-                    "value": "Azul",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "nome_produto",
-                    "value": "Azul",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Bundle_Recomendacao",
-                    "value":
-                      "['carrossel':'1','posicao':'1','produto':'5006028'];\r\n['carrossel':'1','posicao':'2','produto':'5011104'];\r\n['carrossel':'1','posicao':'3','produto':'413'];\r\n['carrossel':'2','posicao':'1','produto':'5006180'];",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "estampa",
-                    "value": "Neopro Azul",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Fotos_Produto",
-                    "value":
-                      "['urlImagem':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-neopro-blue-azul-zeecat-zeedog-gato-pet-main-1-.jpg','altImagem':'Coleira para gatos Neopro Azul | Zee.Dog'];\r\n['urlVideo':'https://s3-sa-east-1.amazonaws.com/zee.dog/videos/pdp/zeecat-buckle-guide.mp4','urlImagem':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-neopro-blue-azul-zeecat-zeedog-gato-pet-main-2-.jpg','altImagem':'Coleira para gatos Neopro Azul | Zee.Dog'];\r\n['urlImagem':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-neopro-blue-azul-zeecat-zeedog-gato-pet-main-3-.jpg','altImagem':'Coleira para gatos Neopro Azul | Zee.Dog'];\r\n['urlImagem':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-neopro-blue-azul-zeecat-zeedog-gato-pet-main-4-.jpg','altImagem':'Coleira para gatos Neopro Azul | Zee.Dog'];",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Age",
-                    "value": "adulto",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "gender",
-                    "value": "unisex",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Estampas_Relacionadas",
-                    "value":
-                      "['idProduto':'5005698','nomeProduto':'Coleira para gatos Neopro Preto','nomeEstampa':'Preto','imagemProduto':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos_neopro_preto_zeedog_gato_pet_fb.jpg'];\r\n['idProduto':'5005699','nomeProduto':'Coleira para gatos Neopro Azul','nomeEstampa':'Azul','imagemProduto':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos_neopro_blue_zeecat_gato_pet_fb.png'];\r\n['idProduto':'5005700','nomeProduto':'Coleira para gatos Neopro Coral','nomeEstampa':'Coral','imagemProduto':'https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos_neopro_red_zeecat_gato_pet_fb.png'];\r\n['idProduto':'5005701','nomeProduto':'Coleira para gatos Neopro Verde Limão','nomeEstampa':'Verde Limão','imagemProduto':'https://zeedog.vteximg.com.br/arquivos/ids/172379_2/coleira-para-gatos_neopro_limegreen_zeecat_gato_pet_active.png'];",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "TableSizeChart",
-                    "value":
-                      '<ul class="sizes">\r\n   <li>Largura da tira</li>\r\n   <li><span>U</span>1 cm</li>\r\n</ul>\r\n<ul class="sizes">\r\n   <li>Regulagem do pescoço</li>\r\n   <li><span>U</span>20 a 30 cm</li>\r\n</ul>',
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Descricao_Produto",
-                    "value":
-                      "A coleira para gatos NeoPro é mais um super lançamento da Zee.Dog. A coleira possui uma nova tecnologia com ultra proteção externa de borracha de PVC chamada NeoPro, resistente à água e à ação do tempo, evitando que a coleira fique suja, molhada ou arranhada. Além de ser muito mais fácil de limpar, a coleira é feita com a mesma qualidade e material que a coleira para cachorro da Zee.Dog. Nossas coleiras de gato tem fecho breakway, que abre sozinho caso o gato se enrosque. Totalmente reguláveis, para gatos de atitude.",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "Atributos_Especiais",
-                    "value":
-                      "<ul>\r\n\r\n<li>Nova tecnologia NeoPro, com ultra proteção resistente à água e à ação do tempo</li>\r\n<li>Muito fácil de limpar</li>\r\n<li>Tamanho único com regularem ajustável.</li>\r\n<li>Exclusivo fecho breakaway que abre sozinho caso o gato se enrosque.</li>\r\n<li>Logo emborrachada da Zee.Dog, feita em material atóxico.</li>\r\n</ul>",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "facebook_image",
-                    "value":
-                      "https://zeedog.vteximg.com.br/arquivos/coleira-para-gatos-neopro-blue-azul-zeecat-zeedog-gato-pet-main-1.jpg",
-                    "valueReference": "PROPERTY",
-                  },
-                  {
-                    "@type": "PropertyValue",
-                    "name": "sellerId",
-                    "value": "1",
-                    "valueReference": "PROPERTY",
-                  },
-                ],
-                "model": "901278",
-              },
-              "image": [
-                {
-                  "@type": "ImageObject",
-                  "alternateName": "cinza",
-                  "url":
-                    "https://zeedog.vtexassets.com/arquivos/ids/197569/coleira-para-gatos-blue-zeecat-neopro-zeedog-active.png?v=637514338580900000",
-                  "name": "cinza",
-                },
-                {
-                  "@type": "ImageObject",
-                  "alternateName": "mainhover",
-                  "url":
-                    "https://zeedog.vtexassets.com/arquivos/ids/201656/coleira-para-gatos-blue-zeecat-neopro-zeedog-hover.png?v=637636075653100000",
-                  "name": "mainhover",
-                },
-              ],
-              "offers": {
-                "@type": "AggregateOffer",
-                "priceCurrency": "BRL",
-                "highPrice": 69,
-                "lowPrice": 69,
-                "offerCount": 1,
-                "offers": [
-                  {
-                    "@type": "Offer",
-                    "price": 69,
-                    "seller": "1",
-                    "priceValidUntil": "2024-12-01T18:19:57Z",
-                    "inventoryLevel": {
-                      "value": 0,
-                    },
-                    "giftSkuIds": [],
-                    "teasers": [],
-                    "priceSpecification": [
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/ListPrice",
-                        "price": 69,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SalePrice",
-                        "price": 69,
-                      },
-                      {
-                        "@type": "UnitPriceSpecification",
-                        "priceType": "https://schema.org/SRP",
-                        "price": 69,
-                      },
-                    ],
-                    "availability": "https://schema.org/OutOfStock",
-                  },
-                ],
-              },
-            },
-          ],
-        ],
-        "role": "user",
-      },
-    ];
+            "role": "user"
+        }
+    ]
   }
 
   useEffect(() => {
@@ -3827,7 +5901,7 @@ function Chat() {
   const updateMessages = useCallback((data: string) => {
     const jsonData = JSON.parse(data);
     const newMessageObject: { content: any; role: "user" | "bot" } = {
-      content: jsonData.content,
+      content: jsonData,
       role: "user",
     };
     messageList.value = [...messageList.value, newMessageObject];
