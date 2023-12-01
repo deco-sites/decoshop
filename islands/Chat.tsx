@@ -2033,20 +2033,27 @@ function Chat() {
 const ProductShelf = ({ products }) => {
   return (
     <div className="flex overflow-x-auto">
-      <div className="flex flex-row space-x-4">
-        {products.map((product, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <a href={product.url} target="_blank" rel="noopener noreferrer">
-              <img
-                src={product.image[0].url}
-                alt={product.name}
-                className="w-24 h-24 rounded-md"
-              />
-            </a>
-            <h3 className="text-lg text-sm mt-2">{product.name}</h3>
-            <p className="text-gray-500">R$ {product.offers.offers[0].price}</p>
-          </div>
-        ))}
+      <div className="flex flex-col space-x-4">
+        <div class="mb-4 ml-4 font-medium mt-2">{products[0].brand.name}</div>
+        <div class="flex flex-row w-full">
+          {products.map((product, index) => (
+            <div key={index} className="flex flex-col items-center mr-4">
+              <a href={product.url} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={product.image[0].url}
+                  alt={product.name}
+                  className="w-36 h-36 rounded-lg"
+                />
+              </a>
+              <div class="flex flex-col">
+                <p className="text-lg text-sm mt-2">{product.name}</p>
+                <p className="text-gray-500">
+                  R$ {product.offers.offers[0].price}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
