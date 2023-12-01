@@ -3,7 +3,7 @@
     "deco-sites/decoshop/": "./",
     "$store/": "./",
     "deco/": "https://denopkg.com/deco-cx/deco@1.46.7/",
-    "apps/": "https://denopkg.com/deco-cx/apps@e2bd6196b655b9517951a119384a4197686d98a0/",
+    "apps/": "https://denopkg.com/deco-cx/apps@a5525743e75ed138bd35a07288acced9730d7ffc/",
     "$fresh/": "https://denopkg.com/denoland/fresh@7ad4610e3a42aba42638cbc1041b96ee58a9b29e/",
     "preact": "https://esm.sh/preact@10.15.1",
     "preact/": "https://esm.sh/preact@10.15.1/",
