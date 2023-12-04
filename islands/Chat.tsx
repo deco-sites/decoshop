@@ -177,7 +177,7 @@ function Chat() {
     </div>
   );
 
-  const MessageContainer = () => {
+  const ChatContainer = () => {
     return (
       <div class="w-1/2 shadow-md h-[100vh] flex flex-col justify-end z-50 bg-white">
         <div class="bg-green-500 flex justify-center p-3 text-white">
@@ -189,21 +189,27 @@ function Chat() {
     );
   };
 
+  const InstagramContainer = () => {
+    return (
+      <div class="w-1/2 h-full flex flex-col relative">
+        <div class="absolute bg-[#00000044] inset-0 flex justify-center items-center">
+          Carregando...
+        </div>
+        <input
+          type="text"
+          class="h-12 p-2 w-full"
+          value={`https://instagram.com/${selectedUserInstagram.value}`}
+        />
+        <img src={screenshot} class="w-full" alt="Screenshot" />
+      </div>
+    );
+  };
+
   return selectedUserInstagram.value
     ? (
       <div class="flex flex-row justify-between">
-        <MessageContainer />
-        <div class="w-1/2 h-full flex flex-col relative">
-          <div class="absolute bg-[#00000044] inset-0 flex justify-center items-center">
-            Carregando...
-          </div>
-          <input
-            type="text"
-            class="h-12 p-2 w-full"
-            value={`https://instagram.com/${selectedUserInstagram.value}`}
-          />
-          <img src={screenshot} class="w-full" alt="Screenshot" />
-        </div>
+        <ChatContainer />
+        <InstagramContainer />
       </div>
     )
     : <InstagramSearch onUser={onUser} />;
