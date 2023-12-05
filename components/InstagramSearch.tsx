@@ -8,6 +8,13 @@ export interface Props {
 export default function socialMedia({ onUser }: Props) {
   const user = useSignal("");
 
+  const handleKeydown = (e: KeyboardEvent) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      onUser(user.value);
+    }
+  };
+
   return (
     <div class="max-w-7xl mx-auto">
       <div class="text-center py-6">
@@ -39,6 +46,7 @@ export default function socialMedia({ onUser }: Props) {
               type="text"
               placeholder="@instagram"
               aria-label="Instagram handle"
+              onKeyDown={handleKeydown}
             />
           </div>
           <button
