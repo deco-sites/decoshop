@@ -2,7 +2,7 @@ import { Signal, useSignal } from "@preact/signals";
 import { useCallback, useEffect } from "preact/hooks";
 import { cache } from "../mock.ts";
 import InstagramSearch from "../shop-assistant/InstagramSearch.tsx";
-import Chat from "../shop-assistant/Chat.tsx";
+import { ChatContainer } from "./ChatContainer.tsx";
 import { Message } from "./types/shop-assistant.ts";
 
 function ShopAssistant() {
@@ -54,7 +54,7 @@ function ShopAssistant() {
 
   return (
     <div class="flex flex-row justify-between">
-      <Chat
+      <ChatContainer
         send={send}
         messageList={messageList}
         updateMessageList={updateMessageList}

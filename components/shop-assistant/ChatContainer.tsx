@@ -10,7 +10,7 @@ type ChatProps = {
   send: (text: string) => void;
 };
 
-function Chat(
+export function ChatContainer(
   { messageList, updateMessageList, send }: ChatProps,
 ) {
   const mock = false;
@@ -63,22 +63,24 @@ function InputArea({ send, updateMessageList }: InputAreaProps) {
   };
 
   return (
-    <div class="flex flex-row items-center bg-gray-100 rounded-xl relative mb-4 p-4 mt-4 mx-4">
+    <form
+      onSubmit={handleSubmit}
+      class="flex flex-row items-center bg-gray-100 rounded-xl relative mb-4 p-4 mt-4 mx-4"
+    >
       <textarea
         ref={userInput}
+        name="userInput"
         placeholder="Ask..."
         class="w-full grow h-32 outline-none relative resize-none pr-6 bg-gray-100 text-sm"
+        aria-label="Chat text area"
         onKeyDown={handleKeydown}
       />
       <button
-        type="button"
         class="bg-green-600 hover:bg-green-700 absolute rounder-md font-light text-white py-1 px-4 rounded-lg text-sm bottom-3 right-3"
-        onClick={handleSubmit}
+        type="submit"
       >
         Send
       </button>
-    </div>
+    </form>
   );
 }
-
-export default Chat;
