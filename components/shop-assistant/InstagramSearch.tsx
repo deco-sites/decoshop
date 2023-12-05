@@ -17,7 +17,7 @@ export default function socialMedia({ onUser }: Props) {
 
   return (
     <div class="max-w-7xl mx-auto">
-      <div class="text-center py-6">
+      <div class="flex justify-center py-6">
         <Image
           src="https://raw.githubusercontent.com/vitortrindader/movier/main/deco.cx-logo-outline.png"
           class="object-cover"
