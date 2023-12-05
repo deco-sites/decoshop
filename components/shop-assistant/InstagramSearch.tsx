@@ -35,30 +35,34 @@ export default function socialMedia({ onUser }: Props) {
           Insert your Instagram or TikTok handle to get recommendations
         </p>
 
-        <div class="relative flex items-center max-w-[608px] mx-auto mt-[64px]">
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            const form = event.target as HTMLFormElement;
+            const instagramValue = form.elements.namedItem(
+              "instagram",
+            ) as HTMLInputElement;
+
+            onUser(instagramValue.value);
+          }}
+          class="relative flex items-center max-w-[608px] mx-auto mt-[64px]"
+        >
           <div class="relative">
             <input
               class="w-[608px] appearance-none focus:outline-none h-[60px] pl-4 py-1 pr-1 bg-white rounded-[60px] border-2 border-neutral-300 border-opacity-30 justify-start items-center gap-4 inline-flex"
-              value={user.value}
-              onChange={(e) => {
-                user.value = e.currentTarget.value;
-              }}
               type="text"
+              name="instagram"
               placeholder="@instagram"
               aria-label="Instagram handle"
-              onKeyDown={handleKeydown}
             />
           </div>
           <button
             class=" absolute right-0 w-[111px] h-[52px] px-10 m-[4px] py-4 bg-fuchsia-400 rounded-[60px] justify-center items-center gap-2 inline-flex"
-            type="button"
-            onClick={() => {
-              onUser(user.value);
-            }}
+            type="submit"
           >
             Find
           </button>
-        </div>
+        </form>
       </main>
     </div>
   );
