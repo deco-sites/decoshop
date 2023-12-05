@@ -41,7 +41,7 @@ type InputAreaProps = {
 function InputArea({ send, updateMessageList }: InputAreaProps) {
   const userInput = useRef<HTMLTextAreaElement>(null);
 
-  const handleSubmit = () => {
+  const processSubmit = () => {
     if (!userInput.current?.value) return;
 
     send(userInput.current.value);
@@ -55,10 +55,15 @@ function InputArea({ send, updateMessageList }: InputAreaProps) {
     userInput.current.value = "";
   };
 
+  const handleSubmit = (e: React.TargetedEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    processSubmit();
+  };
+
   const handleKeydown = (e: KeyboardEvent) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
-      handleSubmit();
+      processSubmit();
     }
   };
 
