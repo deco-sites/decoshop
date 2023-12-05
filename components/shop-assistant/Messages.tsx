@@ -1,8 +1,9 @@
 import { memo } from "preact/compat";
+import type { ComponentChildren } from "preact";
 import { useEffect, useRef } from "preact/hooks";
-import { Content, Message, Product } from "./types/shop-assistant.ts";
+import { Message, Product } from "./types/shop-assistant.ts";
 
-function Messages({ messageList }: { messageList: Message[] }) {
+export function Messages({ messageList }: { messageList: Message[] }) {
   const messageEl = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -35,51 +36,56 @@ function Messages({ messageList }: { messageList: Message[] }) {
   );
 }
 
-const ProductListResponse = ({ content }: { content: Content[] }) => (
-  <>
-    {content
-      .filter((res) =>
-        res.name === "deco-sites/decoshop/loaders/productList.ts"
-      )
-      .map((productData, index) => (
-        <ProductShelf
-          key={index}
-          products={productData.response as Product[]}
-        />
-      ))}
-  </>
-);
-
 const BotMessage = memo(({ message }: { message: Message }) => {
-  const renderContent = () => {
-    switch (message.type) {
-      case "function_calls":
-        return <ProductListResponse content={message.content as Content[]} />;
-      case "message":
-        return <div>{message.content}</div>;
-      default:
-        return null;
-    }
-  };
+  if (
+    message.type === "function_calls" && typeof message.content !== "string"
+  ) {
+    return (
+      <BotMessageWrapper>
+        <>
+          {message.content
+            .filter((res) =>
+              res.name === "deco-sites/decoshop/loaders/productList.ts"
+            )
+            .map((productData, index) => (
+              <ProductShelf
+                key={index}
+                products={productData.response as Product[]}
+              />
+            ))}
+        </>
+      </BotMessageWrapper>
+    );
+  }
 
-  const content = renderContent();
+  if (message.type === "message") {
+    return (
+      <BotMessageWrapper>
+        <div>{message.content}</div>
+      </BotMessageWrapper>
+    );
+  }
 
-  return content && (
-    <div class="mb-3 p-2 rounded-2xl bg-gray-200 text-black text-sm max-w-s w-fit self-start">
-      {content}
-    </div>
-  );
+  return null;
 });
 
-const UserMessage = ({ message }: { message: Message }) => {
+function BotMessageWrapper({ children }: { children: ComponentChildren }) {
+  return (
+    <div class="mb-3 p-2 rounded-2xl bg-gray-200 text-black text-sm max-w-s w-fit self-start">
+      {children}
+    </div>
+  );
+}
+
+function UserMessage({ message }: { message: Message }) {
   return (
     <div class="mb-3 p-2 rounded-2xl bg-green-600 text-white text-sm max-w-s w-fit self-end">
       {message.content}
     </div>
   );
-};
+}
 
-const ProductShelf = ({ products }: { products: Product[] }) => {
+function ProductShelf({ products }: { products: Product[] }) {
   return (
     <div className="flex overflow-x-auto mt-4">
       <div className="flex flex-col space-x-4">
@@ -106,6 +112,4 @@ const ProductShelf = ({ products }: { products: Product[] }) => {
       </div>
     </div>
   );
-};
-
-export default Messages;
+}

@@ -1,7 +1,7 @@
-import { Signal, useSignal } from "@preact/signals";
+import { Signal } from "@preact/signals";
 import { mockMsgList } from "../mock.ts";
 import { Message } from "./types/shop-assistant.ts";
-import Messages from "./Messages.tsx";
+import { Messages } from "./Messages.tsx";
 import { useRef } from "preact/hooks";
 
 type ChatProps = {
