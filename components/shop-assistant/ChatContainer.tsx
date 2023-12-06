@@ -1,6 +1,6 @@
 import { Signal } from "@preact/signals";
 import { mockMsgList } from "../mock.ts";
-import { Message } from "./types/shop-assistant.ts";
+import { Message, MessageContentText } from "./types/shop-assistant.ts";
 import { Messages } from "./Messages.tsx";
 import { useRef } from "preact/hooks";
 
@@ -16,7 +16,7 @@ export function ChatContainer(
   const mock = false;
 
   if (mock) {
-    messageList.value = mockMsgList;
+    // messageList.value = mockMsgList;
   }
 
   return (
@@ -42,12 +42,18 @@ function InputArea({ send, updateMessageList }: InputAreaProps) {
   const userInput = useRef<HTMLTextAreaElement>(null);
 
   const processSubmit = () => {
-    if (!userInput.current?.value) return;
+    const inputValue = userInput.current?.value;
+    if (!inputValue) return;
 
-    send(userInput.current.value);
+    send(inputValue);
+
+    const msgContent: MessageContentText[] = [{
+      type: "text",
+      value: inputValue,
+    }];
 
     updateMessageList({
-      content: userInput.current.value,
+      content: msgContent,
       type: "message",
       role: "user",
     });

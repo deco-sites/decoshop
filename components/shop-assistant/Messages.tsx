@@ -1,7 +1,7 @@
 import { memo } from "preact/compat";
 import type { ComponentChildren } from "preact";
 import { useEffect, useRef } from "preact/hooks";
-import { Message, Product } from "./types/shop-assistant.ts";
+import { Content, Message, Product, UserMsg } from "./types/shop-assistant.ts";
 
 export function Messages({ messageList }: { messageList: Message[] }) {
   const messageEl = useRef<HTMLDivElement>(null);
@@ -28,22 +28,20 @@ export function Messages({ messageList }: { messageList: Message[] }) {
   return (
     <div ref={messageEl} class="overflow-y-auto flex flex-col mx-5 pt-4 h-full">
       {messageList.map((message, index) => (
-        message.role === "bot"
+        message.role === "assistant"
           ? <BotMessage key={index} message={message} />
-          : <UserMessage key={index} message={message} />
+          : <UserMessage key={index} message={message as UserMsg} />
       ))}
     </div>
   );
 }
 
 const BotMessage = memo(({ message }: { message: Message }) => {
-  if (
-    message.type === "function_calls" && typeof message.content !== "string"
-  ) {
+  if (message.type === "function_calls") {
     return (
       <BotMessageWrapper>
         <>
-          {message.content
+          {(message.content as Content[])
             .filter((res) =>
               res.name === "deco-sites/decoshop/loaders/productList.ts"
             )
@@ -61,7 +59,13 @@ const BotMessage = memo(({ message }: { message: Message }) => {
   if (message.type === "message") {
     return (
       <BotMessageWrapper>
-        <div>{message.content}</div>
+        {message.content.map((message, index) => {
+          if ("value" in message) {
+            return <div key={index}>{message.value}</div>;
+          }
+
+          return null;
+        })}
       </BotMessageWrapper>
     );
   }
@@ -77,10 +81,18 @@ function BotMessageWrapper({ children }: { children: ComponentChildren }) {
   );
 }
 
-function UserMessage({ message }: { message: Message }) {
+function UserMessage({ message }: { message: UserMsg }) {
   return (
     <div class="mb-3 p-2 rounded-2xl bg-green-600 text-white text-sm max-w-s w-fit self-end">
-      {message.content}
+      {message.content.map((message, index) => {
+        if ("value" in message) {
+          return <div key={index}>{message.value}</div>;
+        }
+        if ("fileId" in message) {
+          return <div key={index}>{message.fileId}</div>;
+        }
+        return null;
+      })}
     </div>
   );
 }

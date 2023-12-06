@@ -91,8 +91,33 @@ export interface UnitPriceSpecification {
   price: number;
 }
 
-export interface Message {
-  content: Content[] | string;
+export interface BaseMessage {
   type: string;
-  role: "user" | "bot";
+  role: "user" | "assistant";
+}
+
+export interface UserMsg extends BaseMessage {
+  content: (MessageContentText | MessageContentFile)[];
+}
+
+export interface AssistantFunctionCall extends BaseMessage {
+  content: Content[];
+}
+
+export interface AssistantTextMessage extends BaseMessage {
+  content: MessageContentText[];
+}
+
+export type AssistantMessage = AssistantFunctionCall | AssistantTextMessage;
+
+export type Message = AssistantMessage | UserMsg;
+
+export interface MessageContentText {
+  type: "text";
+  value: string;
+}
+
+export interface MessageContentFile {
+  type: "file";
+  fileId: string;
 }

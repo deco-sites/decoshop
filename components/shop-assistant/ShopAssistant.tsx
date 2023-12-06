@@ -3,7 +3,7 @@ import { useCallback, useEffect } from "preact/hooks";
 import { cache } from "../mock.ts";
 import InstagramSearch from "../shop-assistant/InstagramSearch.tsx";
 import { ChatContainer } from "./ChatContainer.tsx";
-import { Message } from "./types/shop-assistant.ts";
+import { Message, MessageContentText } from "./types/shop-assistant.ts";
 
 function ShopAssistant() {
   const selectedUserInstagram = useSignal("");
@@ -17,8 +17,14 @@ function ShopAssistant() {
       `${websocket}://${host}/live/invoke/ai-assistants/actions/chat.ts?assistant=Boteco`,
     );
     ws.value.onmessage = (event: MessageEvent) => {
-      const { content, type } = JSON.parse(event.data);
-      updateMessageList({ content, type, role: "bot" });
+      const parsedAiResponse = JSON.parse(event.data);
+      const role = parsedAiResponse.role ?? "assistant";
+
+      updateMessageList({
+        content: parsedAiResponse.content,
+        type: parsedAiResponse.type,
+        role,
+      });
     };
   }, []);
 
@@ -28,23 +34,26 @@ function ShopAssistant() {
     }
   }, []);
 
-  const updateMessageList = ({ content, type, role }: Message): void => {
-    const newMessageObject: Message = {
-      content,
-      type,
-      role,
-    };
-    messageList.value = [...messageList.value, newMessageObject];
+  const updateMessageList = (newMessage: Message): void => {
+    messageList.value = [...messageList.value, newMessage];
   };
 
   const onUser = (user: string) => {
-    const message = `Quero um presente para @${user}`;
-    send(message);
+    const value = `Quero um presente para @${user}`;
+
+    const msgContent: MessageContentText[] = [{
+      type: "text",
+      value,
+    }];
+
+    send(value);
+
     updateMessageList({
-      content: message,
+      content: msgContent,
       type: "message",
       role: "user",
     });
+
     selectedUserInstagram.value = user;
   };
 
