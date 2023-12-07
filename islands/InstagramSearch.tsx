@@ -1,1 +1,1 @@
-export { default } from "../components/shop-assistant/InstagramSearch.tsx";
+export { default } from "../components/shop-assistant/StoreSearch.tsx";

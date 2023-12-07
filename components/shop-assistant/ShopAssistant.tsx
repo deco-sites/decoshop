@@ -1,7 +1,7 @@
 import { Signal, useSignal } from "@preact/signals";
 import { useCallback, useEffect } from "preact/hooks";
 import { cache } from "../mock.ts";
-import InstagramSearch from "../shop-assistant/InstagramSearch.tsx";
+import StoreSearch from "./StoreSearch.tsx";
 import { ChatContainer } from "./ChatContainer.tsx";
 import { Message, MessageContentText } from "./types/shop-assistant.ts";
 
@@ -58,7 +58,7 @@ function ShopAssistant() {
   };
 
   if (!selectedUserInstagram.value) {
-    return <InstagramSearch onUser={onUser} />;
+    return <StoreSearch onUser={onUser} />;
   }
 
   return (
