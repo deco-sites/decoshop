@@ -1,8 +1,9 @@
 import { Signal } from "@preact/signals";
-import { mockMsgList } from "../mock.ts";
-import { Message, MessageContentText } from "./types/shop-assistant.ts";
-import { Messages } from "./Messages.tsx";
-import { useRef } from "preact/hooks";
+import { Message } from "./types/shop-assistant.ts";
+import { useState } from "preact/hooks";
+import { StartStep } from "./ChatSteps/StartStep.tsx";
+import { SetupStep } from "deco-sites/decoshop/components/shop-assistant/ChatSteps/SetupStep.tsx";
+import { ChatStep } from "deco-sites/decoshop/components/shop-assistant/ChatSteps/ChatStep.tsx";
 
 type ChatProps = {
   messageList: Signal<Message[]>;
@@ -13,85 +14,28 @@ type ChatProps = {
 export function ChatContainer(
   { messageList, updateMessageList, send }: ChatProps,
 ) {
-  const mock = false;
+  const [step, setStep] = useState(1);
 
-  if (mock) {
-    // messageList.value = mockMsgList;
-  }
+  const onClickStart = () => {
+    setStep(2);
+  };
 
   return (
-    <div class="w-1/2 shadow-md h-[100vh] flex flex-col justify-end z-50 bg-white">
-      <div class="bg-green-500 flex justify-center p-3 text-white">
-        shop.deco.cx
+    <div class="shadow-lg outline-white/40 outline outline-8 rounded-[2.5rem] w-[25rem] h-[25rem] flex flex-col z-50 bg-[#063534] right-8 absolute bottom-8">
+      <div class="m-6 space-y-8 h-full">
+        <div class="bg-[#08F67C] rounded-full flex justify-center items-center w-16 h-16">
+          <img src="/deco-icon.svg"></img>
+        </div>
+        {step === 1 && <StartStep onClickStart={onClickStart} />}
+        {step === 2 && <SetupStep />}
+        {step === 3 && (
+          <ChatStep
+            send={send}
+            messageList={messageList}
+            updateMessageList={updateMessageList}
+          />
+        )}
       </div>
-      <Messages messageList={messageList.value} />
-      <InputArea
-        send={send}
-        updateMessageList={updateMessageList}
-      />
     </div>
-  );
-}
-
-type InputAreaProps = {
-  send: (text: string) => void;
-  updateMessageList: ({ content, type, role }: Message) => void;
-};
-
-function InputArea({ send, updateMessageList }: InputAreaProps) {
-  const userInput = useRef<HTMLTextAreaElement>(null);
-
-  const processSubmit = () => {
-    const inputValue = userInput.current?.value;
-    if (!inputValue) return;
-
-    send(inputValue);
-
-    const msgContent: MessageContentText[] = [{
-      type: "text",
-      value: inputValue,
-    }];
-
-    updateMessageList({
-      content: msgContent,
-      type: "message",
-      role: "user",
-    });
-
-    userInput.current.value = "";
-  };
-
-  const handleSubmit = (e: React.TargetedEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    processSubmit();
-  };
-
-  const handleKeydown = (e: KeyboardEvent) => {
-    if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault();
-      processSubmit();
-    }
-  };
-
-  return (
-    <form
-      onSubmit={handleSubmit}
-      class="flex flex-row items-center bg-gray-100 rounded-xl relative mb-4 p-4 mt-4 mx-4"
-    >
-      <textarea
-        ref={userInput}
-        name="userInput"
-        placeholder="Ask..."
-        class="w-full grow h-32 outline-none relative resize-none pr-6 bg-gray-100 text-sm"
-        aria-label="Chat text area"
-        onKeyDown={handleKeydown}
-      />
-      <button
-        class="bg-green-600 hover:bg-green-700 absolute rounder-md font-light text-white py-1 px-4 rounded-lg text-sm bottom-3 right-3"
-        type="submit"
-      >
-        Send
-      </button>
-    </form>
   );
 }
