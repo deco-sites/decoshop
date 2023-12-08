@@ -67,7 +67,7 @@ function InputArea({ send, updateMessageList }: InputAreaProps) {
   return (
     <form
       onSubmit={handleUserInput}
-      class="flex flex-row items-center rounded-xl relative mb-2 mt-4 mx-2 bg-[#063534]"
+      class="flex flex-row items-center rounded-xl mb-2 mt-4 mx-1 bg-[#063534] pt-5 pb-1 sticky bottom-0"
     >
       <input
         ref={userInput}

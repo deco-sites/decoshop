@@ -28,7 +28,7 @@ export function Messages({ messageList }: { messageList: Message[] }) {
   return (
     <div
       ref={messageEl}
-      class="overflow-y-auto flex flex-col mx-5 pt-4 h-full min-h-[50vh]"
+      class="overflow-y-auto flex flex-col pt-4 h-[50vh]"
     >
       {messageList.map((message, index) => (
         message.role === "assistant"
@@ -78,7 +78,7 @@ const BotMessage = memo(({ message }: { message: Message }) => {
 
 function BotMessageWrapper({ children }: { children: ComponentChildren }) {
   return (
-    <div class="mb-3 p-2 rounded-2xl bg-gray-200 text-black text-sm max-w-s w-fit self-start">
+    <div class="mb-3 text-white text-2xl max-w-s self-start w-full">
       {children}
     </div>
   );
@@ -86,7 +86,7 @@ function BotMessageWrapper({ children }: { children: ComponentChildren }) {
 
 function UserMessage({ message }: { message: UserMsg }) {
   return (
-    <div class="mb-3 p-2 rounded-2xl bg-green-600 text-white text-sm max-w-s w-fit self-end">
+    <div class="mb-3 p-2 rounded-xl bg-[#104E4A] text-white text-md max-w-s w-fit self-end">
       {message.content.map((message, index) => {
         if ("value" in message) {
           return <div key={index}>{message.value}</div>;
