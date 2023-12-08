@@ -20,6 +20,10 @@ export function ChatContainer(
     setStep(2);
   };
 
+  const onSetupFinish = () => {
+    setStep(3);
+  };
+
   return (
     <div class="shadow-lg h-fit outline-white/40 outline outline-8 rounded-[2.5rem] w-[25rem] min-h-[25rem] flex flex-col z-50 bg-[#063534] right-8 absolute bottom-8">
       <div class="m-6 space-y-8 h-full">
@@ -27,7 +31,7 @@ export function ChatContainer(
           <img src="/deco-icon.svg"></img>
         </div>
         {step === 1 && <StartStep onClickStart={onClickStart} />}
-        {step === 2 && <SetupStep />}
+        {step === 2 && <SetupStep onSetupFinish={onSetupFinish} />}
         {step === 3 && (
           <ChatStep
             send={send}

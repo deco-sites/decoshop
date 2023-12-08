@@ -26,7 +26,10 @@ export function Messages({ messageList }: { messageList: Message[] }) {
   }, []);
 
   return (
-    <div ref={messageEl} class="overflow-y-auto flex flex-col mx-5 pt-4 h-full">
+    <div
+      ref={messageEl}
+      class="overflow-y-auto flex flex-col mx-5 pt-4 h-full min-h-[50vh]"
+    >
       {messageList.map((message, index) => (
         message.role === "assistant"
           ? <BotMessage key={index} message={message} />

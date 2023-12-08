@@ -14,7 +14,8 @@ type ChatProps = {
 
 export function ChatStep({ messageList, updateMessageList, send }: ChatProps) {
   return (
-    <div class="text-white">
+    <div class="text-white min-h-full">
+      <div class="text-2xl">All set!</div>
       <Messages messageList={messageList.value} />
       <InputArea
         send={send}
@@ -66,7 +67,7 @@ function InputArea({ send, updateMessageList }: InputAreaProps) {
   return (
     <form
       onSubmit={handleUserInput}
-      class="flex flex-row items-center rounded-xl relative mb-2 p-4 mt-4 mx-2 bg-[#063534]"
+      class="flex flex-row items-center rounded-xl relative mb-2 mt-4 mx-2 bg-[#063534]"
     >
       <input
         ref={userInput}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "preact/hooks";
 
-export function SetupStep() {
+export function SetupStep({ onSetupFinish }: { onSetupFinish: () => void }) {
   const storeType = "Shopify";
   const [readStep, setReadStep] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -32,6 +32,11 @@ export function SetupStep() {
           ]);
         }
       }, 1000);
+    }
+    if (readStep === 3) {
+      setTimeout(() => {
+        onSetupFinish();
+      }, 2000);
     }
   }, [readStep]);
 
