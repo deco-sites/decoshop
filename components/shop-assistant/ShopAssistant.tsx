@@ -78,7 +78,7 @@ function ShopAssistant() {
   return (
     <div>
       <img
-        class="h-screen"
+        class="h-full w-full"
         src="https://s3-alpha-sig.figma.com/img/1cec/b079/0b024aee22f170f20a9ac1e0498a45d6?Expires=1702857600&Signature=Wsgbxjp8ANtANh8a0EWZUW7dG0WC3GMcWyM4pKh1Z920YNspiTpTUbFmzuQ1QYB0KBBt80ES6-YdMfZsvBNKbJC2MXnbj6V5eBfjwa8bpp74CtiueDkV1ANIeSaonF8Hn4492JkGuf4F6hY4P7XMfS65c8PEu~zpALNDeI6NONl1Tb~JfsMNOCZ4ygaRsSM3VyDpdpwXG0IR6VXzrlabGstC9Ujss6dPNfvWWlQmg2GLPBbKpDkNv5UzlPmNaiw~f~4RZMAbAqKlLUN1oTCiL15fMOSXw0N9houfLZxQKD5pI5ywuE0P~82LmjZyWyZRh34O0mwtETPQuW~ggVidwQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
       >
       </img>
