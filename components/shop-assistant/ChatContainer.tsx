@@ -25,21 +25,44 @@ export function ChatContainer(
   };
 
   return (
-    <div class="shadow-lg h-fit outline-white/40 outline outline-8 rounded-[2.5rem] w-[25rem] min-h-[25rem] flex flex-col z-50 bg-[#063534] right-8 fixed bottom-8">
-      <div class="m-6 space-y-8 h-full max-h-[80vh] overflow-y-auto">
-        <div class="bg-[#08F67C] rounded-full flex justify-center items-center w-16 h-16">
-          <img src="/deco-icon.svg"></img>
+    <>
+      <style>
+        {`@keyframes slideout {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-30%);
+          opacity: 0;
+        }
+      }`}
+        {`@keyframes slidein {
+        from {
+          transform: translateX(30%);
+          opacity: 0.2;
+        }
+        to {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+      }`}
+      </style>
+      <div class="shadow-lg h-fit outline-white/40 outline outline-8 rounded-[2.5rem] w-[25rem] min-h-[25rem] flex flex-col z-50 bg-[#063534] right-8 fixed bottom-8">
+        <div class="m-6 space-y-8 h-full max-h-[80vh] overflow-y-auto overflow-x-hidden">
+          <div class="bg-[#08F67C] rounded-full flex justify-center items-center w-16 h-16">
+            <img src="/deco-icon.svg"></img>
+          </div>
+          {step === 1 && <StartStep onClickStart={onClickStart} />}
+          {step === 2 && <SetupStep onSetupFinish={onSetupFinish} />}
+          {step === 3 && (
+            <ChatStep
+              send={send}
+              messageList={messageList}
+              updateMessageList={updateMessageList}
+            />
+          )}
         </div>
-        {step === 1 && <StartStep onClickStart={onClickStart} />}
-        {step === 2 && <SetupStep onSetupFinish={onSetupFinish} />}
-        {step === 3 && (
-          <ChatStep
-            send={send}
-            messageList={messageList}
-            updateMessageList={updateMessageList}
-          />
-        )}
       </div>
-    </div>
+    </>
   );
 }
