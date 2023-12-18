@@ -1,5 +1,4 @@
 # Deco Shop
-
 Welcome to your [deco.cx](https://deco.cx) site!
 
 This repository was created for you when you created a new site. To edit the
