@@ -13,7 +13,6 @@ the current page you're seeing.
 
 ---
 ## Usage
-
 Start the project:
 
 ```sh
